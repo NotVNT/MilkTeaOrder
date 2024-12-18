@@ -82,7 +82,7 @@
             this.btnTieptuc.Name = "btnTieptuc";
             this.btnTieptuc.Size = new System.Drawing.Size(430, 45);
             this.btnTieptuc.TabIndex = 5;
-            this.btnTieptuc.Text = "Tiếp tục";
+            this.btnTieptuc.Text = "Tiếp tụcasdasd";
             this.btnTieptuc.Click += new System.EventHandler(this.btnTieptuc_Click);
             // 
             // txtEmail
