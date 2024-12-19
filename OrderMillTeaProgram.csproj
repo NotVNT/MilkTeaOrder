@@ -173,23 +173,17 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Giao diện\Giao Diện của Admin\Bảng điều hướng của Admin\AnVatAdmin.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Giao diện\Giao Diện của Admin\Bảng điều hướng của Admin\AnVatAdmin.Designer.cs">
-      <DependentUpon>AnVatAdmin.cs</DependentUpon>
-    </Compile>
     <Compile Include="Giao diện\Giao Diện của Admin\Bảng điều hướng của Admin\BangDieuKhien.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Giao diện\Giao Diện của Admin\Bảng điều hướng của Admin\BangDieuKhien.Designer.cs">
       <DependentUpon>BangDieuKhien.cs</DependentUpon>
     </Compile>
-    <Compile Include="Giao diện\Giao Diện của Admin\Bảng điều hướng của Admin\TrangMiengAdmin.cs">
+    <Compile Include="Giao diện\Giao Diện của Admin\Bảng điều hướng của Admin\AnVatAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Giao diện\Giao Diện của Admin\Bảng điều hướng của Admin\TrangMiengAdmin.Designer.cs">
-      <DependentUpon>TrangMiengAdmin.cs</DependentUpon>
+    <Compile Include="Giao diện\Giao Diện của Admin\Bảng điều hướng của Admin\AnVatAdmin.Designer.cs">
+      <DependentUpon>AnVatAdmin.cs</DependentUpon>
     </Compile>
     <Compile Include="Giao diện\Giao Diện của Admin\DashboardAdmin.cs">
       <SubType>Form</SubType>
@@ -234,14 +228,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Giao diện\Giao Diện của Admin\Bảng điều hướng của Admin\AnVatAdmin.resx">
-      <DependentUpon>AnVatAdmin.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Giao diện\Giao Diện của Admin\Bảng điều hướng của Admin\BangDieuKhien.resx">
       <DependentUpon>BangDieuKhien.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Giao diện\Giao Diện của Admin\Bảng điều hướng của Admin\TrangMiengAdmin.resx">
-      <DependentUpon>TrangMiengAdmin.cs</DependentUpon>
+    <EmbeddedResource Include="Giao diện\Giao Diện của Admin\Bảng điều hướng của Admin\AnVatAdmin.resx">
+      <DependentUpon>AnVatAdmin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Giao diện\Giao Diện của Admin\Bảng điều hướng của Admin\TraSuaAdmin.resx">
       <DependentUpon>TraSuaAdmin.cs</DependentUpon>

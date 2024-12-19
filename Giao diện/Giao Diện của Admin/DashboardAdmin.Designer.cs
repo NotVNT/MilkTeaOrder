@@ -42,7 +42,7 @@
             this.btnDanhMuc = new System.Windows.Forms.Button();
             this.btnTraSua = new System.Windows.Forms.Button();
             this.btnTrangMieng = new System.Windows.Forms.Button();
-            this.btnAnVat = new System.Windows.Forms.Button();
+            this.btnTopping = new System.Windows.Forms.Button();
             this.btnQLDT = new System.Windows.Forms.Button();
             this.btnQLTK = new System.Windows.Forms.Button();
             this.btnKho = new System.Windows.Forms.Button();
@@ -70,9 +70,9 @@
             this.sidebar.Controls.Add(this.btnDashboard);
             this.sidebar.Controls.Add(this.menuContainer);
             this.sidebar.Controls.Add(this.btnQLDT);
-            this.sidebar.Controls.Add(this.btnQLTK);
             this.sidebar.Controls.Add(this.btnKho);
             this.sidebar.Controls.Add(this.btnDonhang);
+            this.sidebar.Controls.Add(this.btnQLTK);
             this.sidebar.Controls.Add(this.btnThongBao);
             this.sidebar.Controls.Add(this.btnLogout);
             this.sidebar.Dock = System.Windows.Forms.DockStyle.Left;
@@ -156,7 +156,7 @@
             this.menuContainer.Controls.Add(this.btnDanhMuc);
             this.menuContainer.Controls.Add(this.btnTraSua);
             this.menuContainer.Controls.Add(this.btnTrangMieng);
-            this.menuContainer.Controls.Add(this.btnAnVat);
+            this.menuContainer.Controls.Add(this.btnTopping);
             this.menuContainer.Location = new System.Drawing.Point(3, 244);
             this.menuContainer.Name = "menuContainer";
             this.menuContainer.Size = new System.Drawing.Size(217, 46);
@@ -216,22 +216,22 @@
             this.btnTrangMieng.Text = "Tráng Miệng";
             this.btnTrangMieng.UseVisualStyleBackColor = false;
             // 
-            // btnAnVat
+            // btnTopping
             // 
-            this.btnAnVat.BackColor = System.Drawing.Color.LightGray;
-            this.btnAnVat.FlatAppearance.BorderSize = 0;
-            this.btnAnVat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAnVat.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAnVat.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.btnAnVat.Image = ((System.Drawing.Image)(resources.GetObject("btnAnVat.Image")));
-            this.btnAnVat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAnVat.Location = new System.Drawing.Point(0, 138);
-            this.btnAnVat.Margin = new System.Windows.Forms.Padding(0);
-            this.btnAnVat.Name = "btnAnVat";
-            this.btnAnVat.Size = new System.Drawing.Size(217, 46);
-            this.btnAnVat.TabIndex = 8;
-            this.btnAnVat.Text = "Ăn Vặt";
-            this.btnAnVat.UseVisualStyleBackColor = false;
+            this.btnTopping.BackColor = System.Drawing.Color.LightGray;
+            this.btnTopping.FlatAppearance.BorderSize = 0;
+            this.btnTopping.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTopping.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTopping.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.btnTopping.Image = ((System.Drawing.Image)(resources.GetObject("btnTopping.Image")));
+            this.btnTopping.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTopping.Location = new System.Drawing.Point(0, 138);
+            this.btnTopping.Margin = new System.Windows.Forms.Padding(0);
+            this.btnTopping.Name = "btnTopping";
+            this.btnTopping.Size = new System.Drawing.Size(217, 46);
+            this.btnTopping.TabIndex = 8;
+            this.btnTopping.Text = "Topping";
+            this.btnTopping.UseVisualStyleBackColor = false;
             // 
             // btnQLDT
             // 
@@ -257,7 +257,7 @@
             this.btnQLTK.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.btnQLTK.Image = ((System.Drawing.Image)(resources.GetObject("btnQLTK.Image")));
             this.btnQLTK.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnQLTK.Location = new System.Drawing.Point(3, 342);
+            this.btnQLTK.Location = new System.Drawing.Point(3, 446);
             this.btnQLTK.Name = "btnQLTK";
             this.btnQLTK.Size = new System.Drawing.Size(217, 46);
             this.btnQLTK.TabIndex = 8;
@@ -273,7 +273,7 @@
             this.btnKho.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.btnKho.Image = ((System.Drawing.Image)(resources.GetObject("btnKho.Image")));
             this.btnKho.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnKho.Location = new System.Drawing.Point(3, 394);
+            this.btnKho.Location = new System.Drawing.Point(3, 342);
             this.btnKho.Name = "btnKho";
             this.btnKho.Size = new System.Drawing.Size(217, 46);
             this.btnKho.TabIndex = 9;
@@ -288,7 +288,7 @@
             this.btnDonhang.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.btnDonhang.Image = ((System.Drawing.Image)(resources.GetObject("btnDonhang.Image")));
             this.btnDonhang.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDonhang.Location = new System.Drawing.Point(3, 446);
+            this.btnDonhang.Location = new System.Drawing.Point(3, 394);
             this.btnDonhang.Name = "btnDonhang";
             this.btnDonhang.Size = new System.Drawing.Size(217, 46);
             this.btnDonhang.TabIndex = 10;
@@ -365,7 +365,7 @@
         private System.Windows.Forms.Button btnDanhMuc;
         private System.Windows.Forms.Button btnTraSua;
         private System.Windows.Forms.Button btnTrangMieng;
-        private System.Windows.Forms.Button btnAnVat;
+        private System.Windows.Forms.Button btnTopping;
         private System.Windows.Forms.Button btnQLDT;
         private System.Windows.Forms.Button btnQLTK;
         private System.Windows.Forms.Button btnKho;
