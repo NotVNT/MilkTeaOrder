@@ -9,7 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using OrderMillTeaProgram.Giao_diện;
 using OrderMillTeaProgram.Giao_diện.Giao_Diện_của_Admin;
-using OrderMillTeaProgram.Giao_diện.Giao_Diện_của_Admin.Bảng_điều_hướng_của_Admin;
+
+
 
 namespace OrderMillTeaProgram.Giao_diện_của_User
 {
@@ -17,8 +18,7 @@ namespace OrderMillTeaProgram.Giao_diện_của_User
     {
         BangDieuKhien bangdieukhien;
         TraSuaAdmin trasuaAdmin;
-        TrangMiengAdmin trangmiengAdmin;
-        AnVatAdmin anvatAdmin;
+        
         public DashboardAdmin()
         {
             InitializeComponent();
