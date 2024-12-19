@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
+using OrderMillTeaProgram.Giao_diện_của_User;
+
 
 namespace OrderMillTeaProgram
 {
@@ -78,12 +81,26 @@ namespace OrderMillTeaProgram
                 string query = "Select * from UserInfo where UserName = '"+username+"' and Password = '"+password+"'";
                 if(modify.Accounts(query).Count!=0)
                 {
-                    MessageBox.Show("Bạn đã đăng nhập thành công!", "Thông báo",MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    this.Hide();
-                    Dashboard dashboard = new Dashboard();
-                    dashboard.ShowDialog();
-                    this.Close();
+                    if (username == "admin")
+                    {
+                        MessageBox.Show("Bạn đang đăng nhập tài khoản Admin!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        this.Hide();
+                        DashboardAdmin dashboardadmin = new DashboardAdmin();
+                        dashboardadmin.ShowDialog();
+                        this.Close();
+                    }
+                    else
+                    {
+
+                        MessageBox.Show("Bạn đã đăng nhập thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        this.Hide();
+                        Dashboard dashboard = new Dashboard();
+                        dashboard.ShowDialog();
+                        this.Close();
+                    }
                 }
+             
+                
                 else
                 {
                     MessageBox.Show("Tên tài khoản hoặc mật khẩu của bạn không chính xác, vui lòng kiểm tra lại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);

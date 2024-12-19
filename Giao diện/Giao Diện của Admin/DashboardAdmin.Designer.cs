@@ -42,7 +42,7 @@
             this.btnDanhMuc = new System.Windows.Forms.Button();
             this.btnTraSua = new System.Windows.Forms.Button();
             this.btnTrangMieng = new System.Windows.Forms.Button();
-            this.btnAnVat = new System.Windows.Forms.Button();
+            this.btnTopping = new System.Windows.Forms.Button();
             this.btnQLDT = new System.Windows.Forms.Button();
             this.btnQLTK = new System.Windows.Forms.Button();
             this.btnKho = new System.Windows.Forms.Button();
@@ -156,7 +156,7 @@
             this.menuContainer.Controls.Add(this.btnDanhMuc);
             this.menuContainer.Controls.Add(this.btnTraSua);
             this.menuContainer.Controls.Add(this.btnTrangMieng);
-            this.menuContainer.Controls.Add(this.btnAnVat);
+            this.menuContainer.Controls.Add(this.btnTopping);
             this.menuContainer.Location = new System.Drawing.Point(3, 244);
             this.menuContainer.Name = "menuContainer";
             this.menuContainer.Size = new System.Drawing.Size(217, 46);
@@ -215,23 +215,25 @@
             this.btnTrangMieng.TabIndex = 7;
             this.btnTrangMieng.Text = "Tráng Miệng";
             this.btnTrangMieng.UseVisualStyleBackColor = false;
+            this.btnTrangMieng.Click += new System.EventHandler(this.btnTrangMieng_Click);
             // 
-            // btnAnVat
+            // btnTopping
             // 
-            this.btnAnVat.BackColor = System.Drawing.Color.LightGray;
-            this.btnAnVat.FlatAppearance.BorderSize = 0;
-            this.btnAnVat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAnVat.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAnVat.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.btnAnVat.Image = ((System.Drawing.Image)(resources.GetObject("btnAnVat.Image")));
-            this.btnAnVat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAnVat.Location = new System.Drawing.Point(0, 138);
-            this.btnAnVat.Margin = new System.Windows.Forms.Padding(0);
-            this.btnAnVat.Name = "btnAnVat";
-            this.btnAnVat.Size = new System.Drawing.Size(217, 46);
-            this.btnAnVat.TabIndex = 8;
-            this.btnAnVat.Text = "Ăn Vặt";
-            this.btnAnVat.UseVisualStyleBackColor = false;
+            this.btnTopping.BackColor = System.Drawing.Color.LightGray;
+            this.btnTopping.FlatAppearance.BorderSize = 0;
+            this.btnTopping.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTopping.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTopping.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.btnTopping.Image = ((System.Drawing.Image)(resources.GetObject("btnTopping.Image")));
+            this.btnTopping.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTopping.Location = new System.Drawing.Point(0, 138);
+            this.btnTopping.Margin = new System.Windows.Forms.Padding(0);
+            this.btnTopping.Name = "btnTopping";
+            this.btnTopping.Size = new System.Drawing.Size(217, 46);
+            this.btnTopping.TabIndex = 8;
+            this.btnTopping.Text = "Topping";
+            this.btnTopping.UseVisualStyleBackColor = false;
+            this.btnTopping.Click += new System.EventHandler(this.btnTopping_Click);
             // 
             // btnQLDT
             // 
@@ -263,7 +265,6 @@
             this.btnQLTK.TabIndex = 8;
             this.btnQLTK.Text = "        Quản Lý Tài Khoản";
             this.btnQLTK.UseVisualStyleBackColor = true;
-            this.btnQLTK.Click += new System.EventHandler(this.btnQLTK_Click);
             // 
             // btnKho
             // 
@@ -324,6 +325,7 @@
             this.btnLogout.TabIndex = 12;
             this.btnLogout.Text = "     LogOut";
             this.btnLogout.UseVisualStyleBackColor = true;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
             // sidebarTransition
             // 
@@ -365,7 +367,7 @@
         private System.Windows.Forms.Button btnDanhMuc;
         private System.Windows.Forms.Button btnTraSua;
         private System.Windows.Forms.Button btnTrangMieng;
-        private System.Windows.Forms.Button btnAnVat;
+        private System.Windows.Forms.Button btnTopping;
         private System.Windows.Forms.Button btnQLDT;
         private System.Windows.Forms.Button btnQLTK;
         private System.Windows.Forms.Button btnKho;
