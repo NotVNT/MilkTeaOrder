@@ -70,9 +70,9 @@
             this.sidebar.Controls.Add(this.btnDashboard);
             this.sidebar.Controls.Add(this.menuContainer);
             this.sidebar.Controls.Add(this.btnQLDT);
+            this.sidebar.Controls.Add(this.btnQLTK);
             this.sidebar.Controls.Add(this.btnKho);
             this.sidebar.Controls.Add(this.btnDonhang);
-            this.sidebar.Controls.Add(this.btnQLTK);
             this.sidebar.Controls.Add(this.btnThongBao);
             this.sidebar.Controls.Add(this.btnLogout);
             this.sidebar.Dock = System.Windows.Forms.DockStyle.Left;
@@ -215,6 +215,7 @@
             this.btnTrangMieng.TabIndex = 7;
             this.btnTrangMieng.Text = "Tráng Miệng";
             this.btnTrangMieng.UseVisualStyleBackColor = false;
+            this.btnTrangMieng.Click += new System.EventHandler(this.btnTrangMieng_Click);
             // 
             // btnTopping
             // 
@@ -232,6 +233,7 @@
             this.btnTopping.TabIndex = 8;
             this.btnTopping.Text = "Topping";
             this.btnTopping.UseVisualStyleBackColor = false;
+            this.btnTopping.Click += new System.EventHandler(this.btnTopping_Click);
             // 
             // btnQLDT
             // 
@@ -257,13 +259,12 @@
             this.btnQLTK.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.btnQLTK.Image = ((System.Drawing.Image)(resources.GetObject("btnQLTK.Image")));
             this.btnQLTK.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnQLTK.Location = new System.Drawing.Point(3, 446);
+            this.btnQLTK.Location = new System.Drawing.Point(3, 342);
             this.btnQLTK.Name = "btnQLTK";
             this.btnQLTK.Size = new System.Drawing.Size(217, 46);
             this.btnQLTK.TabIndex = 8;
             this.btnQLTK.Text = "        Quản Lý Tài Khoản";
             this.btnQLTK.UseVisualStyleBackColor = true;
-            this.btnQLTK.Click += new System.EventHandler(this.btnQLTK_Click);
             // 
             // btnKho
             // 
@@ -273,7 +274,7 @@
             this.btnKho.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.btnKho.Image = ((System.Drawing.Image)(resources.GetObject("btnKho.Image")));
             this.btnKho.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnKho.Location = new System.Drawing.Point(3, 342);
+            this.btnKho.Location = new System.Drawing.Point(3, 394);
             this.btnKho.Name = "btnKho";
             this.btnKho.Size = new System.Drawing.Size(217, 46);
             this.btnKho.TabIndex = 9;
@@ -288,7 +289,7 @@
             this.btnDonhang.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.btnDonhang.Image = ((System.Drawing.Image)(resources.GetObject("btnDonhang.Image")));
             this.btnDonhang.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDonhang.Location = new System.Drawing.Point(3, 394);
+            this.btnDonhang.Location = new System.Drawing.Point(3, 446);
             this.btnDonhang.Name = "btnDonhang";
             this.btnDonhang.Size = new System.Drawing.Size(217, 46);
             this.btnDonhang.TabIndex = 10;
@@ -324,6 +325,7 @@
             this.btnLogout.TabIndex = 12;
             this.btnLogout.Text = "     LogOut";
             this.btnLogout.UseVisualStyleBackColor = true;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
             // sidebarTransition
             // 

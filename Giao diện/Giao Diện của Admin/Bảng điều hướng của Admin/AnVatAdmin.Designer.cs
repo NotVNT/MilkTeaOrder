@@ -32,33 +32,33 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblDashboard = new System.Windows.Forms.Label();
             this.pictureThaiXanh = new System.Windows.Forms.PictureBox();
-            this.btnTraSuaThaiXanh = new System.Windows.Forms.Panel();
+            this.btnBanhFlan = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.btnTraSuaTruyenThong = new System.Windows.Forms.Panel();
+            this.btnTiramisu = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnTraSuaKhoaiMon = new System.Windows.Forms.Panel();
+            this.btnBanhPhoMai = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.btnTraSuaChocolate = new System.Windows.Forms.Panel();
+            this.btnCupCake = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureThaiXanh)).BeginInit();
-            this.btnTraSuaThaiXanh.SuspendLayout();
-            this.btnTraSuaTruyenThong.SuspendLayout();
+            this.btnBanhFlan.SuspendLayout();
+            this.btnTiramisu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.btnTraSuaKhoaiMon.SuspendLayout();
+            this.btnBanhPhoMai.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            this.btnTraSuaChocolate.SuspendLayout();
+            this.btnCupCake.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
@@ -94,19 +94,19 @@
             this.pictureThaiXanh.TabIndex = 7;
             this.pictureThaiXanh.TabStop = false;
             // 
-            // btnTraSuaThaiXanh
+            // btnBanhFlan
             // 
-            this.btnTraSuaThaiXanh.Controls.Add(this.label4);
-            this.btnTraSuaThaiXanh.Controls.Add(this.label3);
-            this.btnTraSuaThaiXanh.Controls.Add(this.label2);
-            this.btnTraSuaThaiXanh.Controls.Add(this.pictureThaiXanh);
-            this.btnTraSuaThaiXanh.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnTraSuaThaiXanh.Location = new System.Drawing.Point(46, 73);
-            this.btnTraSuaThaiXanh.Name = "btnTraSuaThaiXanh";
-            this.btnTraSuaThaiXanh.Size = new System.Drawing.Size(200, 235);
-            this.btnTraSuaThaiXanh.TabIndex = 8;
-            this.btnTraSuaThaiXanh.MouseLeave += new System.EventHandler(this.btnTraSuaThaiXanh_MouseLeave);
-            this.btnTraSuaThaiXanh.MouseHover += new System.EventHandler(this.btnTraSuaThaiXanh_MouseHover);
+            this.btnBanhFlan.Controls.Add(this.label4);
+            this.btnBanhFlan.Controls.Add(this.label3);
+            this.btnBanhFlan.Controls.Add(this.label2);
+            this.btnBanhFlan.Controls.Add(this.pictureThaiXanh);
+            this.btnBanhFlan.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnBanhFlan.Location = new System.Drawing.Point(46, 73);
+            this.btnBanhFlan.Name = "btnBanhFlan";
+            this.btnBanhFlan.Size = new System.Drawing.Size(200, 235);
+            this.btnBanhFlan.TabIndex = 8;
+            this.btnBanhFlan.MouseLeave += new System.EventHandler(this.btnBanhFlan_MouseLeave);
+            this.btnBanhFlan.MouseHover += new System.EventHandler(this.btnBanhFlan_MouseHover);
             // 
             // label4
             // 
@@ -115,7 +115,7 @@
             this.label4.Enabled = false;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Silver;
-            this.label4.Location = new System.Drawing.Point(44, 208);
+            this.label4.Location = new System.Drawing.Point(38, 208);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(15, 15);
             this.label4.TabIndex = 10;
@@ -128,9 +128,9 @@
             this.label3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(3, 208);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(45, 15);
+            this.label3.Size = new System.Drawing.Size(38, 15);
             this.label3.TabIndex = 9;
-            this.label3.Text = "25.000";
+            this.label3.Text = "7.000";
             // 
             // label2
             // 
@@ -139,25 +139,25 @@
             this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label2.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(20, 171);
+            this.label2.Location = new System.Drawing.Point(37, 172);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(160, 19);
+            this.label2.Size = new System.Drawing.Size(89, 19);
             this.label2.TabIndex = 8;
-            this.label2.Text = "Trà Sữa Thái Xanh";
+            this.label2.Text = "Bánh Flan";
             // 
-            // btnTraSuaTruyenThong
+            // btnTiramisu
             // 
-            this.btnTraSuaTruyenThong.Controls.Add(this.label1);
-            this.btnTraSuaTruyenThong.Controls.Add(this.label5);
-            this.btnTraSuaTruyenThong.Controls.Add(this.label6);
-            this.btnTraSuaTruyenThong.Controls.Add(this.pictureBox1);
-            this.btnTraSuaTruyenThong.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnTraSuaTruyenThong.Location = new System.Drawing.Point(325, 73);
-            this.btnTraSuaTruyenThong.Name = "btnTraSuaTruyenThong";
-            this.btnTraSuaTruyenThong.Size = new System.Drawing.Size(200, 235);
-            this.btnTraSuaTruyenThong.TabIndex = 9;
-            this.btnTraSuaTruyenThong.MouseLeave += new System.EventHandler(this.btnTraSuaTruyenThong_MouseLeave);
-            this.btnTraSuaTruyenThong.MouseHover += new System.EventHandler(this.btnTraSuaTruyenThong_MouseHover);
+            this.btnTiramisu.Controls.Add(this.label1);
+            this.btnTiramisu.Controls.Add(this.label5);
+            this.btnTiramisu.Controls.Add(this.label6);
+            this.btnTiramisu.Controls.Add(this.pictureBox1);
+            this.btnTiramisu.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnTiramisu.Location = new System.Drawing.Point(325, 73);
+            this.btnTiramisu.Name = "btnTiramisu";
+            this.btnTiramisu.Size = new System.Drawing.Size(200, 235);
+            this.btnTiramisu.TabIndex = 9;
+            this.btnTiramisu.MouseLeave += new System.EventHandler(this.btnTiramisu_MouseLeave);
+            this.btnTiramisu.MouseHover += new System.EventHandler(this.btnTiramisu_MouseHover);
             // 
             // label1
             // 
@@ -181,7 +181,7 @@
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(45, 15);
             this.label5.TabIndex = 9;
-            this.label5.Text = "20.000";
+            this.label5.Text = "18.000";
             // 
             // label6
             // 
@@ -190,11 +190,11 @@
             this.label6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label6.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(6, 171);
+            this.label6.Location = new System.Drawing.Point(32, 172);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(191, 19);
+            this.label6.Size = new System.Drawing.Size(126, 19);
             this.label6.TabIndex = 8;
-            this.label6.Text = "Trà Sữa Truyền Thống";
+            this.label6.Text = "Bánh Tiramisu";
             // 
             // pictureBox1
             // 
@@ -208,19 +208,19 @@
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
             // 
-            // btnTraSuaKhoaiMon
+            // btnBanhPhoMai
             // 
-            this.btnTraSuaKhoaiMon.Controls.Add(this.label7);
-            this.btnTraSuaKhoaiMon.Controls.Add(this.label8);
-            this.btnTraSuaKhoaiMon.Controls.Add(this.label9);
-            this.btnTraSuaKhoaiMon.Controls.Add(this.pictureBox2);
-            this.btnTraSuaKhoaiMon.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnTraSuaKhoaiMon.Location = new System.Drawing.Point(606, 73);
-            this.btnTraSuaKhoaiMon.Name = "btnTraSuaKhoaiMon";
-            this.btnTraSuaKhoaiMon.Size = new System.Drawing.Size(200, 235);
-            this.btnTraSuaKhoaiMon.TabIndex = 10;
-            this.btnTraSuaKhoaiMon.MouseLeave += new System.EventHandler(this.btnTraSuaKhoaiMon_MouseLeave);
-            this.btnTraSuaKhoaiMon.MouseHover += new System.EventHandler(this.btnTraSuaKhoaiMon_MouseHover);
+            this.btnBanhPhoMai.Controls.Add(this.label7);
+            this.btnBanhPhoMai.Controls.Add(this.label8);
+            this.btnBanhPhoMai.Controls.Add(this.label9);
+            this.btnBanhPhoMai.Controls.Add(this.pictureBox2);
+            this.btnBanhPhoMai.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnBanhPhoMai.Location = new System.Drawing.Point(606, 73);
+            this.btnBanhPhoMai.Name = "btnBanhPhoMai";
+            this.btnBanhPhoMai.Size = new System.Drawing.Size(200, 235);
+            this.btnBanhPhoMai.TabIndex = 10;
+            this.btnBanhPhoMai.MouseLeave += new System.EventHandler(this.btnBanhPhoMai_MouseLeave);
+            this.btnBanhPhoMai.MouseHover += new System.EventHandler(this.btnBanhPhoMai_MouseHover);
             // 
             // label7
             // 
@@ -244,7 +244,7 @@
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(45, 15);
             this.label8.TabIndex = 9;
-            this.label8.Text = "30.000";
+            this.label8.Text = "15.000";
             // 
             // label9
             // 
@@ -253,11 +253,11 @@
             this.label9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label9.Font = new System.Drawing.Font("Tahoma", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.Black;
-            this.label9.Location = new System.Drawing.Point(15, 171);
+            this.label9.Location = new System.Drawing.Point(34, 170);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(171, 21);
+            this.label9.Size = new System.Drawing.Size(127, 21);
             this.label9.TabIndex = 8;
-            this.label9.Text = "Trà Sữa Khoai Môn";
+            this.label9.Text = "Bánh Phô Mai";
             // 
             // pictureBox2
             // 
@@ -271,19 +271,19 @@
             this.pictureBox2.TabIndex = 7;
             this.pictureBox2.TabStop = false;
             // 
-            // btnTraSuaChocolate
+            // btnCupCake
             // 
-            this.btnTraSuaChocolate.Controls.Add(this.label10);
-            this.btnTraSuaChocolate.Controls.Add(this.label11);
-            this.btnTraSuaChocolate.Controls.Add(this.label12);
-            this.btnTraSuaChocolate.Controls.Add(this.pictureBox3);
-            this.btnTraSuaChocolate.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnTraSuaChocolate.Location = new System.Drawing.Point(883, 73);
-            this.btnTraSuaChocolate.Name = "btnTraSuaChocolate";
-            this.btnTraSuaChocolate.Size = new System.Drawing.Size(200, 235);
-            this.btnTraSuaChocolate.TabIndex = 11;
-            this.btnTraSuaChocolate.MouseLeave += new System.EventHandler(this.btnTraSuaChocolate_MouseLeave);
-            this.btnTraSuaChocolate.MouseHover += new System.EventHandler(this.btnTraSuaChocolate_MouseHover);
+            this.btnCupCake.Controls.Add(this.label10);
+            this.btnCupCake.Controls.Add(this.label11);
+            this.btnCupCake.Controls.Add(this.label12);
+            this.btnCupCake.Controls.Add(this.pictureBox3);
+            this.btnCupCake.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCupCake.Location = new System.Drawing.Point(883, 73);
+            this.btnCupCake.Name = "btnCupCake";
+            this.btnCupCake.Size = new System.Drawing.Size(200, 235);
+            this.btnCupCake.TabIndex = 11;
+            this.btnCupCake.MouseLeave += new System.EventHandler(this.btnCupCake_MouseLeave);
+            this.btnCupCake.MouseHover += new System.EventHandler(this.btnCupCake_MouseHover);
             // 
             // label10
             // 
@@ -292,7 +292,7 @@
             this.label10.Enabled = false;
             this.label10.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.Silver;
-            this.label10.Location = new System.Drawing.Point(44, 208);
+            this.label10.Location = new System.Drawing.Point(45, 208);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(15, 15);
             this.label10.TabIndex = 10;
@@ -307,7 +307,7 @@
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(45, 15);
             this.label11.TabIndex = 9;
-            this.label11.Text = "30.000";
+            this.label11.Text = "17.000";
             // 
             // label12
             // 
@@ -316,11 +316,11 @@
             this.label12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label12.Font = new System.Drawing.Font("Tahoma", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.Black;
-            this.label12.Location = new System.Drawing.Point(15, 171);
+            this.label12.Location = new System.Drawing.Point(56, 170);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(165, 21);
+            this.label12.Size = new System.Drawing.Size(84, 21);
             this.label12.TabIndex = 8;
-            this.label12.Text = "Trà Sữa Chocolate";
+            this.label12.Text = "CupCake";
             // 
             // pictureBox3
             // 
@@ -339,29 +339,29 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1329, 817);
-            this.Controls.Add(this.btnTraSuaChocolate);
-            this.Controls.Add(this.btnTraSuaKhoaiMon);
-            this.Controls.Add(this.btnTraSuaTruyenThong);
-            this.Controls.Add(this.btnTraSuaThaiXanh);
+            this.Controls.Add(this.btnCupCake);
+            this.Controls.Add(this.btnBanhPhoMai);
+            this.Controls.Add(this.btnTiramisu);
+            this.Controls.Add(this.btnBanhFlan);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AnVatAdmin";
             this.Text = "*";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.TraSuaAdmin_FormClosed);
-            this.Load += new System.EventHandler(this.TraSuaAdmin_Load);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.AnVatAdmin_FormClosed);
+            this.Load += new System.EventHandler(this.AnVatAdmin_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureThaiXanh)).EndInit();
-            this.btnTraSuaThaiXanh.ResumeLayout(false);
-            this.btnTraSuaThaiXanh.PerformLayout();
-            this.btnTraSuaTruyenThong.ResumeLayout(false);
-            this.btnTraSuaTruyenThong.PerformLayout();
+            this.btnBanhFlan.ResumeLayout(false);
+            this.btnBanhFlan.PerformLayout();
+            this.btnTiramisu.ResumeLayout(false);
+            this.btnTiramisu.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.btnTraSuaKhoaiMon.ResumeLayout(false);
-            this.btnTraSuaKhoaiMon.PerformLayout();
+            this.btnBanhPhoMai.ResumeLayout(false);
+            this.btnBanhPhoMai.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            this.btnTraSuaChocolate.ResumeLayout(false);
-            this.btnTraSuaChocolate.PerformLayout();
+            this.btnCupCake.ResumeLayout(false);
+            this.btnCupCake.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
 
@@ -372,21 +372,21 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lblDashboard;
         private System.Windows.Forms.PictureBox pictureThaiXanh;
-        private System.Windows.Forms.Panel btnTraSuaThaiXanh;
+        private System.Windows.Forms.Panel btnBanhFlan;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Panel btnTraSuaTruyenThong;
+        private System.Windows.Forms.Panel btnTiramisu;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Panel btnTraSuaKhoaiMon;
+        private System.Windows.Forms.Panel btnBanhPhoMai;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Panel btnTraSuaChocolate;
+        private System.Windows.Forms.Panel btnCupCake;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;

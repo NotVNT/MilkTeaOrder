@@ -18,7 +18,8 @@ namespace OrderMillTeaProgram.Giao_diện_của_User
     {
         BangDieuKhien bangdieukhien;
         TraSuaAdmin trasuaAdmin;
-        
+        AnVatAdmin anvatAdmin;
+        ToppingAdmin toppingAdmin;
         public DashboardAdmin()
         {
             InitializeComponent();
@@ -152,9 +153,55 @@ namespace OrderMillTeaProgram.Giao_diện_của_User
             trasuaAdmin = null;
         }
 
-        private void btnQLTK_Click(object sender, EventArgs e)
+        private void btnTrangMieng_Click(object sender, EventArgs e)
         {
+            if (anvatAdmin == null)
+            {
+                anvatAdmin = new AnVatAdmin();
+                anvatAdmin.FormClosed += TraSuaAdmin_FormClosed;
+                anvatAdmin.MdiParent = this;
+                anvatAdmin.Dock = DockStyle.Fill;
+                anvatAdmin.Show();
+            }
+            else
+            {
+                anvatAdmin.Activate();
+            }
+        }
+        private void AnVatAdmin_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            anvatAdmin = null;
+        }
 
+        private void btnTopping_Click(object sender, EventArgs e)
+        {
+            if (toppingAdmin == null)
+            {
+                toppingAdmin = new ToppingAdmin();
+                toppingAdmin.FormClosed += TraSuaAdmin_FormClosed;
+                toppingAdmin.MdiParent = this;
+                toppingAdmin.Dock = DockStyle.Fill;
+                toppingAdmin.Show();
+            }
+            else
+            {
+                toppingAdmin.Activate();
+            }
+        }
+
+        private void ToppingAdmin_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            toppingAdmin = null;
+        }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            if(MessageBox.Show("Bạn có muốn đăng xuất không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes )
+            {
+                this.Hide();
+                LoginForm loginForm = new LoginForm();
+                loginForm.ShowDialog();
+            }
         }
     }
 }

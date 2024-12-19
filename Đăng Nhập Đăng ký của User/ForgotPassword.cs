@@ -27,7 +27,7 @@ namespace OrderMillTeaProgram
             string email = txtEmail.Text;
             if (email.Trim() == "")
             {
-                MessageBox.Show("Vui lòng nhập email đăng ký!");
+                MessageBox.Show("Vui lòng nhập email đăng ký!","Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {

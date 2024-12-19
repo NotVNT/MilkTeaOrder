@@ -173,6 +173,12 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Giao diện\Giao Diện của Admin\Bảng điều hướng của Admin\ToppingAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Giao diện\Giao Diện của Admin\Bảng điều hướng của Admin\ToppingAdmin.Designer.cs">
+      <DependentUpon>ToppingAdmin.cs</DependentUpon>
+    </Compile>
     <Compile Include="Giao diện\Giao Diện của Admin\Bảng điều hướng của Admin\BangDieuKhien.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -228,6 +234,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Giao diện\Giao Diện của Admin\Bảng điều hướng của Admin\ToppingAdmin.resx">
+      <DependentUpon>ToppingAdmin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Giao diện\Giao Diện của Admin\Bảng điều hướng của Admin\BangDieuKhien.resx">
       <DependentUpon>BangDieuKhien.cs</DependentUpon>
     </EmbeddedResource>

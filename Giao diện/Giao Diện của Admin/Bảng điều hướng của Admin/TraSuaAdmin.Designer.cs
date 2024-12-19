@@ -33,9 +33,9 @@
             this.lblDashboard = new System.Windows.Forms.Label();
             this.pictureThaiXanh = new System.Windows.Forms.PictureBox();
             this.btnTraSuaThaiXanh = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.btnTraSuaTruyenThong = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -136,30 +136,6 @@
             this.btnTraSuaThaiXanh.MouseLeave += new System.EventHandler(this.btnTraSuaThaiXanh_MouseLeave);
             this.btnTraSuaThaiXanh.MouseHover += new System.EventHandler(this.btnTraSuaThaiXanh_MouseHover);
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label2.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(20, 171);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(160, 19);
-            this.label2.TabIndex = 8;
-            this.label2.Text = "Trà Sữa Thái Xanh";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Enabled = false;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(3, 208);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(45, 15);
-            this.label3.TabIndex = 9;
-            this.label3.Text = "25.000";
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -172,6 +148,30 @@
             this.label4.Size = new System.Drawing.Size(15, 15);
             this.label4.TabIndex = 10;
             this.label4.Text = "đ";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Enabled = false;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(3, 208);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(45, 15);
+            this.label3.TabIndex = 9;
+            this.label3.Text = "25.000";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label2.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(20, 171);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(160, 19);
+            this.label2.TabIndex = 8;
+            this.label2.Text = "Trà Sữa Thái Xanh";
             // 
             // btnTraSuaTruyenThong
             // 
