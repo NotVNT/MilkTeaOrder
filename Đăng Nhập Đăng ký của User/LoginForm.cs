@@ -10,7 +10,6 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 using OrderMillTeaProgram.Giao_diện_của_User;
 
-
 namespace OrderMillTeaProgram
 {
     public partial class LoginForm : Form
