@@ -88,6 +88,14 @@ namespace OrderMillTeaProgram
                         dashboardadmin.ShowDialog();
                         this.Close();
                     }
+                    if (username == "not_vnt123")
+                    {
+                        MessageBox.Show("Bạn đang đăng nhập tài khoản Nhân Viên!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        this.Hide();
+                        DashboardStaff dashboardstaff = new DashboardStaff();
+                        dashboardstaff.ShowDialog();
+                        this.Close();
+                    }
                     else
                     {
 

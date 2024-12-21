@@ -16,8 +16,8 @@ namespace OrderMillTeaProgram.Giao_diện_của_User
 {
     public partial class DashboardStaff : Form
     {
-        BangDieuKhien bangdieukhien;
-        TraSuaAdmin trasuaAdmin;
+        BangDieuKhienStaff bangdieukhienstaff;
+        TraSuaStaff trasuastaff;
         AnVatAdmin anvatAdmin;
         ToppingAdmin toppingAdmin;
         public DashboardStaff()
@@ -114,43 +114,43 @@ namespace OrderMillTeaProgram.Giao_diện_của_User
 
         private void btnDashboard_Click(object sender, EventArgs e)
         {
-            if(bangdieukhien == null)
+            if(bangdieukhienstaff == null)
             {
-                bangdieukhien = new BangDieuKhien();
-                bangdieukhien.FormClosed += BangDieuKhien_FormClosed;
-                bangdieukhien.MdiParent = this;
-                bangdieukhien.Dock = DockStyle.Fill;
-                bangdieukhien.Show();
+                bangdieukhienstaff = new BangDieuKhienStaff();
+                bangdieukhienstaff.FormClosed += BangDieuKhien_FormClosed;
+                bangdieukhienstaff.MdiParent = this;
+                bangdieukhienstaff.Dock = DockStyle.Fill;
+                bangdieukhienstaff.Show();
 
             }    
             else
             {
-                bangdieukhien.Activate();
+                bangdieukhienstaff.Activate();
             }
         }
         private void BangDieuKhien_FormClosed(object sender, FormClosedEventArgs e)
         {
-            bangdieukhien = null;
+            bangdieukhienstaff = null;
         }
 
         private void btnTraSua_Click(object sender, EventArgs e)
         {
-            if (trasuaAdmin == null)
+            if (trasuastaff == null)
             {
-                trasuaAdmin = new TraSuaAdmin();
-                trasuaAdmin.FormClosed += TraSuaAdmin_FormClosed;
-                trasuaAdmin.MdiParent = this;
-                trasuaAdmin.Dock = DockStyle.Fill;
-                trasuaAdmin.Show();
+                trasuastaff = new TraSuaStaff();
+                trasuastaff.FormClosed += TraSuaAdmin_FormClosed;
+                trasuastaff.MdiParent = this;
+                trasuastaff.Dock = DockStyle.Fill;
+                trasuastaff.Show();
             }
             else
             {
-                trasuaAdmin.Activate();
+                trasuastaff.Activate();
             }
         }
         private void TraSuaAdmin_FormClosed(object sender, FormClosedEventArgs e)
         {
-            trasuaAdmin = null;
+            trasuastaff = null;
         }
 
         private void btnTrangMieng_Click(object sender, EventArgs e)

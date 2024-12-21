@@ -181,28 +181,12 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Database.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Database.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Database.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Database.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Database.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Database.edmx</DependentUpon>
-    </Compile>
-    <Compile Include="Giao diện\Giao Diện của Staff\DashboardStaff.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Giao diện\Giao Diện của Staff\DashboardStaff.Designer.cs">
-      <DependentUpon>DashboardStaff.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Đăng Nhập Đăng ký của User\Drink.cs" />
+    <Compile Include="Database\Drink.cs" />
+    <Compile Include="Database\HoaDon.cs" />
+    <Compile Include="Database\Loai.cs" />
+    <Compile Include="Database\Model1.cs" />
+    <Compile Include="Database\sysdiagram.cs" />
+    <Compile Include="Database\UserInfo.cs" />
     <Compile Include="Giao diện\Giao Diện của Admin\Bảng điều hướng của Admin\ToppingAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -232,6 +216,24 @@
     </Compile>
     <Compile Include="Giao diện\Giao Diện của Admin\Bảng điều hướng của Admin\TraSuaAdmin.Designer.cs">
       <DependentUpon>TraSuaAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Giao diện\Giao Diện của Staff\Bảng điều hướng của Staff\BangDieuKhienStaff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Giao diện\Giao Diện của Staff\Bảng điều hướng của Staff\BangDieuKhienStaff.Designer.cs">
+      <DependentUpon>BangDieuKhienStaff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Giao diện\Giao Diện của Staff\Bảng điều hướng của Staff\TraSuaStaff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Giao diện\Giao Diện của Staff\Bảng điều hướng của Staff\TraSuaStaff.Designer.cs">
+      <DependentUpon>TraSuaStaff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Giao diện\Giao Diện của Staff\DashboardStaff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Giao diện\Giao Diện của Staff\DashboardStaff.Designer.cs">
+      <DependentUpon>DashboardStaff.cs</DependentUpon>
     </Compile>
     <Compile Include="Giao diện\MDIproperties.cs" />
     <Compile Include="Giao diện\Modify.cs" />
@@ -279,6 +281,12 @@
     <EmbeddedResource Include="Giao diện\Giao Diện của Admin\DashboardAdmin.resx">
       <DependentUpon>DashboardAdmin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Giao diện\Giao Diện của Staff\Bảng điều hướng của Staff\BangDieuKhienStaff.resx">
+      <DependentUpon>BangDieuKhienStaff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Giao diện\Giao Diện của Staff\Bảng điều hướng của Staff\TraSuaStaff.resx">
+      <DependentUpon>TraSuaStaff.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Giao diện\Giao Diện của Staff\DashboardStaff.resx">
       <DependentUpon>DashboardStaff.cs</DependentUpon>
     </EmbeddedResource>
@@ -303,13 +311,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EntityDeploy Include="Database.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Database.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <None Include="Database.edmx.diagram">
-      <DependentUpon>Database.edmx</DependentUpon>
-    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -337,19 +338,10 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Database.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>Database.Context.cs</LastGenOutput>
-      <DependentUpon>Database.edmx</DependentUpon>
-    </Content>
-    <Content Include="Database.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Database.edmx</DependentUpon>
-      <LastGenOutput>Database.cs</LastGenOutput>
-    </Content>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+    <Folder Include="Giao diện\Giao Diện của User\Bảng điều hướng của User\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="packages\Microsoft.Data.SqlClient.SNI.5.2.0\build\net462\Microsoft.Data.SqlClient.SNI.targets" Condition="Exists('packages\Microsoft.Data.SqlClient.SNI.5.2.0\build\net462\Microsoft.Data.SqlClient.SNI.targets')" />
