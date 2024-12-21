@@ -1,4 +1,4 @@
-﻿using OrderMillTeaProgram.Đăng_Nhập_Đăng_ký_của_User;
+﻿using Google.Apis.Gmail.v1;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -26,37 +26,33 @@ namespace OrderMillTeaProgram
         private void btnTieptuc_Click(object sender, EventArgs e)
         {
             string email = txtEmail.Text;
-
-            if (string.IsNullOrWhiteSpace(email))
+            if (email.Trim() == "")
             {
                 MessageBox.Show("Vui lòng nhập email đăng ký!");
             }
             else
             {
-                string query = "SELECT * FROM UserInfo WHERE Email = '" + email + "'";
-
-                // Sử dụng danh sách Account
-                List<Account> accounts = modify.Accounts(query);
-
-                if (accounts.Count > 0) // Email tồn tại
+                string query = "Select * from UserInfo where Email = '" + email + "' ";
+                if (modify.Accounts(query).Count != 0)
                 {
-                    this.Hide(); // Ẩn form cha
-                    FogotPassword_child forgotPasswordChild = new FogotPassword_child(email); // Truyền email sang form con
-                    forgotPasswordChild.ShowDialog(); // Hiển thị form con
-                    this.Show(); // Hiển thị lại form cha sau khi form con đóng
+                    // Sinh mã xác thực ngẫu nhiên
+                    string verificationCode = new Random().Next(100000, 999999).ToString();
+
+                    // Gửi mã xác thực qua Gmail SMTP
+                    EmailService.SendVerificationEmail(email, verificationCode);
                 }
                 else
                 {
-                    // Email không tồn tại
                     lblEmailDaDangKy.ForeColor = Color.Red;
                     txtEmail.FillColor = Color.Tomato;
                     txtEmail.BorderColor = Color.Red;
                     txtEmail.BorderThickness = 3;
                     txtEmail.PlaceholderForeColor = Color.DimGray;
+                    
                 }
             }
-        }
 
+        }
 
         private void txtEmail_TextChanged(object sender, EventArgs e)
         {
