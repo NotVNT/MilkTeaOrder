@@ -66,9 +66,10 @@
             this.frmFormLogin.Controls.Add(this.lblTextLogo);
             this.frmFormLogin.Controls.Add(this.logobox);
             this.frmFormLogin.Controls.Add(this.btnExit);
-            this.frmFormLogin.Location = new System.Drawing.Point(260, -2);
+            this.frmFormLogin.Location = new System.Drawing.Point(347, -2);
+            this.frmFormLogin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.frmFormLogin.Name = "frmFormLogin";
-            this.frmFormLogin.Size = new System.Drawing.Size(923, 801);
+            this.frmFormLogin.Size = new System.Drawing.Size(1231, 986);
             this.frmFormLogin.TabIndex = 0;
             // 
             // btnhidepass
@@ -83,9 +84,10 @@
             this.btnhidepass.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.btnhidepass.ForeColor = System.Drawing.Color.Transparent;
             this.btnhidepass.Image = ((System.Drawing.Image)(resources.GetObject("btnhidepass.Image")));
-            this.btnhidepass.Location = new System.Drawing.Point(598, 360);
+            this.btnhidepass.Location = new System.Drawing.Point(797, 443);
+            this.btnhidepass.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnhidepass.Name = "btnhidepass";
-            this.btnhidepass.Size = new System.Drawing.Size(26, 19);
+            this.btnhidepass.Size = new System.Drawing.Size(35, 23);
             this.btnhidepass.TabIndex = 9;
             this.btnhidepass.Click += new System.EventHandler(this.btnhidepass_Click);
             // 
@@ -100,9 +102,10 @@
             this.btnshowpass.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.btnshowpass.ForeColor = System.Drawing.Color.White;
             this.btnshowpass.Image = ((System.Drawing.Image)(resources.GetObject("btnshowpass.Image")));
-            this.btnshowpass.Location = new System.Drawing.Point(598, 360);
+            this.btnshowpass.Location = new System.Drawing.Point(797, 443);
+            this.btnshowpass.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnshowpass.Name = "btnshowpass";
-            this.btnshowpass.Size = new System.Drawing.Size(26, 19);
+            this.btnshowpass.Size = new System.Drawing.Size(35, 23);
             this.btnshowpass.TabIndex = 9;
             this.btnshowpass.Click += new System.EventHandler(this.btnshowpass_Click);
             // 
@@ -112,9 +115,10 @@
             this.lblDangKy.AutoSize = true;
             this.lblDangKy.Font = new System.Drawing.Font("Segoe UI Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDangKy.LinkColor = System.Drawing.Color.Black;
-            this.lblDangKy.Location = new System.Drawing.Point(413, 491);
+            this.lblDangKy.Location = new System.Drawing.Point(551, 604);
+            this.lblDangKy.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDangKy.Name = "lblDangKy";
-            this.lblDangKy.Size = new System.Drawing.Size(94, 17);
+            this.lblDangKy.Size = new System.Drawing.Size(127, 23);
             this.lblDangKy.TabIndex = 8;
             this.lblDangKy.TabStop = true;
             this.lblDangKy.Text = "Đăng ký ngay";
@@ -125,9 +129,10 @@
             this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel1.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.Silver;
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(291, 491);
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(388, 604);
+            this.guna2HtmlLabel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(116, 18);
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(144, 21);
             this.guna2HtmlLabel1.TabIndex = 7;
             this.guna2HtmlLabel1.Text = "Chưa có tài khoản ?";
             // 
@@ -138,9 +143,10 @@
             this.lblQuenMatKhau.Font = new System.Drawing.Font("Segoe UI Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblQuenMatKhau.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.lblQuenMatKhau.LinkColor = System.Drawing.Color.MediumSlateBlue;
-            this.lblQuenMatKhau.Location = new System.Drawing.Point(192, 405);
+            this.lblQuenMatKhau.Location = new System.Drawing.Point(256, 498);
+            this.lblQuenMatKhau.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblQuenMatKhau.Name = "lblQuenMatKhau";
-            this.lblQuenMatKhau.Size = new System.Drawing.Size(139, 21);
+            this.lblQuenMatKhau.Size = new System.Drawing.Size(176, 28);
             this.lblQuenMatKhau.TabIndex = 6;
             this.lblQuenMatKhau.TabStop = true;
             this.lblQuenMatKhau.Text = "Quên mật khẩu ?";
@@ -155,9 +161,10 @@
             this.btnDangNhap.FillColor = System.Drawing.Color.MediumSlateBlue;
             this.btnDangNhap.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold);
             this.btnDangNhap.ForeColor = System.Drawing.Color.White;
-            this.btnDangNhap.Location = new System.Drawing.Point(206, 440);
+            this.btnDangNhap.Location = new System.Drawing.Point(275, 542);
+            this.btnDangNhap.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnDangNhap.Name = "btnDangNhap";
-            this.btnDangNhap.Size = new System.Drawing.Size(430, 45);
+            this.btnDangNhap.Size = new System.Drawing.Size(573, 55);
             this.btnDangNhap.TabIndex = 5;
             this.btnDangNhap.Text = "Đăng Nhập";
             this.btnDangNhap.Click += new System.EventHandler(this.btnDangNhap_Click);
@@ -175,12 +182,13 @@
             this.txtMatKhau.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.txtMatKhau.ForeColor = System.Drawing.Color.Black;
             this.txtMatKhau.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtMatKhau.Location = new System.Drawing.Point(205, 349);
+            this.txtMatKhau.Location = new System.Drawing.Point(273, 430);
+            this.txtMatKhau.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtMatKhau.Name = "txtMatKhau";
             this.txtMatKhau.PasswordChar = '*';
             this.txtMatKhau.PlaceholderText = "Nhập mật khẩu";
             this.txtMatKhau.SelectedText = "";
-            this.txtMatKhau.Size = new System.Drawing.Size(429, 39);
+            this.txtMatKhau.Size = new System.Drawing.Size(572, 48);
             this.txtMatKhau.TabIndex = 4;
             // 
             // txtDangNhap
@@ -196,12 +204,13 @@
             this.txtDangNhap.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.txtDangNhap.ForeColor = System.Drawing.Color.Black;
             this.txtDangNhap.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtDangNhap.Location = new System.Drawing.Point(205, 258);
+            this.txtDangNhap.Location = new System.Drawing.Point(273, 318);
+            this.txtDangNhap.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtDangNhap.Name = "txtDangNhap";
             this.txtDangNhap.PasswordChar = '\0';
             this.txtDangNhap.PlaceholderText = "Nhập email hoặc tên tài khoản";
             this.txtDangNhap.SelectedText = "";
-            this.txtDangNhap.Size = new System.Drawing.Size(430, 39);
+            this.txtDangNhap.Size = new System.Drawing.Size(573, 48);
             this.txtDangNhap.TabIndex = 4;
             this.txtDangNhap.TextChanged += new System.EventHandler(this.txtDangNhap_TextChanged);
             // 
@@ -209,9 +218,10 @@
             // 
             this.lblMk.AutoSize = true;
             this.lblMk.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMk.Location = new System.Drawing.Point(204, 330);
+            this.lblMk.Location = new System.Drawing.Point(272, 406);
+            this.lblMk.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblMk.Name = "lblMk";
-            this.lblMk.Size = new System.Drawing.Size(67, 16);
+            this.lblMk.Size = new System.Drawing.Size(89, 21);
             this.lblMk.TabIndex = 3;
             this.lblMk.Text = "Mật khẩu";
             // 
@@ -219,9 +229,10 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(203, 330);
+            this.label3.Location = new System.Drawing.Point(271, 406);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(67, 16);
+            this.label3.Size = new System.Drawing.Size(89, 21);
             this.label3.TabIndex = 3;
             this.label3.Text = "Mật khẩu";
             // 
@@ -229,9 +240,10 @@
             // 
             this.lblTenDN.AutoSize = true;
             this.lblTenDN.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTenDN.Location = new System.Drawing.Point(203, 239);
+            this.lblTenDN.Location = new System.Drawing.Point(271, 294);
+            this.lblTenDN.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTenDN.Name = "lblTenDN";
-            this.lblTenDN.Size = new System.Drawing.Size(104, 16);
+            this.lblTenDN.Size = new System.Drawing.Size(141, 21);
             this.lblTenDN.TabIndex = 3;
             this.lblTenDN.Text = "Tên Đăng Nhập";
             // 
@@ -239,9 +251,10 @@
             // 
             this.lblTextLogo.AutoSize = true;
             this.lblTextLogo.Font = new System.Drawing.Font("Arial Rounded MT Bold", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTextLogo.Location = new System.Drawing.Point(201, 154);
+            this.lblTextLogo.Location = new System.Drawing.Point(268, 190);
+            this.lblTextLogo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTextLogo.Name = "lblTextLogo";
-            this.lblTextLogo.Size = new System.Drawing.Size(349, 32);
+            this.lblTextLogo.Size = new System.Drawing.Size(442, 39);
             this.lblTextLogo.TabIndex = 2;
             this.lblTextLogo.Text = "Đăng Nhập Quán Trà Sữa ";
             // 
@@ -250,10 +263,11 @@
             this.logobox.FillColor = System.Drawing.Color.Transparent;
             this.logobox.Image = ((System.Drawing.Image)(resources.GetObject("logobox.Image")));
             this.logobox.ImageRotate = 0F;
-            this.logobox.Location = new System.Drawing.Point(175, 52);
+            this.logobox.Location = new System.Drawing.Point(233, 53);
+            this.logobox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.logobox.Name = "logobox";
             this.logobox.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.logobox.Size = new System.Drawing.Size(132, 119);
+            this.logobox.Size = new System.Drawing.Size(157, 157);
             this.logobox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.logobox.TabIndex = 1;
             this.logobox.TabStop = false;
@@ -271,22 +285,24 @@
             this.btnExit.Font = new System.Drawing.Font("Segoe UI Light", 9F);
             this.btnExit.ForeColor = System.Drawing.Color.Transparent;
             this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
-            this.btnExit.Location = new System.Drawing.Point(899, 0);
+            this.btnExit.Location = new System.Drawing.Point(1199, 0);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnExit.Name = "btnExit";
             this.btnExit.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.btnExit.Size = new System.Drawing.Size(24, 31);
+            this.btnExit.Size = new System.Drawing.Size(32, 38);
             this.btnExit.TabIndex = 0;
             this.btnExit.UseTransparentBackground = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // LoginForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ClientSize = new System.Drawing.Size(1556, 769);
+            this.ClientSize = new System.Drawing.Size(1942, 946);
             this.Controls.Add(this.frmFormLogin);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "LoginForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";

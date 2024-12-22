@@ -53,7 +53,7 @@
             this.frmForgotPass.Controls.Add(this.logobox);
             this.frmForgotPass.Controls.Add(this.btnExit);
             this.frmForgotPass.Location = new System.Drawing.Point(347, -2);
-            this.frmForgotPass.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.frmForgotPass.Margin = new System.Windows.Forms.Padding(4);
             this.frmForgotPass.Name = "frmForgotPass";
             this.frmForgotPass.Size = new System.Drawing.Size(1235, 1925);
             this.frmForgotPass.TabIndex = 0;
@@ -81,7 +81,7 @@
             this.btnTieptuc.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold);
             this.btnTieptuc.ForeColor = System.Drawing.Color.White;
             this.btnTieptuc.Location = new System.Drawing.Point(273, 390);
-            this.btnTieptuc.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnTieptuc.Margin = new System.Windows.Forms.Padding(4);
             this.btnTieptuc.Name = "btnTieptuc";
             this.btnTieptuc.Size = new System.Drawing.Size(573, 55);
             this.btnTieptuc.TabIndex = 5;
@@ -140,10 +140,10 @@
             this.logobox.Image = ((System.Drawing.Image)(resources.GetObject("logobox.Image")));
             this.logobox.ImageRotate = 0F;
             this.logobox.Location = new System.Drawing.Point(233, 64);
-            this.logobox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.logobox.Margin = new System.Windows.Forms.Padding(4);
             this.logobox.Name = "logobox";
             this.logobox.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.logobox.Size = new System.Drawing.Size(176, 146);
+            this.logobox.Size = new System.Drawing.Size(180, 146);
             this.logobox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.logobox.TabIndex = 1;
             this.logobox.TabStop = false;
@@ -162,7 +162,7 @@
             this.btnExit.ForeColor = System.Drawing.Color.Transparent;
             this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
             this.btnExit.Location = new System.Drawing.Point(1199, 0);
-            this.btnExit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(4);
             this.btnExit.Name = "btnExit";
             this.btnExit.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.btnExit.Size = new System.Drawing.Size(32, 38);
@@ -178,7 +178,7 @@
             this.ClientSize = new System.Drawing.Size(1942, 946);
             this.Controls.Add(this.frmForgotPass);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ForgotPassword";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";

@@ -47,9 +47,11 @@ namespace OrderMillTeaProgram
 
         private void lblQuenMatKhau_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            ForgotPassword Forgot = new ForgotPassword();
-            Forgot.Show();
-            this.Hide();
+            // Chuyển sang form ForgotPassword
+            this.Hide(); // Ẩn LoginForm
+            ForgotPassword forgotPassword = new ForgotPassword();
+            forgotPassword.ShowDialog(); // Hiển thị ForgotPassword
+            this.Show(); // Hiển thị lại LoginForm sau khi ForgotPassword đóng
         }
 
      

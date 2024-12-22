@@ -18,7 +18,7 @@ namespace OrderMillTeaProgram
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FogotPassword_child());
+            Application.Run(new LoginForm());
         }
     }
 }

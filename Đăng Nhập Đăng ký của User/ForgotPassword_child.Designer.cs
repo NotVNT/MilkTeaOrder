@@ -28,7 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FogotPassword_child));
             this.frmForgotPass = new Guna.UI2.WinForms.Guna2Panel();
+            this.logobox = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.imgNextStep1 = new System.Windows.Forms.Button();
             this.imgNextStep2 = new System.Windows.Forms.Button();
             this.lblNextStep1 = new System.Windows.Forms.Label();
@@ -49,12 +51,14 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.frmForgotPass.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.logobox)).BeginInit();
             this.SuspendLayout();
             // 
             // frmForgotPass
             // 
             this.frmForgotPass.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.frmForgotPass.BackColor = System.Drawing.Color.White;
+            this.frmForgotPass.Controls.Add(this.logobox);
             this.frmForgotPass.Controls.Add(this.imgNextStep1);
             this.frmForgotPass.Controls.Add(this.imgNextStep2);
             this.frmForgotPass.Controls.Add(this.lblNextStep1);
@@ -80,13 +84,27 @@
             this.frmForgotPass.Size = new System.Drawing.Size(1235, 1925);
             this.frmForgotPass.TabIndex = 0;
             // 
+            // logobox
+            // 
+            this.logobox.FillColor = System.Drawing.Color.Transparent;
+            this.logobox.Image = ((System.Drawing.Image)(resources.GetObject("logobox.Image")));
+            this.logobox.ImageRotate = 0F;
+            this.logobox.Location = new System.Drawing.Point(153, 15);
+            this.logobox.Margin = new System.Windows.Forms.Padding(4);
+            this.logobox.Name = "logobox";
+            this.logobox.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.logobox.Size = new System.Drawing.Size(191, 157);
+            this.logobox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.logobox.TabIndex = 63;
+            this.logobox.TabStop = false;
+            // 
             // imgNextStep1
             // 
             this.imgNextStep1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.imgNextStep1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.imgNextStep1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.imgNextStep1.ForeColor = System.Drawing.Color.White;
-            this.imgNextStep1.Location = new System.Drawing.Point(417, 329);
+            this.imgNextStep1.Location = new System.Drawing.Point(417, 320);
             this.imgNextStep1.Margin = new System.Windows.Forms.Padding(4);
             this.imgNextStep1.Name = "imgNextStep1";
             this.imgNextStep1.Size = new System.Drawing.Size(51, 41);
@@ -112,12 +130,12 @@
             // 
             this.lblNextStep1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblNextStep1.AutoSize = true;
-            this.lblNextStep1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNextStep1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNextStep1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.lblNextStep1.Location = new System.Drawing.Point(270, 339);
+            this.lblNextStep1.Location = new System.Drawing.Point(253, 330);
             this.lblNextStep1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNextStep1.Name = "lblNextStep1";
-            this.lblNextStep1.Size = new System.Drawing.Size(149, 23);
+            this.lblNextStep1.Size = new System.Drawing.Size(166, 25);
             this.lblNextStep1.TabIndex = 59;
             this.lblNextStep1.Text = "Bước Tiếp Theo";
             this.lblNextStep1.Visible = false;
@@ -126,12 +144,12 @@
             // 
             this.lblNextStep2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblNextStep2.AutoSize = true;
-            this.lblNextStep2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNextStep2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNextStep2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.lblNextStep2.Location = new System.Drawing.Point(270, 616);
+            this.lblNextStep2.Location = new System.Drawing.Point(253, 622);
             this.lblNextStep2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNextStep2.Name = "lblNextStep2";
-            this.lblNextStep2.Size = new System.Drawing.Size(149, 23);
+            this.lblNextStep2.Size = new System.Drawing.Size(166, 25);
             this.lblNextStep2.TabIndex = 60;
             this.lblNextStep2.Text = "Bước Tiếp Theo";
             this.lblNextStep2.Visible = false;
@@ -141,7 +159,7 @@
             this.label7.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label7.AutoSize = true;
             this.label7.ForeColor = System.Drawing.Color.Blue;
-            this.label7.Location = new System.Drawing.Point(317, 339);
+            this.label7.Location = new System.Drawing.Point(317, 330);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(560, 16);
@@ -168,7 +186,7 @@
             this.btnForgetPasswordSendMail.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnForgetPasswordSendMail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnForgetPasswordSendMail.ForeColor = System.Drawing.Color.White;
-            this.btnForgetPasswordSendMail.Location = new System.Drawing.Point(496, 214);
+            this.btnForgetPasswordSendMail.Location = new System.Drawing.Point(627, 213);
             this.btnForgetPasswordSendMail.Margin = new System.Windows.Forms.Padding(4);
             this.btnForgetPasswordSendMail.Name = "btnForgetPasswordSendMail";
             this.btnForgetPasswordSendMail.Size = new System.Drawing.Size(167, 46);
@@ -180,59 +198,63 @@
             // btnForgetPassordSendAgain
             // 
             this.btnForgetPassordSendAgain.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnForgetPassordSendAgain.BackColor = System.Drawing.Color.SeaGreen;
+            this.btnForgetPassordSendAgain.BackColor = System.Drawing.Color.DarkViolet;
             this.btnForgetPassordSendAgain.Enabled = false;
             this.btnForgetPassordSendAgain.FlatAppearance.BorderSize = 0;
             this.btnForgetPassordSendAgain.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnForgetPassordSendAgain.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnForgetPassordSendAgain.ForeColor = System.Drawing.Color.White;
-            this.btnForgetPassordSendAgain.Location = new System.Drawing.Point(697, 465);
+            this.btnForgetPassordSendAgain.Location = new System.Drawing.Point(697, 456);
             this.btnForgetPassordSendAgain.Margin = new System.Windows.Forms.Padding(4);
             this.btnForgetPassordSendAgain.Name = "btnForgetPassordSendAgain";
-            this.btnForgetPassordSendAgain.Size = new System.Drawing.Size(167, 46);
+            this.btnForgetPassordSendAgain.Size = new System.Drawing.Size(187, 46);
             this.btnForgetPassordSendAgain.TabIndex = 55;
-            this.btnForgetPassordSendAgain.Text = "Gửi Lại";
+            this.btnForgetPassordSendAgain.Text = "Gửi Lại Mã";
             this.btnForgetPassordSendAgain.UseVisualStyleBackColor = false;
+            this.btnForgetPassordSendAgain.Click += new System.EventHandler(this.btnForgetPassordSendAgain_Click);
             // 
             // btnForgetPassordNextStep
             // 
             this.btnForgetPassordNextStep.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnForgetPassordNextStep.BackColor = System.Drawing.Color.Blue;
+            this.btnForgetPassordNextStep.BackColor = System.Drawing.Color.DarkViolet;
             this.btnForgetPassordNextStep.Enabled = false;
             this.btnForgetPassordNextStep.FlatAppearance.BorderSize = 0;
             this.btnForgetPassordNextStep.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnForgetPassordNextStep.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnForgetPassordNextStep.ForeColor = System.Drawing.Color.White;
-            this.btnForgetPassordNextStep.Location = new System.Drawing.Point(428, 465);
+            this.btnForgetPassordNextStep.Location = new System.Drawing.Point(428, 456);
             this.btnForgetPassordNextStep.Margin = new System.Windows.Forms.Padding(4);
             this.btnForgetPassordNextStep.Name = "btnForgetPassordNextStep";
-            this.btnForgetPassordNextStep.Size = new System.Drawing.Size(167, 46);
+            this.btnForgetPassordNextStep.Size = new System.Drawing.Size(186, 46);
             this.btnForgetPassordNextStep.TabIndex = 56;
             this.btnForgetPassordNextStep.Text = "Bước Tiếp Theo";
             this.btnForgetPassordNextStep.UseVisualStyleBackColor = false;
+            this.btnForgetPassordNextStep.Click += new System.EventHandler(this.btnForgetPassordNextStep_Click);
             // 
             // btnForgetPasswordChange
             // 
             this.btnForgetPasswordChange.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnForgetPasswordChange.BackColor = System.Drawing.Color.Blue;
+            this.btnForgetPasswordChange.BackColor = System.Drawing.Color.DarkViolet;
             this.btnForgetPasswordChange.Enabled = false;
             this.btnForgetPasswordChange.FlatAppearance.BorderSize = 0;
             this.btnForgetPasswordChange.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnForgetPasswordChange.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnForgetPasswordChange.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnForgetPasswordChange.ForeColor = System.Drawing.Color.White;
             this.btnForgetPasswordChange.Location = new System.Drawing.Point(522, 790);
             this.btnForgetPasswordChange.Margin = new System.Windows.Forms.Padding(4);
             this.btnForgetPasswordChange.Name = "btnForgetPasswordChange";
-            this.btnForgetPasswordChange.Size = new System.Drawing.Size(167, 46);
+            this.btnForgetPasswordChange.Size = new System.Drawing.Size(250, 46);
             this.btnForgetPasswordChange.TabIndex = 53;
-            this.btnForgetPasswordChange.Text = "Đổi";
+            this.btnForgetPasswordChange.Text = "Quay Về Đăng Nhập";
             this.btnForgetPasswordChange.UseVisualStyleBackColor = false;
+            this.btnForgetPasswordChange.Click += new System.EventHandler(this.btnForgetPasswordChange_Click_1);
             // 
             // txtForgrtPassswordCode
             // 
             this.txtForgrtPassswordCode.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtForgrtPassswordCode.Enabled = false;
-            this.txtForgrtPassswordCode.Location = new System.Drawing.Point(560, 391);
+            this.txtForgrtPassswordCode.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtForgrtPassswordCode.Location = new System.Drawing.Point(560, 382);
             this.txtForgrtPassswordCode.Margin = new System.Windows.Forms.Padding(4);
             this.txtForgrtPassswordCode.Multiline = true;
             this.txtForgrtPassswordCode.Name = "txtForgrtPassswordCode";
@@ -243,6 +265,7 @@
             // 
             this.txtForgetPasswordConformPassword.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtForgetPasswordConformPassword.Enabled = false;
+            this.txtForgetPasswordConformPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtForgetPasswordConformPassword.Location = new System.Drawing.Point(560, 715);
             this.txtForgetPasswordConformPassword.Margin = new System.Windows.Forms.Padding(4);
             this.txtForgetPasswordConformPassword.Multiline = true;
@@ -254,6 +277,7 @@
             // 
             this.txtForgetPasswordNewPassword.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtForgetPasswordNewPassword.Enabled = false;
+            this.txtForgetPasswordNewPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtForgetPasswordNewPassword.Location = new System.Drawing.Point(560, 666);
             this.txtForgetPasswordNewPassword.Margin = new System.Windows.Forms.Padding(4);
             this.txtForgetPasswordNewPassword.Multiline = true;
@@ -279,7 +303,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Blue;
-            this.label6.Location = new System.Drawing.Point(344, 407);
+            this.label6.Location = new System.Drawing.Point(344, 398);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(141, 23);
@@ -316,12 +340,12 @@
             // 
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Red;
-            this.label4.Location = new System.Drawing.Point(600, 172);
+            this.label4.Location = new System.Drawing.Point(623, 168);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(198, 21);
+            this.label4.Size = new System.Drawing.Size(182, 20);
             this.label4.TabIndex = 48;
             this.label4.Text = "Email này không tồn tại";
             this.label4.Visible = false;
@@ -330,12 +354,12 @@
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Blue;
             this.label1.Location = new System.Drawing.Point(344, 117);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(118, 23);
+            this.label1.Size = new System.Drawing.Size(112, 25);
             this.label1.TabIndex = 47;
             this.label1.Text = "Nhập Email";
             // 
@@ -354,6 +378,7 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.frmForgotPass.ResumeLayout(false);
             this.frmForgotPass.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.logobox)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -380,6 +405,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label1;
+        private Guna.UI2.WinForms.Guna2CirclePictureBox logobox;
     }
 }
 

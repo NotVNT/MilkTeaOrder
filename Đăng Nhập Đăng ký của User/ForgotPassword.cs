@@ -40,10 +40,9 @@ namespace OrderMillTeaProgram
 
                 if (accounts.Count > 0) // Email tồn tại
                 {
-                    this.Hide(); // Ẩn form cha
                     FogotPassword_child forgotPasswordChild = new FogotPassword_child(email); // Truyền email sang form con
                     forgotPasswordChild.ShowDialog(); // Hiển thị form con
-                    this.Show(); // Hiển thị lại form cha sau khi form con đóng
+                    this.Hide(); // Ẩn form hiện tại (nếu cần)
                 }
                 else
                 {
