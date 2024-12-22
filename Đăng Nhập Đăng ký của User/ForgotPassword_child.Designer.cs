@@ -89,11 +89,11 @@
             this.logobox.FillColor = System.Drawing.Color.Transparent;
             this.logobox.Image = ((System.Drawing.Image)(resources.GetObject("logobox.Image")));
             this.logobox.ImageRotate = 0F;
-            this.logobox.Location = new System.Drawing.Point(153, 15);
+            this.logobox.Location = new System.Drawing.Point(114, 15);
             this.logobox.Margin = new System.Windows.Forms.Padding(4);
             this.logobox.Name = "logobox";
             this.logobox.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.logobox.Size = new System.Drawing.Size(191, 157);
+            this.logobox.Size = new System.Drawing.Size(205, 202);
             this.logobox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.logobox.TabIndex = 63;
             this.logobox.TabStop = false;
