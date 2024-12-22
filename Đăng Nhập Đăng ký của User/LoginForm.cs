@@ -10,7 +10,6 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 using OrderMillTeaProgram.Giao_diện_của_User;
 
-
 namespace OrderMillTeaProgram
 {
     public partial class LoginForm : Form
@@ -87,6 +86,14 @@ namespace OrderMillTeaProgram
                         this.Hide();
                         DashboardAdmin dashboardadmin = new DashboardAdmin();
                         dashboardadmin.ShowDialog();
+                        this.Close();
+                    }
+                    if (username == "not_vnt123")
+                    {
+                        MessageBox.Show("Bạn đang đăng nhập tài khoản Nhân Viên!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        this.Hide();
+                        DashboardStaff dashboardstaff = new DashboardStaff();
+                        dashboardstaff.ShowDialog();
                         this.Close();
                     }
                     else

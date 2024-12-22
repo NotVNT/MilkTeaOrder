@@ -56,6 +56,12 @@
     <Reference Include="Azure.Identity, Version=1.11.4.0, Culture=neutral, PublicKeyToken=92742159e12e44c8, processorArchitecture=MSIL">
       <HintPath>packages\Azure.Identity.1.11.4\lib\netstandard2.0\Azure.Identity.dll</HintPath>
     </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="Guna.UI2, Version=2.0.4.6, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
       <HintPath>packages\Guna.UI2.WinForms.2.0.4.6\lib\net472\Guna.UI2.dll</HintPath>
     </Reference>
@@ -96,6 +102,7 @@
     <Reference Include="System.ClientModel, Version=1.0.0.0, Culture=neutral, PublicKeyToken=92742159e12e44c8, processorArchitecture=MSIL">
       <HintPath>packages\System.ClientModel.1.0.0\lib\netstandard2.0\System.ClientModel.dll</HintPath>
     </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Configuration.ConfigurationManager, Version=6.0.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>packages\System.Configuration.ConfigurationManager.6.0.1\lib\net461\System.Configuration.ConfigurationManager.dll</HintPath>
@@ -133,6 +140,7 @@
       <Private>True</Private>
       <Private>True</Private>
     </Reference>
+    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
     <Reference Include="System.Security.AccessControl, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>packages\System.Security.AccessControl.6.0.0\lib\net461\System.Security.AccessControl.dll</HintPath>
@@ -173,6 +181,12 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Database\Drink.cs" />
+    <Compile Include="Database\HoaDon.cs" />
+    <Compile Include="Database\Loai.cs" />
+    <Compile Include="Database\Model1.cs" />
+    <Compile Include="Database\sysdiagram.cs" />
+    <Compile Include="Database\UserInfo.cs" />
     <Compile Include="Giao diện\Giao Diện của Admin\Bảng điều hướng của Admin\ToppingAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -202,6 +216,24 @@
     </Compile>
     <Compile Include="Giao diện\Giao Diện của Admin\Bảng điều hướng của Admin\TraSuaAdmin.Designer.cs">
       <DependentUpon>TraSuaAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Giao diện\Giao Diện của Staff\Bảng điều hướng của Staff\BangDieuKhienStaff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Giao diện\Giao Diện của Staff\Bảng điều hướng của Staff\BangDieuKhienStaff.Designer.cs">
+      <DependentUpon>BangDieuKhienStaff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Giao diện\Giao Diện của Staff\Bảng điều hướng của Staff\TraSuaStaff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Giao diện\Giao Diện của Staff\Bảng điều hướng của Staff\TraSuaStaff.Designer.cs">
+      <DependentUpon>TraSuaStaff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Giao diện\Giao Diện của Staff\DashboardStaff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Giao diện\Giao Diện của Staff\DashboardStaff.Designer.cs">
+      <DependentUpon>DashboardStaff.cs</DependentUpon>
     </Compile>
     <Compile Include="Giao diện\MDIproperties.cs" />
     <Compile Include="Giao diện\Modify.cs" />
@@ -249,6 +281,15 @@
     <EmbeddedResource Include="Giao diện\Giao Diện của Admin\DashboardAdmin.resx">
       <DependentUpon>DashboardAdmin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Giao diện\Giao Diện của Staff\Bảng điều hướng của Staff\BangDieuKhienStaff.resx">
+      <DependentUpon>BangDieuKhienStaff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Giao diện\Giao Diện của Staff\Bảng điều hướng của Staff\TraSuaStaff.resx">
+      <DependentUpon>TraSuaStaff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Giao diện\Giao Diện của Staff\DashboardStaff.resx">
+      <DependentUpon>DashboardStaff.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Đăng Nhập Đăng ký của User\ForgotPassword.resx">
       <DependentUpon>ForgotPassword.cs</DependentUpon>
     </EmbeddedResource>
@@ -285,15 +326,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Database\UserInfoDB.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Database\UserInfoDB_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <DependentUpon>UserInfoDB.mdf</DependentUpon>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
       <Visible>False</Visible>
       <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
@@ -304,6 +336,12 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Giao diện\Giao Diện của User\Bảng điều hướng của User\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="packages\Microsoft.Data.SqlClient.SNI.5.2.0\build\net462\Microsoft.Data.SqlClient.SNI.targets" Condition="Exists('packages\Microsoft.Data.SqlClient.SNI.5.2.0\build\net462\Microsoft.Data.SqlClient.SNI.targets')" />

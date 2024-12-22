@@ -9,38 +9,48 @@ namespace OrderMillTeaProgram
 {
     class Modify
     {
-        public Modify() 
-        { 
+        public Modify()
+        {
 
         }
-        SqlCommand SqlCommand; //truy vấn các câu lệnh crud,....
-        SqlDataReader dataReader; // đọc dữ liệu trong bảng
         public List<Account> Accounts(string query)
         {
             List<Account> accounts = new List<Account>();
             using (SqlConnection sqlConnection = Connection.GetSqlConnection())
             {
                 sqlConnection.Open();
-                SqlCommand = new SqlCommand(query, sqlConnection);
-                dataReader = SqlCommand.ExecuteReader();
-                while (dataReader.Read())
+                using (SqlCommand sqlCommand = new SqlCommand(query, sqlConnection))
                 {
-                    accounts.Add(new Account(dataReader.GetString(0),dataReader.GetString(1)));
+                    using (SqlDataReader dataReader = sqlCommand.ExecuteReader())
+                    {
+                        while (dataReader.Read())
+                        {
+                            accounts.Add(new Account(dataReader.GetString(0), dataReader.GetString(1)));
+                        }
+                    }
                 }
-                sqlConnection.Close();
             }
-                return accounts;
+            return accounts;
         }
         // hàm này dùng để Đăng ký tài khoản
-        public void Command(string query)
+        public void Command(string query, Dictionary<string, object> parameters = null)
         {
             using (SqlConnection sqlConnection = Connection.GetSqlConnection())
             {
                 sqlConnection.Open();
-                SqlCommand = new SqlCommand (query, sqlConnection);
-                SqlCommand.ExecuteNonQuery(); // thực thi câu truy vấn
-                sqlConnection.Close();
+                using (SqlCommand sqlCommand = new SqlCommand(query, sqlConnection))
+                {
+                    if (parameters != null)
+                    {
+                        foreach (var parameter in parameters)
+                        {
+                            sqlCommand.Parameters.AddWithValue(parameter.Key, parameter.Value);
+                        }
+                    }
+                    sqlCommand.ExecuteNonQuery();
+                }
             }
         }
     }
 }
+

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -105,25 +106,55 @@ namespace OrderMillTeaProgram
                 MessageBox.Show("Vui lòng nhập đúng định dạng Email!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
-            if(modify.Accounts("Select * from UserInfo where Email = '"+ email +"'").Count != 0)
-            {
-                MessageBox.Show("Email này đã được đăng ký, vui lòng đăng ký Email khác!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                     return;
-            }
+
+
             try
             {
-                string query = "Insert into UserInfo values ('"+ username +"','"+ password +"','"+ email +"')";
-                modify.Command(query);
-                if(MessageBox.Show("Đăng ký thành công! Bạn có muốn đăng nhập luôn không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+                // Use parameterized query to check for existing username or email
+                string checkQuery = "SELECT COUNT(*) FROM UserInfo WHERE UserName = @username OR Email = @email";
+                using (SqlConnection sqlConnection = Connection.GetSqlConnection())
+                {
+                    sqlConnection.Open();
+                    using (SqlCommand sqlCommand = new SqlCommand(checkQuery, sqlConnection))
+                    {
+                        sqlCommand.Parameters.AddWithValue("@username", username);
+                        sqlCommand.Parameters.AddWithValue("@email", email);
+                        int count = (int)sqlCommand.ExecuteScalar();
+                        if (count > 0)
+                        {
+                            MessageBox.Show("Tên tài khoản hoặc Email này đã được đăng ký!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            return;
+                        }
+                    }
+                }
+
+
+                string query = "INSERT INTO UserInfo (UserName, Password, Email) VALUES (@username, @password, @email)";
+                var parameters = new Dictionary<string, object>
+                {
+                    { "@username", username },
+                    { "@password", password },
+                    { "@email", email }
+                };
+                modify.Command(query, parameters);
+
+                if (MessageBox.Show("Đăng ký thành công! Bạn có muốn đăng nhập luôn không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
                 {
                     LoginForm Login = new LoginForm();
                     Login.Show();
                     this.Hide();
                 }
             }
-            catch
+            catch (SqlException ex)
             {
-                MessageBox.Show("Tên tài khoản này đã được đăng ký, vui lòng đăng ký tên tài khoản khác!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                if (ex.Number == 2627)
+                {
+                    MessageBox.Show("Tên tài khoản hoặc Email này đã được đăng ký!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Đã xảy ra lỗi trong quá trình đăng ký. Vui lòng thử lại sau!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
     }
