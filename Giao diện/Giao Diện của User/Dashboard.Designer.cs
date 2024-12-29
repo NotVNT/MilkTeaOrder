@@ -69,7 +69,7 @@
             this.guna2Panel3.CustomBorderColor = System.Drawing.Color.White;
             this.guna2Panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2Panel3.Location = new System.Drawing.Point(385, 0);
-            this.guna2Panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2Panel3.Margin = new System.Windows.Forms.Padding(4);
             this.guna2Panel3.Name = "guna2Panel3";
             this.guna2Panel3.Size = new System.Drawing.Size(1153, 160);
             this.guna2Panel3.TabIndex = 13;
@@ -80,7 +80,7 @@
             this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
             this.guna2PictureBox1.ImageRotate = 0F;
             this.guna2PictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.guna2PictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2PictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
             this.guna2PictureBox1.Size = new System.Drawing.Size(1153, 160);
             this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -96,7 +96,7 @@
             this.guna2Panel2.CustomBorderColor = System.Drawing.Color.White;
             this.guna2Panel2.Dock = System.Windows.Forms.DockStyle.Right;
             this.guna2Panel2.Location = new System.Drawing.Point(1538, 0);
-            this.guna2Panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2Panel2.Margin = new System.Windows.Forms.Padding(4);
             this.guna2Panel2.Name = "guna2Panel2";
             this.guna2Panel2.Size = new System.Drawing.Size(404, 1102);
             this.guna2Panel2.TabIndex = 12;
@@ -109,7 +109,7 @@
             this.guna2Panel4.CustomBorderColor = System.Drawing.Color.White;
             this.guna2Panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2Panel4.Location = new System.Drawing.Point(0, 0);
-            this.guna2Panel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2Panel4.Margin = new System.Windows.Forms.Padding(4);
             this.guna2Panel4.Name = "guna2Panel4";
             this.guna2Panel4.Size = new System.Drawing.Size(404, 107);
             this.guna2Panel4.TabIndex = 12;
@@ -117,7 +117,7 @@
             // splitter1
             // 
             this.splitter1.Location = new System.Drawing.Point(0, 0);
-            this.splitter1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.splitter1.Margin = new System.Windows.Forms.Padding(4);
             this.splitter1.Name = "splitter1";
             this.splitter1.Size = new System.Drawing.Size(4, 1102);
             this.splitter1.TabIndex = 0;
@@ -152,7 +152,7 @@
             this.guna2Panel1.CustomBorderColor = System.Drawing.Color.Silver;
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
-            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(4);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(385, 1102);
             this.guna2Panel1.TabIndex = 0;
@@ -167,7 +167,7 @@
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.Location = new System.Drawing.Point(12, 326);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(365, 63);
             this.button1.TabIndex = 0;
@@ -185,7 +185,7 @@
             this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
             this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button3.Location = new System.Drawing.Point(12, 559);
-            this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(365, 63);
             this.button3.TabIndex = 0;
@@ -203,7 +203,7 @@
             this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
             this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button4.Location = new System.Drawing.Point(12, 476);
-            this.button4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button4.Margin = new System.Windows.Forms.Padding(4);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(365, 63);
             this.button4.TabIndex = 0;
@@ -221,7 +221,7 @@
             this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button2.Location = new System.Drawing.Point(12, 396);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(365, 63);
             this.button2.TabIndex = 0;
@@ -251,7 +251,7 @@
             this.guna2Panel10.Controls.Add(this.button6);
             this.guna2Panel10.CustomBorderColor = System.Drawing.Color.White;
             this.guna2Panel10.Location = new System.Drawing.Point(-29, -12);
-            this.guna2Panel10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2Panel10.Margin = new System.Windows.Forms.Padding(4);
             this.guna2Panel10.Name = "guna2Panel10";
             this.guna2Panel10.Size = new System.Drawing.Size(415, 308);
             this.guna2Panel10.TabIndex = 11;
@@ -319,14 +319,13 @@
             this.button6.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button6.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.button6.Location = new System.Drawing.Point(303, 249);
-            this.button6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button6.Margin = new System.Windows.Forms.Padding(4);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(100, 42);
             this.button6.TabIndex = 13;
             this.button6.Text = "Nạp tiền";
             this.button6.UseVisualStyleBackColor = false;
             // 
-
             // guna2BorderlessForm1
             // 
             this.guna2BorderlessForm1.ContainerControl = this;
@@ -347,7 +346,7 @@
             this.guna2Panel5.CustomBorderColor = System.Drawing.Color.White;
             this.guna2Panel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.guna2Panel5.Location = new System.Drawing.Point(385, 160);
-            this.guna2Panel5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2Panel5.Margin = new System.Windows.Forms.Padding(4);
             this.guna2Panel5.Name = "guna2Panel5";
             this.guna2Panel5.Size = new System.Drawing.Size(1153, 942);
             this.guna2Panel5.TabIndex = 14;
@@ -363,7 +362,7 @@
             this.Controls.Add(this.guna2Panel2);
             this.Controls.Add(this.guna2Panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Dashboard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
