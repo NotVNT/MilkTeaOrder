@@ -108,7 +108,7 @@
             // 
             // btnAddGioHang
             // 
-            this.btnAddGioHang.BackColor = System.Drawing.Color.Aquamarine;
+            this.btnAddGioHang.BackColor = System.Drawing.SystemColors.Control;
             this.btnAddGioHang.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnAddGioHang.Location = new System.Drawing.Point(311, 558);
             this.btnAddGioHang.Name = "btnAddGioHang";
@@ -119,7 +119,7 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel2.BackColor = System.Drawing.SystemColors.Control;
             this.panel2.Controls.Add(this.btnAddGioHang);
             this.panel2.Controls.Add(this.btnDatMon);
             this.panel2.Controls.Add(this.clbDa);
@@ -143,7 +143,7 @@
             // 
             // btnDatMon
             // 
-            this.btnDatMon.BackColor = System.Drawing.Color.Aquamarine;
+            this.btnDatMon.BackColor = System.Drawing.SystemColors.Control;
             this.btnDatMon.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnDatMon.Location = new System.Drawing.Point(456, 558);
             this.btnDatMon.Name = "btnDatMon";
@@ -274,9 +274,9 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label1.Location = new System.Drawing.Point(22, 18);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(282, 36);
+            this.label1.Size = new System.Drawing.Size(247, 36);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Trà Sữa Thái Xanh";
+            this.label1.Text = "Trà Đào Cam Sả";
             // 
             // TraDaoCamSa
             // 

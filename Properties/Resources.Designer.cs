@@ -10,8 +10,9 @@
 
 namespace OrderMillTeaProgram.Properties {
     using System;
-    
-    
+    using System.Drawing;
+
+
     /// <summary>
     ///   A strongly-typed resource class, for looking up localized strings, etc.
     /// </summary>
@@ -23,7 +24,18 @@ namespace OrderMillTeaProgram.Properties {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class Resources {
-        
+#pragma warning disable CS1717 // Assignment made to same variable
+        internal static readonly Image BanhFlan = Properties.Resources.BanhFlan;
+#pragma warning restore CS1717 // Assignment made to same variable
+#pragma warning disable CS1717 // Assignment made to same variable
+        internal static readonly Image Tiramisu = Properties.Resources.Tiramisu;
+#pragma warning restore CS1717 // Assignment made to same variable
+#pragma warning disable CS1717 // Assignment made to same variable
+        internal static readonly Image CheeseCake = Properties.Resources.CheeseCake;
+#pragma warning restore CS1717 // Assignment made to same variable
+#pragma warning disable CS1717 // Assignment made to same variable
+        internal static readonly Image Cupcake = Properties.Resources.Cupcake;
+#pragma warning restore CS1717 // Assignment made to same variable
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
@@ -63,9 +75,49 @@ namespace OrderMillTeaProgram.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap banhflan {
+            get {
+                object obj = ResourceManager.GetObject("banhflan", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap cheesecake {
+            get {
+                object obj = ResourceManager.GetObject("cheesecake", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap cupcake {
+            get {
+                object obj = ResourceManager.GetObject("cupcake", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap hongtratac {
             get {
                 object obj = ResourceManager.GetObject("hongtratac", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tiramisu {
+            get {
+                object obj = ResourceManager.GetObject("tiramisu", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -60,7 +60,7 @@ namespace OrderMillTeaProgram.Giao_diện.Giao_Diện_của_User.All_form_TS
             // 
             // btnDatMon
             // 
-            this.btnDatMon.BackColor = System.Drawing.Color.Aquamarine;
+            this.btnDatMon.BackColor = System.Drawing.SystemColors.Control;
             this.btnDatMon.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnDatMon.Location = new System.Drawing.Point(456, 558);
             this.btnDatMon.Name = "btnDatMon";
@@ -108,12 +108,12 @@ namespace OrderMillTeaProgram.Giao_diện.Giao_Diện_của_User.All_form_TS
             this.clbTopping.FormattingEnabled = true;
             this.clbTopping.Location = new System.Drawing.Point(26, 128);
             this.clbTopping.Name = "clbTopping";
-            this.clbTopping.Size = new System.Drawing.Size(255, 89);
+            this.clbTopping.Size = new System.Drawing.Size(291, 89);
             this.clbTopping.TabIndex = 10;
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel2.BackColor = System.Drawing.SystemColors.Control;
             this.panel2.Controls.Add(this.btnAddGioHang);
             this.panel2.Controls.Add(this.btnDatMon);
             this.panel2.Controls.Add(this.clbDa);
@@ -137,7 +137,7 @@ namespace OrderMillTeaProgram.Giao_diện.Giao_Diện_của_User.All_form_TS
             // 
             // btnAddGioHang
             // 
-            this.btnAddGioHang.BackColor = System.Drawing.Color.Aquamarine;
+            this.btnAddGioHang.BackColor = System.Drawing.SystemColors.Control;
             this.btnAddGioHang.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnAddGioHang.Location = new System.Drawing.Point(311, 558);
             this.btnAddGioHang.Name = "btnAddGioHang";
@@ -226,9 +226,9 @@ namespace OrderMillTeaProgram.Giao_diện.Giao_Diện_của_User.All_form_TS
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label1.Location = new System.Drawing.Point(22, 18);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(282, 36);
+            this.label1.Size = new System.Drawing.Size(295, 36);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Trà Sữa Thái Xanh";
+            this.label1.Text = "Trà Sữa Socola Min";
             // 
             // panel1
             // 
@@ -285,7 +285,7 @@ namespace OrderMillTeaProgram.Giao_diện.Giao_Diện_của_User.All_form_TS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(984, 709);
             this.Controls.Add(this.lbBasePrice);
             this.Controls.Add(this.btnExit);

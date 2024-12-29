@@ -5,7 +5,7 @@ using System.Windows.Forms;
 
 namespace OrderMillTeaProgram.Giao_diện.Giao_Diện_của_User.All_form_TS
 {
-    public partial class TSSocolaMin : Form
+    public partial class TSTranChau : Form
     {
         private const int BasePrice = 20000;
         public event Action<string, decimal> ProductSelected; // Sự kiện gửi dữ liệu về form chính
@@ -15,7 +15,7 @@ namespace OrderMillTeaProgram.Giao_diện.Giao_Diện_của_User.All_form_TS
         private bool isHandlingItemCheck = false;
         private ContextMenuStrip toppingContextMenu;
 
-        public TSSocolaMin()
+        public TSTranChau()
         {
             InitializeComponent();
             LoadFormData();
