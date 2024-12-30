@@ -395,20 +395,7 @@ namespace OrderMillTeaProgram.Giao_diện_của_User
             this.label4.TabIndex = 0;
             this.label4.Text = "Since 12/2024";
             // 
- // button6
-            // 
-            this.button6.BackColor = System.Drawing.Color.LimeGreen;
-            this.button6.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button6.Location = new System.Drawing.Point(303, 249);
-            this.button6.Margin = new System.Windows.Forms.Padding(4);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(100, 42);
-            this.button6.TabIndex = 13;
-            this.button6.Text = "Nạp tiền";
-            this.button6.UseVisualStyleBackColor = false;
-            // 
-
+ 
             // guna2BorderlessForm1
             // 
             this.guna2BorderlessForm1.ContainerControl = this;
@@ -440,19 +427,6 @@ namespace OrderMillTeaProgram.Giao_diện_của_User
             this.sqlCommand1.CommandTimeout = 30;
             this.sqlCommand1.EnableOptimizedParameterBinding = false;
 
-            this.guna2Panel5.BackColor = System.Drawing.Color.White;
-            this.guna2Panel5.BorderColor = System.Drawing.Color.Gainsboro;
-            this.guna2Panel5.BorderThickness = 4;
-            this.guna2Panel5.CustomBorderColor = System.Drawing.Color.White;
-            this.guna2Panel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.guna2Panel5.Location = new System.Drawing.Point(385, 160);
-            this.guna2Panel5.Margin = new System.Windows.Forms.Padding(4);
-            this.guna2Panel5.Name = "guna2Panel5";
-            this.guna2Panel5.Size = new System.Drawing.Size(1153, 942);
-            this.guna2Panel5.TabIndex = 14;
-
-            // 
-            // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
