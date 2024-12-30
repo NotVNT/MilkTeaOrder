@@ -210,7 +210,7 @@ namespace OrderMillTeaProgram.Giao_diện.Giao_Diện_của_User.All_form_TS
                 string totalPriceText = lbBasePrice.Text.Replace("Tổng giá: ", "").Replace(" VNĐ", "").Replace(",", "");
                 decimal totalPrice = decimal.Parse(totalPriceText);
 
-                ProductSelected?.Invoke($"Trà Sữa Oreo Cake Cream - {size} ({toppings})", totalPrice);
+                ProductSelected?.Invoke($"Hồng trà tắc - {size} ({toppings})", totalPrice);
 
                 MessageBox.Show($"Sản phẩm đã được thêm vào giỏ hàng:\n" +
                                 $"Size: {size}\n" +
@@ -231,8 +231,7 @@ namespace OrderMillTeaProgram.Giao_diện.Giao_Diện_của_User.All_form_TS
 
         private void BtnExit_Click(object sender, EventArgs e)
         {
-            var result = MessageBox.Show("Bạn có chắc chắn muốn thoát không?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (result == DialogResult.Yes)
+
             {
                 Close();
             }

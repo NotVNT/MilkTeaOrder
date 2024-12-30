@@ -282,11 +282,11 @@
     <Compile Include="Giao diện\Giao Diện của User\All form TS\TraSuaThaiXanh.Designer.cs">
       <DependentUpon>TraSuaThaiXanh.cs</DependentUpon>
     </Compile>
-    <Compile Include="Giao diện\Giao Diện của User\All form TS\TSKhoaiMon.cs">
+    <Compile Include="Giao diện\Giao Diện của User\All form TS\TSkhoaimon.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Giao diện\Giao Diện của User\All form TS\TSKhoaiMon.Designer.cs">
-      <DependentUpon>TSKhoaiMon.cs</DependentUpon>
+    <Compile Include="Giao diện\Giao Diện của User\All form TS\TSkhoaimon.Designer.cs">
+      <DependentUpon>TSkhoaimon.cs</DependentUpon>
     </Compile>
     <Compile Include="Giao diện\Giao Diện của User\All form TS\TSOreoCakeCream.cs">
       <SubType>Form</SubType>
@@ -391,8 +391,8 @@
     <EmbeddedResource Include="Giao diện\Giao Diện của User\All form TS\TraSuaThaiXanh.resx">
       <DependentUpon>TraSuaThaiXanh.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Giao diện\Giao Diện của User\All form TS\TSKhoaiMon.resx">
-      <DependentUpon>TSKhoaiMon.cs</DependentUpon>
+    <EmbeddedResource Include="Giao diện\Giao Diện của User\All form TS\TSkhoaimon.resx">
+      <DependentUpon>TSkhoaimon.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Giao diện\Giao Diện của User\All form TS\TSOreoCakeCream.resx">
       <DependentUpon>TSOreoCakeCream.cs</DependentUpon>

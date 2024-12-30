@@ -29,30 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TraSuaUser));
-            this.btnHongTraTac = new System.Windows.Forms.Panel();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.lblHongTraTac = new System.Windows.Forms.Label();
-            this.picHongTraTac = new System.Windows.Forms.PictureBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.btnTraDaoCamSa = new System.Windows.Forms.Panel();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.lblTraDaoCamSa = new System.Windows.Forms.Label();
-            this.picTraDaoCamSa = new System.Windows.Forms.PictureBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.btnTraSuaOreo = new System.Windows.Forms.Panel();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.lblTSOreoCakeCream = new System.Windows.Forms.Label();
-            this.picTSOreoCakeCream = new System.Windows.Forms.PictureBox();
-            this.btnTraSuaPhoMai = new System.Windows.Forms.Panel();
-            this.label22 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
-            this.lblTSPhoMai = new System.Windows.Forms.Label();
-            this.picTSPhoMai = new System.Windows.Forms.PictureBox();
-            this.lblTSSocolaMin = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.btnClose = new Guna.UI2.WinForms.Guna2CircleButton();
             this.lblDashboard = new System.Windows.Forms.Label();
             this.picTraSuaThaiXanh = new System.Windows.Forms.PictureBox();
@@ -65,24 +43,40 @@
             this.label5 = new System.Windows.Forms.Label();
             this.lblTSChanTrau = new System.Windows.Forms.Label();
             this.picTSChanTrau = new System.Windows.Forms.PictureBox();
+            this.label11 = new System.Windows.Forms.Label();
             this.btnTraSuaKhoaiMon = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.lblTSKhoaiMon = new System.Windows.Forms.Label();
             this.picTSKhoaiMon = new System.Windows.Forms.PictureBox();
+            this.label10 = new System.Windows.Forms.Label();
             this.btnTraSuaChocolate = new System.Windows.Forms.Panel();
+            this.lblTSSocolaMin = new System.Windows.Forms.Label();
             this.picTSSocolaMin = new System.Windows.Forms.PictureBox();
-            this.VScrollBar1 = new System.Windows.Forms.VScrollBar();
             this.HScrollBar1 = new System.Windows.Forms.HScrollBar();
-            this.btnHongTraTac.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picHongTraTac)).BeginInit();
-            this.btnTraDaoCamSa.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picTraDaoCamSa)).BeginInit();
-            this.btnTraSuaOreo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picTSOreoCakeCream)).BeginInit();
-            this.btnTraSuaPhoMai.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picTSPhoMai)).BeginInit();
+            this.btnHongTraTac = new System.Windows.Forms.Panel();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.lblHongTraTac = new System.Windows.Forms.Label();
+            this.picHongTraTac = new System.Windows.Forms.PictureBox();
+            this.btnTraDaoCamSa = new System.Windows.Forms.Panel();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.lblTraDaoCamSa = new System.Windows.Forms.Label();
+            this.picTraDaoCamSa = new System.Windows.Forms.PictureBox();
+            this.btnTraSuaOreo = new System.Windows.Forms.Panel();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.lblTSOreoCakeCream = new System.Windows.Forms.Label();
+            this.picTSOreoCakeCream = new System.Windows.Forms.PictureBox();
+            this.btnTraSuaPhoMai = new System.Windows.Forms.Panel();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
+            this.lblTSPhoMai = new System.Windows.Forms.Label();
+            this.picTSPhoMai = new System.Windows.Forms.PictureBox();
+            this.VScrollBar1 = new System.Windows.Forms.VScrollBar();
             this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picTraSuaThaiXanh)).BeginInit();
             this.btnTraSuaThaiXanh.SuspendLayout();
             this.btnTraSuaTruyenThong.SuspendLayout();
@@ -91,7 +85,350 @@
             ((System.ComponentModel.ISupportInitialize)(this.picTSKhoaiMon)).BeginInit();
             this.btnTraSuaChocolate.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picTSSocolaMin)).BeginInit();
+            this.btnHongTraTac.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picHongTraTac)).BeginInit();
+            this.btnTraDaoCamSa.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picTraDaoCamSa)).BeginInit();
+            this.btnTraSuaOreo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picTSOreoCakeCream)).BeginInit();
+            this.btnTraSuaPhoMai.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picTSPhoMai)).BeginInit();
             this.SuspendLayout();
+            // 
+            // panel1
+            // 
+            this.panel1.AutoScroll = true;
+            this.panel1.Controls.Add(this.panel2);
+            this.panel1.Controls.Add(this.btnTraSuaThaiXanh);
+            this.panel1.Controls.Add(this.btnTraSuaTruyenThong);
+            this.panel1.Controls.Add(this.btnTraSuaKhoaiMon);
+            this.panel1.Controls.Add(this.btnTraSuaChocolate);
+            this.panel1.Controls.Add(this.HScrollBar1);
+            this.panel1.Controls.Add(this.btnHongTraTac);
+            this.panel1.Controls.Add(this.btnTraDaoCamSa);
+            this.panel1.Controls.Add(this.btnTraSuaOreo);
+            this.panel1.Controls.Add(this.btnTraSuaPhoMai);
+            this.panel1.Controls.Add(this.VScrollBar1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1496, 1000);
+            this.panel1.TabIndex = 0;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.panel2.Controls.Add(this.btnClose);
+            this.panel2.Controls.Add(this.lblDashboard);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1496, 63);
+            this.panel2.TabIndex = 27;
+            // 
+            // btnClose
+            // 
+            this.btnClose.BackColor = System.Drawing.Color.Transparent;
+            this.btnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnClose.BorderColor = System.Drawing.Color.Transparent;
+            this.btnClose.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnClose.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnClose.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnClose.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnClose.FillColor = System.Drawing.Color.Silver;
+            this.btnClose.Font = new System.Drawing.Font("Segoe UI Light", 9F);
+            this.btnClose.ForeColor = System.Drawing.Color.Transparent;
+            this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
+            this.btnClose.Location = new System.Drawing.Point(1464, 0);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(4);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.btnClose.Size = new System.Drawing.Size(32, 38);
+            this.btnClose.TabIndex = 37;
+            this.btnClose.UseTransparentBackground = true;
+            // 
+            // lblDashboard
+            // 
+            this.lblDashboard.AutoSize = true;
+            this.lblDashboard.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDashboard.Location = new System.Drawing.Point(16, 11);
+            this.lblDashboard.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblDashboard.Name = "lblDashboard";
+            this.lblDashboard.Size = new System.Drawing.Size(98, 32);
+            this.lblDashboard.TabIndex = 0;
+            this.lblDashboard.Text = "Trà Sữa";
+            // 
+            // picTraSuaThaiXanh
+            // 
+            this.picTraSuaThaiXanh.BackColor = System.Drawing.Color.Transparent;
+            this.picTraSuaThaiXanh.Enabled = false;
+            this.picTraSuaThaiXanh.Image = ((System.Drawing.Image)(resources.GetObject("picTraSuaThaiXanh.Image")));
+            this.picTraSuaThaiXanh.Location = new System.Drawing.Point(0, 0);
+            this.picTraSuaThaiXanh.Margin = new System.Windows.Forms.Padding(4);
+            this.picTraSuaThaiXanh.Name = "picTraSuaThaiXanh";
+            this.picTraSuaThaiXanh.Size = new System.Drawing.Size(267, 196);
+            this.picTraSuaThaiXanh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picTraSuaThaiXanh.TabIndex = 7;
+            this.picTraSuaThaiXanh.TabStop = false;
+            // 
+            // btnTraSuaThaiXanh
+            // 
+            this.btnTraSuaThaiXanh.Controls.Add(this.label4);
+            this.btnTraSuaThaiXanh.Controls.Add(this.label3);
+            this.btnTraSuaThaiXanh.Controls.Add(this.lblTraSuaThaiXanh);
+            this.btnTraSuaThaiXanh.Controls.Add(this.picTraSuaThaiXanh);
+            this.btnTraSuaThaiXanh.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnTraSuaThaiXanh.Location = new System.Drawing.Point(41, 171);
+            this.btnTraSuaThaiXanh.Margin = new System.Windows.Forms.Padding(4);
+            this.btnTraSuaThaiXanh.Name = "btnTraSuaThaiXanh";
+            this.btnTraSuaThaiXanh.Size = new System.Drawing.Size(267, 289);
+            this.btnTraSuaThaiXanh.TabIndex = 28;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Enabled = false;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Silver;
+            this.label4.Location = new System.Drawing.Point(59, 256);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(18, 20);
+            this.label4.TabIndex = 10;
+            this.label4.Text = "đ";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Enabled = false;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(4, 256);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(58, 20);
+            this.label3.TabIndex = 9;
+            this.label3.Text = "25.000";
+            // 
+            // lblTraSuaThaiXanh
+            // 
+            this.lblTraSuaThaiXanh.AutoSize = true;
+            this.lblTraSuaThaiXanh.BackColor = System.Drawing.Color.Transparent;
+            this.lblTraSuaThaiXanh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblTraSuaThaiXanh.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTraSuaThaiXanh.ForeColor = System.Drawing.Color.Black;
+            this.lblTraSuaThaiXanh.Location = new System.Drawing.Point(27, 210);
+            this.lblTraSuaThaiXanh.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTraSuaThaiXanh.Name = "lblTraSuaThaiXanh";
+            this.lblTraSuaThaiXanh.Size = new System.Drawing.Size(195, 24);
+            this.lblTraSuaThaiXanh.TabIndex = 8;
+            this.lblTraSuaThaiXanh.Text = "Trà Sữa Thái Xanh";
+            // 
+            // btnTraSuaTruyenThong
+            // 
+            this.btnTraSuaTruyenThong.Controls.Add(this.label1);
+            this.btnTraSuaTruyenThong.Controls.Add(this.label5);
+            this.btnTraSuaTruyenThong.Controls.Add(this.lblTSChanTrau);
+            this.btnTraSuaTruyenThong.Controls.Add(this.picTSChanTrau);
+            this.btnTraSuaTruyenThong.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnTraSuaTruyenThong.Location = new System.Drawing.Point(413, 171);
+            this.btnTraSuaTruyenThong.Margin = new System.Windows.Forms.Padding(4);
+            this.btnTraSuaTruyenThong.Name = "btnTraSuaTruyenThong";
+            this.btnTraSuaTruyenThong.Size = new System.Drawing.Size(267, 289);
+            this.btnTraSuaTruyenThong.TabIndex = 29;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Enabled = false;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Silver;
+            this.label1.Location = new System.Drawing.Point(59, 256);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(18, 20);
+            this.label1.TabIndex = 10;
+            this.label1.Text = "đ";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Enabled = false;
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(4, 256);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(58, 20);
+            this.label5.TabIndex = 9;
+            this.label5.Text = "20.000";
+            // 
+            // lblTSChanTrau
+            // 
+            this.lblTSChanTrau.AutoSize = true;
+            this.lblTSChanTrau.BackColor = System.Drawing.Color.Transparent;
+            this.lblTSChanTrau.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblTSChanTrau.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTSChanTrau.ForeColor = System.Drawing.Color.Black;
+            this.lblTSChanTrau.Location = new System.Drawing.Point(8, 210);
+            this.lblTSChanTrau.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTSChanTrau.Name = "lblTSChanTrau";
+            this.lblTSChanTrau.Size = new System.Drawing.Size(234, 24);
+            this.lblTSChanTrau.TabIndex = 8;
+            this.lblTSChanTrau.Text = "Trà Sữa Truyền Thống";
+            // 
+            // picTSChanTrau
+            // 
+            this.picTSChanTrau.BackColor = System.Drawing.Color.Transparent;
+            this.picTSChanTrau.Enabled = false;
+            this.picTSChanTrau.Image = ((System.Drawing.Image)(resources.GetObject("picTSChanTrau.Image")));
+            this.picTSChanTrau.Location = new System.Drawing.Point(0, 0);
+            this.picTSChanTrau.Margin = new System.Windows.Forms.Padding(4);
+            this.picTSChanTrau.Name = "picTSChanTrau";
+            this.picTSChanTrau.Size = new System.Drawing.Size(267, 196);
+            this.picTSChanTrau.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picTSChanTrau.TabIndex = 7;
+            this.picTSChanTrau.TabStop = false;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Enabled = false;
+            this.label11.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(4, 256);
+            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(58, 20);
+            this.label11.TabIndex = 9;
+            this.label11.Text = "30.000";
+            // 
+            // btnTraSuaKhoaiMon
+            // 
+            this.btnTraSuaKhoaiMon.Controls.Add(this.label7);
+            this.btnTraSuaKhoaiMon.Controls.Add(this.label8);
+            this.btnTraSuaKhoaiMon.Controls.Add(this.lblTSKhoaiMon);
+            this.btnTraSuaKhoaiMon.Controls.Add(this.picTSKhoaiMon);
+            this.btnTraSuaKhoaiMon.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnTraSuaKhoaiMon.Location = new System.Drawing.Point(788, 171);
+            this.btnTraSuaKhoaiMon.Margin = new System.Windows.Forms.Padding(4);
+            this.btnTraSuaKhoaiMon.Name = "btnTraSuaKhoaiMon";
+            this.btnTraSuaKhoaiMon.Size = new System.Drawing.Size(267, 289);
+            this.btnTraSuaKhoaiMon.TabIndex = 30;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.Enabled = false;
+            this.label7.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.Silver;
+            this.label7.Location = new System.Drawing.Point(59, 256);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(18, 20);
+            this.label7.TabIndex = 10;
+            this.label7.Text = "đ";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Enabled = false;
+            this.label8.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(4, 256);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(58, 20);
+            this.label8.TabIndex = 9;
+            this.label8.Text = "30.000";
+            // 
+            // lblTSKhoaiMon
+            // 
+            this.lblTSKhoaiMon.AutoSize = true;
+            this.lblTSKhoaiMon.BackColor = System.Drawing.Color.Transparent;
+            this.lblTSKhoaiMon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblTSKhoaiMon.Font = new System.Drawing.Font("Tahoma", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTSKhoaiMon.ForeColor = System.Drawing.Color.Black;
+            this.lblTSKhoaiMon.Location = new System.Drawing.Point(20, 210);
+            this.lblTSKhoaiMon.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTSKhoaiMon.Name = "lblTSKhoaiMon";
+            this.lblTSKhoaiMon.Size = new System.Drawing.Size(220, 27);
+            this.lblTSKhoaiMon.TabIndex = 8;
+            this.lblTSKhoaiMon.Text = "Trà Sữa Khoai Môn";
+            // 
+            // picTSKhoaiMon
+            // 
+            this.picTSKhoaiMon.BackColor = System.Drawing.Color.Transparent;
+            this.picTSKhoaiMon.Enabled = false;
+            this.picTSKhoaiMon.Image = ((System.Drawing.Image)(resources.GetObject("picTSKhoaiMon.Image")));
+            this.picTSKhoaiMon.Location = new System.Drawing.Point(0, 0);
+            this.picTSKhoaiMon.Margin = new System.Windows.Forms.Padding(4);
+            this.picTSKhoaiMon.Name = "picTSKhoaiMon";
+            this.picTSKhoaiMon.Size = new System.Drawing.Size(267, 196);
+            this.picTSKhoaiMon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picTSKhoaiMon.TabIndex = 7;
+            this.picTSKhoaiMon.TabStop = false;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.Transparent;
+            this.label10.Enabled = false;
+            this.label10.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.Silver;
+            this.label10.Location = new System.Drawing.Point(59, 256);
+            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(18, 20);
+            this.label10.TabIndex = 10;
+            this.label10.Text = "đ";
+            // 
+            // btnTraSuaChocolate
+            // 
+            this.btnTraSuaChocolate.Controls.Add(this.label10);
+            this.btnTraSuaChocolate.Controls.Add(this.label11);
+            this.btnTraSuaChocolate.Controls.Add(this.lblTSSocolaMin);
+            this.btnTraSuaChocolate.Controls.Add(this.picTSSocolaMin);
+            this.btnTraSuaChocolate.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnTraSuaChocolate.Location = new System.Drawing.Point(1157, 171);
+            this.btnTraSuaChocolate.Margin = new System.Windows.Forms.Padding(4);
+            this.btnTraSuaChocolate.Name = "btnTraSuaChocolate";
+            this.btnTraSuaChocolate.Size = new System.Drawing.Size(267, 289);
+            this.btnTraSuaChocolate.TabIndex = 31;
+            // 
+            // lblTSSocolaMin
+            // 
+            this.lblTSSocolaMin.AutoSize = true;
+            this.lblTSSocolaMin.BackColor = System.Drawing.Color.Transparent;
+            this.lblTSSocolaMin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblTSSocolaMin.Font = new System.Drawing.Font("Tahoma", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTSSocolaMin.ForeColor = System.Drawing.Color.Black;
+            this.lblTSSocolaMin.Location = new System.Drawing.Point(20, 210);
+            this.lblTSSocolaMin.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTSSocolaMin.Name = "lblTSSocolaMin";
+            this.lblTSSocolaMin.Size = new System.Drawing.Size(214, 27);
+            this.lblTSSocolaMin.TabIndex = 8;
+            this.lblTSSocolaMin.Text = "Trà Sữa Chocolate";
+            // 
+            // picTSSocolaMin
+            // 
+            this.picTSSocolaMin.BackColor = System.Drawing.Color.Transparent;
+            this.picTSSocolaMin.Enabled = false;
+            this.picTSSocolaMin.Image = ((System.Drawing.Image)(resources.GetObject("picTSSocolaMin.Image")));
+            this.picTSSocolaMin.Location = new System.Drawing.Point(0, 0);
+            this.picTSSocolaMin.Margin = new System.Windows.Forms.Padding(4);
+            this.picTSSocolaMin.Name = "picTSSocolaMin";
+            this.picTSSocolaMin.Size = new System.Drawing.Size(267, 196);
+            this.picTSSocolaMin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picTSSocolaMin.TabIndex = 7;
+            this.picTSSocolaMin.TabStop = false;
+            // 
+            // HScrollBar1
+            // 
+            this.HScrollBar1.Location = new System.Drawing.Point(701, 969);
+            this.HScrollBar1.Name = "HScrollBar1";
+            this.HScrollBar1.Size = new System.Drawing.Size(80, 21);
+            this.HScrollBar1.TabIndex = 37;
             // 
             // btnHongTraTac
             // 
@@ -100,11 +437,11 @@
             this.btnHongTraTac.Controls.Add(this.lblHongTraTac);
             this.btnHongTraTac.Controls.Add(this.picHongTraTac);
             this.btnHongTraTac.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnHongTraTac.Location = new System.Drawing.Point(1168, 620);
+            this.btnHongTraTac.Location = new System.Drawing.Point(1157, 609);
             this.btnHongTraTac.Margin = new System.Windows.Forms.Padding(4);
             this.btnHongTraTac.Name = "btnHongTraTac";
             this.btnHongTraTac.Size = new System.Drawing.Size(267, 289);
-            this.btnHongTraTac.TabIndex = 24;
+            this.btnHongTraTac.TabIndex = 35;
             // 
             // label13
             // 
@@ -159,20 +496,6 @@
             this.picHongTraTac.TabIndex = 7;
             this.picHongTraTac.TabStop = false;
             // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.Color.Transparent;
-            this.label10.Enabled = false;
-            this.label10.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.Silver;
-            this.label10.Location = new System.Drawing.Point(59, 256);
-            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(18, 20);
-            this.label10.TabIndex = 10;
-            this.label10.Text = "đ";
-            // 
             // btnTraDaoCamSa
             // 
             this.btnTraDaoCamSa.Controls.Add(this.label16);
@@ -180,11 +503,11 @@
             this.btnTraDaoCamSa.Controls.Add(this.lblTraDaoCamSa);
             this.btnTraDaoCamSa.Controls.Add(this.picTraDaoCamSa);
             this.btnTraDaoCamSa.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnTraDaoCamSa.Location = new System.Drawing.Point(799, 620);
+            this.btnTraDaoCamSa.Location = new System.Drawing.Point(788, 609);
             this.btnTraDaoCamSa.Margin = new System.Windows.Forms.Padding(4);
             this.btnTraDaoCamSa.Name = "btnTraDaoCamSa";
             this.btnTraDaoCamSa.Size = new System.Drawing.Size(267, 289);
-            this.btnTraDaoCamSa.TabIndex = 23;
+            this.btnTraDaoCamSa.TabIndex = 34;
             // 
             // label16
             // 
@@ -239,18 +562,6 @@
             this.picTraDaoCamSa.TabIndex = 7;
             this.picTraDaoCamSa.TabStop = false;
             // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Enabled = false;
-            this.label11.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(4, 256);
-            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(58, 20);
-            this.label11.TabIndex = 9;
-            this.label11.Text = "30.000";
-            // 
             // btnTraSuaOreo
             // 
             this.btnTraSuaOreo.Controls.Add(this.label19);
@@ -258,11 +569,11 @@
             this.btnTraSuaOreo.Controls.Add(this.lblTSOreoCakeCream);
             this.btnTraSuaOreo.Controls.Add(this.picTSOreoCakeCream);
             this.btnTraSuaOreo.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnTraSuaOreo.Location = new System.Drawing.Point(424, 620);
+            this.btnTraSuaOreo.Location = new System.Drawing.Point(413, 609);
             this.btnTraSuaOreo.Margin = new System.Windows.Forms.Padding(4);
             this.btnTraSuaOreo.Name = "btnTraSuaOreo";
             this.btnTraSuaOreo.Size = new System.Drawing.Size(267, 289);
-            this.btnTraSuaOreo.TabIndex = 22;
+            this.btnTraSuaOreo.TabIndex = 33;
             // 
             // label19
             // 
@@ -324,11 +635,11 @@
             this.btnTraSuaPhoMai.Controls.Add(this.lblTSPhoMai);
             this.btnTraSuaPhoMai.Controls.Add(this.picTSPhoMai);
             this.btnTraSuaPhoMai.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnTraSuaPhoMai.Location = new System.Drawing.Point(52, 620);
+            this.btnTraSuaPhoMai.Location = new System.Drawing.Point(41, 609);
             this.btnTraSuaPhoMai.Margin = new System.Windows.Forms.Padding(4);
             this.btnTraSuaPhoMai.Name = "btnTraSuaPhoMai";
             this.btnTraSuaPhoMai.Size = new System.Drawing.Size(267, 289);
-            this.btnTraSuaPhoMai.TabIndex = 21;
+            this.btnTraSuaPhoMai.TabIndex = 32;
             // 
             // label22
             // 
@@ -383,338 +694,26 @@
             this.picTSPhoMai.TabIndex = 7;
             this.picTSPhoMai.TabStop = false;
             // 
-            // lblTSSocolaMin
-            // 
-            this.lblTSSocolaMin.AutoSize = true;
-            this.lblTSSocolaMin.BackColor = System.Drawing.Color.Transparent;
-            this.lblTSSocolaMin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblTSSocolaMin.Font = new System.Drawing.Font("Tahoma", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTSSocolaMin.ForeColor = System.Drawing.Color.Black;
-            this.lblTSSocolaMin.Location = new System.Drawing.Point(20, 210);
-            this.lblTSSocolaMin.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblTSSocolaMin.Name = "lblTSSocolaMin";
-            this.lblTSSocolaMin.Size = new System.Drawing.Size(214, 27);
-            this.lblTSSocolaMin.TabIndex = 8;
-            this.lblTSSocolaMin.Text = "Trà Sữa Chocolate";
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.panel1.Controls.Add(this.btnClose);
-            this.panel1.Controls.Add(this.lblDashboard);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1496, 63);
-            this.panel1.TabIndex = 16;
-            // 
-            // btnClose
-            // 
-            this.btnClose.BackColor = System.Drawing.Color.Transparent;
-            this.btnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnClose.BorderColor = System.Drawing.Color.Transparent;
-            this.btnClose.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnClose.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnClose.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnClose.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnClose.FillColor = System.Drawing.Color.Silver;
-            this.btnClose.Font = new System.Drawing.Font("Segoe UI Light", 9F);
-            this.btnClose.ForeColor = System.Drawing.Color.Transparent;
-            this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
-            this.btnClose.Location = new System.Drawing.Point(1464, 0);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(4);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.btnClose.Size = new System.Drawing.Size(32, 38);
-            this.btnClose.TabIndex = 37;
-            this.btnClose.UseTransparentBackground = true;
-            // 
-            // lblDashboard
-            // 
-            this.lblDashboard.AutoSize = true;
-            this.lblDashboard.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDashboard.Location = new System.Drawing.Point(16, 11);
-            this.lblDashboard.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblDashboard.Name = "lblDashboard";
-            this.lblDashboard.Size = new System.Drawing.Size(98, 32);
-            this.lblDashboard.TabIndex = 0;
-            this.lblDashboard.Text = "Trà Sữa";
-            // 
-            // picTraSuaThaiXanh
-            // 
-            this.picTraSuaThaiXanh.BackColor = System.Drawing.Color.Transparent;
-            this.picTraSuaThaiXanh.Enabled = false;
-            this.picTraSuaThaiXanh.Image = ((System.Drawing.Image)(resources.GetObject("picTraSuaThaiXanh.Image")));
-            this.picTraSuaThaiXanh.Location = new System.Drawing.Point(0, 0);
-            this.picTraSuaThaiXanh.Margin = new System.Windows.Forms.Padding(4);
-            this.picTraSuaThaiXanh.Name = "picTraSuaThaiXanh";
-            this.picTraSuaThaiXanh.Size = new System.Drawing.Size(267, 196);
-            this.picTraSuaThaiXanh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picTraSuaThaiXanh.TabIndex = 7;
-            this.picTraSuaThaiXanh.TabStop = false;
-            // 
-            // btnTraSuaThaiXanh
-            // 
-            this.btnTraSuaThaiXanh.Controls.Add(this.label4);
-            this.btnTraSuaThaiXanh.Controls.Add(this.label3);
-            this.btnTraSuaThaiXanh.Controls.Add(this.lblTraSuaThaiXanh);
-            this.btnTraSuaThaiXanh.Controls.Add(this.picTraSuaThaiXanh);
-            this.btnTraSuaThaiXanh.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnTraSuaThaiXanh.Location = new System.Drawing.Point(52, 182);
-            this.btnTraSuaThaiXanh.Margin = new System.Windows.Forms.Padding(4);
-            this.btnTraSuaThaiXanh.Name = "btnTraSuaThaiXanh";
-            this.btnTraSuaThaiXanh.Size = new System.Drawing.Size(267, 289);
-            this.btnTraSuaThaiXanh.TabIndex = 17;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Enabled = false;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Silver;
-            this.label4.Location = new System.Drawing.Point(59, 256);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(18, 20);
-            this.label4.TabIndex = 10;
-            this.label4.Text = "đ";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Enabled = false;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(4, 256);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(58, 20);
-            this.label3.TabIndex = 9;
-            this.label3.Text = "25.000";
-            // 
-            // lblTraSuaThaiXanh
-            // 
-            this.lblTraSuaThaiXanh.AutoSize = true;
-            this.lblTraSuaThaiXanh.BackColor = System.Drawing.Color.Transparent;
-            this.lblTraSuaThaiXanh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblTraSuaThaiXanh.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTraSuaThaiXanh.ForeColor = System.Drawing.Color.Black;
-            this.lblTraSuaThaiXanh.Location = new System.Drawing.Point(27, 210);
-            this.lblTraSuaThaiXanh.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblTraSuaThaiXanh.Name = "lblTraSuaThaiXanh";
-            this.lblTraSuaThaiXanh.Size = new System.Drawing.Size(195, 24);
-            this.lblTraSuaThaiXanh.TabIndex = 8;
-            this.lblTraSuaThaiXanh.Text = "Trà Sữa Thái Xanh";
-            // 
-            // btnTraSuaTruyenThong
-            // 
-            this.btnTraSuaTruyenThong.Controls.Add(this.label1);
-            this.btnTraSuaTruyenThong.Controls.Add(this.label5);
-            this.btnTraSuaTruyenThong.Controls.Add(this.lblTSChanTrau);
-            this.btnTraSuaTruyenThong.Controls.Add(this.picTSChanTrau);
-            this.btnTraSuaTruyenThong.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnTraSuaTruyenThong.Location = new System.Drawing.Point(424, 182);
-            this.btnTraSuaTruyenThong.Margin = new System.Windows.Forms.Padding(4);
-            this.btnTraSuaTruyenThong.Name = "btnTraSuaTruyenThong";
-            this.btnTraSuaTruyenThong.Size = new System.Drawing.Size(267, 289);
-            this.btnTraSuaTruyenThong.TabIndex = 18;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Enabled = false;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Silver;
-            this.label1.Location = new System.Drawing.Point(59, 256);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(18, 20);
-            this.label1.TabIndex = 10;
-            this.label1.Text = "đ";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Enabled = false;
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(4, 256);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(58, 20);
-            this.label5.TabIndex = 9;
-            this.label5.Text = "20.000";
-            // 
-            // lblTSChanTrau
-            // 
-            this.lblTSChanTrau.AutoSize = true;
-            this.lblTSChanTrau.BackColor = System.Drawing.Color.Transparent;
-            this.lblTSChanTrau.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblTSChanTrau.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTSChanTrau.ForeColor = System.Drawing.Color.Black;
-            this.lblTSChanTrau.Location = new System.Drawing.Point(8, 210);
-            this.lblTSChanTrau.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblTSChanTrau.Name = "lblTSChanTrau";
-            this.lblTSChanTrau.Size = new System.Drawing.Size(234, 24);
-            this.lblTSChanTrau.TabIndex = 8;
-            this.lblTSChanTrau.Text = "Trà Sữa Truyền Thống";
-            // 
-            // picTSChanTrau
-            // 
-            this.picTSChanTrau.BackColor = System.Drawing.Color.Transparent;
-            this.picTSChanTrau.Enabled = false;
-            this.picTSChanTrau.Image = ((System.Drawing.Image)(resources.GetObject("picTSChanTrau.Image")));
-            this.picTSChanTrau.Location = new System.Drawing.Point(0, 0);
-            this.picTSChanTrau.Margin = new System.Windows.Forms.Padding(4);
-            this.picTSChanTrau.Name = "picTSChanTrau";
-            this.picTSChanTrau.Size = new System.Drawing.Size(267, 196);
-            this.picTSChanTrau.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picTSChanTrau.TabIndex = 7;
-            this.picTSChanTrau.TabStop = false;
-            // 
-            // btnTraSuaKhoaiMon
-            // 
-            this.btnTraSuaKhoaiMon.Controls.Add(this.label7);
-            this.btnTraSuaKhoaiMon.Controls.Add(this.label8);
-            this.btnTraSuaKhoaiMon.Controls.Add(this.lblTSKhoaiMon);
-            this.btnTraSuaKhoaiMon.Controls.Add(this.picTSKhoaiMon);
-            this.btnTraSuaKhoaiMon.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnTraSuaKhoaiMon.Location = new System.Drawing.Point(799, 182);
-            this.btnTraSuaKhoaiMon.Margin = new System.Windows.Forms.Padding(4);
-            this.btnTraSuaKhoaiMon.Name = "btnTraSuaKhoaiMon";
-            this.btnTraSuaKhoaiMon.Size = new System.Drawing.Size(267, 289);
-            this.btnTraSuaKhoaiMon.TabIndex = 19;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Enabled = false;
-            this.label7.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.Silver;
-            this.label7.Location = new System.Drawing.Point(59, 256);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(18, 20);
-            this.label7.TabIndex = 10;
-            this.label7.Text = "đ";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Enabled = false;
-            this.label8.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(4, 256);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(58, 20);
-            this.label8.TabIndex = 9;
-            this.label8.Text = "30.000";
-            // 
-            // lblTSKhoaiMon
-            // 
-            this.lblTSKhoaiMon.AutoSize = true;
-            this.lblTSKhoaiMon.BackColor = System.Drawing.Color.Transparent;
-            this.lblTSKhoaiMon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblTSKhoaiMon.Font = new System.Drawing.Font("Tahoma", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTSKhoaiMon.ForeColor = System.Drawing.Color.Black;
-            this.lblTSKhoaiMon.Location = new System.Drawing.Point(20, 210);
-            this.lblTSKhoaiMon.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblTSKhoaiMon.Name = "lblTSKhoaiMon";
-            this.lblTSKhoaiMon.Size = new System.Drawing.Size(220, 27);
-            this.lblTSKhoaiMon.TabIndex = 8;
-            this.lblTSKhoaiMon.Text = "Trà Sữa Khoai Môn";
-            // 
-            // picTSKhoaiMon
-            // 
-            this.picTSKhoaiMon.BackColor = System.Drawing.Color.Transparent;
-            this.picTSKhoaiMon.Enabled = false;
-            this.picTSKhoaiMon.Image = ((System.Drawing.Image)(resources.GetObject("picTSKhoaiMon.Image")));
-            this.picTSKhoaiMon.Location = new System.Drawing.Point(0, 0);
-            this.picTSKhoaiMon.Margin = new System.Windows.Forms.Padding(4);
-            this.picTSKhoaiMon.Name = "picTSKhoaiMon";
-            this.picTSKhoaiMon.Size = new System.Drawing.Size(267, 196);
-            this.picTSKhoaiMon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picTSKhoaiMon.TabIndex = 7;
-            this.picTSKhoaiMon.TabStop = false;
-            // 
-            // btnTraSuaChocolate
-            // 
-            this.btnTraSuaChocolate.Controls.Add(this.label10);
-            this.btnTraSuaChocolate.Controls.Add(this.label11);
-            this.btnTraSuaChocolate.Controls.Add(this.lblTSSocolaMin);
-            this.btnTraSuaChocolate.Controls.Add(this.picTSSocolaMin);
-            this.btnTraSuaChocolate.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnTraSuaChocolate.Location = new System.Drawing.Point(1168, 182);
-            this.btnTraSuaChocolate.Margin = new System.Windows.Forms.Padding(4);
-            this.btnTraSuaChocolate.Name = "btnTraSuaChocolate";
-            this.btnTraSuaChocolate.Size = new System.Drawing.Size(267, 289);
-            this.btnTraSuaChocolate.TabIndex = 20;
-            // 
-            // picTSSocolaMin
-            // 
-            this.picTSSocolaMin.BackColor = System.Drawing.Color.Transparent;
-            this.picTSSocolaMin.Enabled = false;
-            this.picTSSocolaMin.Image = ((System.Drawing.Image)(resources.GetObject("picTSSocolaMin.Image")));
-            this.picTSSocolaMin.Location = new System.Drawing.Point(0, 0);
-            this.picTSSocolaMin.Margin = new System.Windows.Forms.Padding(4);
-            this.picTSSocolaMin.Name = "picTSSocolaMin";
-            this.picTSSocolaMin.Size = new System.Drawing.Size(267, 196);
-            this.picTSSocolaMin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picTSSocolaMin.TabIndex = 7;
-            this.picTSSocolaMin.TabStop = false;
-            // 
             // VScrollBar1
             // 
-            this.VScrollBar1.Location = new System.Drawing.Point(1475, 498);
+            this.VScrollBar1.Location = new System.Drawing.Point(1464, 487);
             this.VScrollBar1.Name = "VScrollBar1";
             this.VScrollBar1.Size = new System.Drawing.Size(21, 100);
-            this.VScrollBar1.TabIndex = 25;
-            this.VScrollBar1.Scroll += new System.Windows.Forms.ScrollEventHandler(this.VScrollBar1_Scroll);
-            // 
-            // HScrollBar1
-            // 
-            this.HScrollBar1.Location = new System.Drawing.Point(712, 980);
-            this.HScrollBar1.Name = "HScrollBar1";
-            this.HScrollBar1.Size = new System.Drawing.Size(80, 21);
-            this.HScrollBar1.TabIndex = 26;
-            this.HScrollBar1.Scroll += new System.Windows.Forms.ScrollEventHandler(this.HScrollBar1_Scroll);
+            this.VScrollBar1.TabIndex = 36;
             // 
             // TraSuaUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1496, 1000);
-            this.Controls.Add(this.HScrollBar1);
-            this.Controls.Add(this.VScrollBar1);
-            this.Controls.Add(this.btnHongTraTac);
-            this.Controls.Add(this.btnTraDaoCamSa);
-            this.Controls.Add(this.btnTraSuaOreo);
-            this.Controls.Add(this.btnTraSuaPhoMai);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.btnTraSuaThaiXanh);
-            this.Controls.Add(this.btnTraSuaTruyenThong);
-            this.Controls.Add(this.btnTraSuaKhoaiMon);
-            this.Controls.Add(this.btnTraSuaChocolate);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "TraSuaUser";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TraSuaUser";
-            this.btnHongTraTac.ResumeLayout(false);
-            this.btnHongTraTac.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picHongTraTac)).EndInit();
-            this.btnTraDaoCamSa.ResumeLayout(false);
-            this.btnTraDaoCamSa.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picTraDaoCamSa)).EndInit();
-            this.btnTraSuaOreo.ResumeLayout(false);
-            this.btnTraSuaOreo.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picTSOreoCakeCream)).EndInit();
-            this.btnTraSuaPhoMai.ResumeLayout(false);
-            this.btnTraSuaPhoMai.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picTSPhoMai)).EndInit();
             this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picTraSuaThaiXanh)).EndInit();
             this.btnTraSuaThaiXanh.ResumeLayout(false);
             this.btnTraSuaThaiXanh.PerformLayout();
@@ -727,42 +726,33 @@
             this.btnTraSuaChocolate.ResumeLayout(false);
             this.btnTraSuaChocolate.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picTSSocolaMin)).EndInit();
+            this.btnHongTraTac.ResumeLayout(false);
+            this.btnHongTraTac.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picHongTraTac)).EndInit();
+            this.btnTraDaoCamSa.ResumeLayout(false);
+            this.btnTraDaoCamSa.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picTraDaoCamSa)).EndInit();
+            this.btnTraSuaOreo.ResumeLayout(false);
+            this.btnTraSuaOreo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picTSOreoCakeCream)).EndInit();
+            this.btnTraSuaPhoMai.ResumeLayout(false);
+            this.btnTraSuaPhoMai.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picTSPhoMai)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel btnHongTraTac;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label lblHongTraTac;
-        private System.Windows.Forms.PictureBox picHongTraTac;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Panel btnTraDaoCamSa;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label lblTraDaoCamSa;
-        private System.Windows.Forms.PictureBox picTraDaoCamSa;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Panel btnTraSuaOreo;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.Label lblTSOreoCakeCream;
-        private System.Windows.Forms.PictureBox picTSOreoCakeCream;
-        private System.Windows.Forms.Panel btnTraSuaPhoMai;
-        private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.Label lblTSPhoMai;
-        private System.Windows.Forms.PictureBox picTSPhoMai;
-        private System.Windows.Forms.Label lblTSSocolaMin;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
+        private Guna.UI2.WinForms.Guna2CircleButton btnClose;
         private System.Windows.Forms.Label lblDashboard;
-        private System.Windows.Forms.PictureBox picTraSuaThaiXanh;
         private System.Windows.Forms.Panel btnTraSuaThaiXanh;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lblTraSuaThaiXanh;
+        private System.Windows.Forms.PictureBox picTraSuaThaiXanh;
         private System.Windows.Forms.Panel btnTraSuaTruyenThong;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label5;
@@ -774,9 +764,31 @@
         private System.Windows.Forms.Label lblTSKhoaiMon;
         private System.Windows.Forms.PictureBox picTSKhoaiMon;
         private System.Windows.Forms.Panel btnTraSuaChocolate;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label lblTSSocolaMin;
         private System.Windows.Forms.PictureBox picTSSocolaMin;
-        private Guna.UI2.WinForms.Guna2CircleButton btnClose;
-        private System.Windows.Forms.VScrollBar VScrollBar1;
         private System.Windows.Forms.HScrollBar HScrollBar1;
+        private System.Windows.Forms.Panel btnHongTraTac;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label lblHongTraTac;
+        private System.Windows.Forms.PictureBox picHongTraTac;
+        private System.Windows.Forms.Panel btnTraDaoCamSa;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label lblTraDaoCamSa;
+        private System.Windows.Forms.PictureBox picTraDaoCamSa;
+        private System.Windows.Forms.Panel btnTraSuaOreo;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label lblTSOreoCakeCream;
+        private System.Windows.Forms.PictureBox picTSOreoCakeCream;
+        private System.Windows.Forms.Panel btnTraSuaPhoMai;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Label lblTSPhoMai;
+        private System.Windows.Forms.PictureBox picTSPhoMai;
+        private System.Windows.Forms.VScrollBar VScrollBar1;
     }
 }

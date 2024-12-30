@@ -1,4 +1,5 @@
 ﻿using OrderMillTeaProgram.Giao_diện.Giao_Diện_của_User.All_form_TS;
+using OrderMillTeaProgram.Giao_diện_của_User;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,6 +14,8 @@ namespace OrderMillTeaProgram
 {
     public partial class TraSuaUser : Form
     {
+        public Action<object, ProductSelectedEventArgs> ProductSelected { get; internal set; }
+
         public TraSuaUser()
         {
             InitializeComponent();
@@ -58,22 +61,37 @@ namespace OrderMillTeaProgram
             btnClose.Click += CloseForm;
         }
 
-
+        // Phương thức mở form trà sữa
         private void OpenTeaForm(Form teaForm)
         {
             try
             {
-                this.Show(); // Ẩn form chính khi mở form con
+                this.Show(); // Hiển thị lại form chính khi form con đóng
                 teaForm.FormClosed += (s, e) => this.Show();
+
+                // Nếu form con hỗ trợ sự kiện ProductSelected, đăng ký sự kiện này
+                if (teaForm is IProductSelectable selectableForm)
+                {
+                    selectableForm.ProductSelected += AddProductToCart;
+                }
+
                 teaForm.Show();
             }
             catch (Exception ex)
             {
+                // Hiển thị lỗi nếu xảy ra
                 MessageBox.Show($"Đã xảy ra lỗi: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 this.Show();
             }
         }
 
+        // Thêm sản phẩm vào giỏ hàng
+        private void AddProductToCart(string productName, decimal totalPrice)
+        {
+            MessageBox.Show($"Đã thêm {productName} vào giỏ hàng với giá: {totalPrice:N0} VND", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        // Đóng form chính
         private void CloseForm(object sender, EventArgs e)
         {
             var result = MessageBox.Show("Bạn có chắc chắn muốn thoát không?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -85,16 +103,14 @@ namespace OrderMillTeaProgram
 
         private void TraSuaUser_Load(object sender, EventArgs e)
         {
-            // Kích hoạt thanh cuộn cho Panel
-            panel1.AutoScroll = false; // Tắt AutoScroll để điều khiển thủ công
+            // Cấu hình thanh cuộn theo kích thước nội dung Panel
+            panel1.AutoScroll = false;
 
-            // Cấu hình vScrollBar1
             VScrollBar1.Minimum = 0;
             VScrollBar1.Maximum = Math.Max(0, panel1.DisplayRectangle.Height - panel1.ClientSize.Height);
             VScrollBar1.LargeChange = panel1.ClientSize.Height;
             VScrollBar1.SmallChange = 20;
 
-            // Cấu hình hScrollBar1
             HScrollBar1.Minimum = 0;
             HScrollBar1.Maximum = Math.Max(0, panel1.DisplayRectangle.Width - panel1.ClientSize.Width);
             HScrollBar1.LargeChange = panel1.ClientSize.Width;
@@ -103,26 +119,34 @@ namespace OrderMillTeaProgram
 
         private void VScrollBar1_Scroll(object sender, ScrollEventArgs e)
         {
-            // Thay đổi vị trí nội dung trong Panel theo giá trị vScrollBar
+            // Cập nhật vị trí cuộn dọc của Panel
             panel1.VerticalScroll.Value = VScrollBar1.Value;
-            panel1.PerformLayout(); // Cập nhật lại layout
+            panel1.PerformLayout();
         }
 
         private void HScrollBar1_Scroll(object sender, ScrollEventArgs e)
         {
-            // Thay đổi vị trí nội dung trong Panel theo giá trị hScrollBar
+            // Cập nhật vị trí cuộn ngang của Panel
             panel1.HorizontalScroll.Value = HScrollBar1.Value;
-            panel1.PerformLayout(); // Cập nhật lại layout
+            panel1.PerformLayout();
         }
     }
 
-    public partial class HongTraTac : Form
+    // Giao diện hỗ trợ sự kiện chọn sản phẩm
+    public interface IProductSelectable
     {
-        private readonly int BasePrice = 25000;
-        private NumericUpDown numericQuantity;
-        private Label lblTotalPrice;
-        private Button btnAddToCart;
-        private Button btnClose;
+        event Action<string, decimal> ProductSelected;
+    }
+
+    public partial class HongTraTac : Form, IProductSelectable
+    {
+        private readonly int BasePrice = 25000; // Giá cơ bản của sản phẩm
+        private NumericUpDown numericQuantity; // Điều chỉnh số lượng
+        private Label lblTotalPrice; // Hiển thị tổng giá tiền
+        private Button btnAddToCart; // Nút thêm vào giỏ hàng
+        private Button btnClose; // Nút đóng form
+
+        public event Action<string, decimal> ProductSelected; // Sự kiện chọn sản phẩm
 
         public HongTraTac()
         {
@@ -156,122 +180,26 @@ namespace OrderMillTeaProgram
 
         private void InitializeEvents()
         {
-            numericQuantity.ValueChanged += (s, e) => UpdateTotalPrice();
-            btnAddToCart.Click += (s, e) => MessageBox.Show("Đã thêm vào giỏ hàng!");
-            btnClose.Click += (s, e) => Close();
+            numericQuantity.ValueChanged += (s, e) => UpdateTotalPrice(); // Cập nhật giá khi thay đổi số lượng
+
+            btnAddToCart.Click += (s, e) =>
+            {
+                int quantity = (int)numericQuantity.Value;
+                decimal totalPrice = quantity * BasePrice;
+
+                // Kích hoạt sự kiện ProductSelected khi thêm vào giỏ hàng
+                ProductSelected?.Invoke("Hồng Trà Tắc", totalPrice);
+                Close(); // Đóng form sau khi thêm
+            };
+
+            btnClose.Click += (s, e) => Close(); // Đóng form khi nhấn nút đóng
         }
 
         private void UpdateTotalPrice()
         {
             int quantity = (int)numericQuantity.Value;
-            int totalPrice = quantity * BasePrice;
-            lblTotalPrice.Text = $"Tổng tiền: {totalPrice} VND";
-        }
-    }
-
-    public partial class TSTranChau : Form
-    {
-        private readonly int BasePrice = 30000;
-        private NumericUpDown numericQuantity;
-        private Label lblTotalPrice;
-        private Button btnAddToCart;
-        private Button btnClose;
-
-        public TSTranChau()
-        {
-            InitializeComponent();
-            InitializeEvents();
-            UpdateTotalPrice();
-        }
-
-        private void InitializeComponent()
-        {
-            numericQuantity = new NumericUpDown();
-            lblTotalPrice = new Label();
-            btnAddToCart = new Button();
-            btnClose = new Button();
-
-            numericQuantity.Location = new Point(50, 50);
-            lblTotalPrice.Location = new Point(50, 100);
-            lblTotalPrice.Text = "Tổng tiền: 0 VND";
-
-            btnAddToCart.Location = new Point(50, 150);
-            btnAddToCart.Text = "Thêm vào giỏ hàng";
-
-            btnClose.Location = new Point(150, 150);
-            btnClose.Text = "Đóng";
-
-            Controls.Add(numericQuantity);
-            Controls.Add(lblTotalPrice);
-            Controls.Add(btnAddToCart);
-            Controls.Add(btnClose);
-        }
-
-        private void InitializeEvents()
-        {
-            numericQuantity.ValueChanged += (s, e) => UpdateTotalPrice();
-            btnAddToCart.Click += (s, e) => MessageBox.Show("Đã thêm vào giỏ hàng!");
-            btnClose.Click += (s, e) => Close();
-        }
-
-        private void UpdateTotalPrice()
-        {
-            int quantity = (int)numericQuantity.Value;
-            int totalPrice = quantity * BasePrice;
-            lblTotalPrice.Text = $"Tổng tiền: {totalPrice} VND";
-        }
-    }
-
-    public partial class TSKhoaiMon : Form
-    {
-        private readonly int BasePrice = 28000;
-        private NumericUpDown numericQuantity;
-        private Label lblTotalPrice;
-        private Button btnAddToCart;
-        private Button btnClose;
-
-        public TSKhoaiMon()
-        {
-            InitializeComponent();
-            InitializeEvents();
-            UpdateTotalPrice();
-        }
-
-        private void InitializeComponent()
-        {
-            numericQuantity = new NumericUpDown();
-            lblTotalPrice = new Label();
-            btnAddToCart = new Button();
-            btnClose = new Button();
-
-            numericQuantity.Location = new Point(50, 50);
-            lblTotalPrice.Location = new Point(50, 100);
-            lblTotalPrice.Text = "Tổng tiền: 0 VND";
-
-            btnAddToCart.Location = new Point(50, 150);
-            btnAddToCart.Text = "Thêm vào giỏ hàng";
-
-            btnClose.Location = new Point(150, 150);
-            btnClose.Text = "Đóng";
-
-            Controls.Add(numericQuantity);
-            Controls.Add(lblTotalPrice);
-            Controls.Add(btnAddToCart);
-            Controls.Add(btnClose);
-        }
-
-        private void InitializeEvents()
-        {
-            numericQuantity.ValueChanged += (s, e) => UpdateTotalPrice();
-            btnAddToCart.Click += (s, e) => MessageBox.Show("Đã thêm vào giỏ hàng!");
-            btnClose.Click += (s, e) => Close();
-        }
-
-        private void UpdateTotalPrice()
-        {
-            int quantity = (int)numericQuantity.Value;
-            int totalPrice = quantity * BasePrice;
-            lblTotalPrice.Text = $"Tổng tiền: {totalPrice} VND";
+            decimal totalPrice = quantity * BasePrice;
+            lblTotalPrice.Text = $"Tổng tiền: {totalPrice:N0} VND"; // Hiển thị giá tiền cập nhật
         }
     }
 }

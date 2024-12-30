@@ -231,8 +231,6 @@ namespace OrderMillTeaProgram.Giao_diện.Giao_Diện_của_User.All_form_TS
 
         private void BtnExit_Click(object sender, EventArgs e)
         {
-            var result = MessageBox.Show("Bạn có chắc chắn muốn thoát không?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (result == DialogResult.Yes)
             {
                 Close();
             }

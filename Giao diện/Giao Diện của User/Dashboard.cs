@@ -2,7 +2,8 @@
 using System.Drawing;
 using System.Windows.Forms;
 using OrderMillTeaProgram.Giao_diện.Giao_Diện_của_User.All_form_tráng_miệng; // Namespace của TrangMiengUser
-using OrderMillTeaProgram.Giao_diện.Giao_Diện_của_User.All_form_TS; // Namespace của TraSuaUser
+using OrderMillTeaProgram.Giao_diện.Giao_Diện_của_User.All_form_TS;
+using OrderMillTeaProgram.Giao_diện_của_User; // Namespace của TraSuaUser
 
 namespace OrderMillTeaProgram.Giao_diện_của_User
 {
@@ -13,34 +14,62 @@ namespace OrderMillTeaProgram.Giao_diện_của_User
         public Dashboard()
         {
             InitializeComponent();
+            EnsureFlowLayoutPanelInitialized(); // Ensure flowLayoutPanelCart is initialized
+        }
+
+        private void EnsureFlowLayoutPanelInitialized()
+        {
+            if (flowLayoutPanelCart == null)
+            {
+                flowLayoutPanelCart = new FlowLayoutPanel
+                {
+                    Dock = DockStyle.Fill,
+                    AutoScroll = true
+                };
+                this.Controls.Add(flowLayoutPanelCart);
+            }
         }
 
         private void BtnTraSua_Click(object sender, EventArgs e)
         {
             // Tạo instance của form TraSuaUser
-            TraSuaUser traSuaUser = new TraSuaUser();
+            TraSuaUser traSuaForm = new TraSuaUser();
+
+            // Đăng ký sự kiện ProductSelected để nhận dữ liệu từ tất cả các form trong TraSuaUser
+            traSuaForm.ProductSelected += TraSuaForm_ProductSelected;
 
             // Hiển thị form TraSuaUser
-            traSuaUser.ShowDialog();
+            traSuaForm.ShowDialog();
+        }
+
+        private void TraSuaForm_ProductSelected(object sender, ProductSelectedEventArgs e)
+        {
+            // Gọi phương thức AddProductToCart để thêm sản phẩm vào giỏ hàng
+            AddProductToCart(e.ProductName, e.TotalPrice);
         }
 
         private void BtnTrangMieng_Click(object sender, EventArgs e)
         {
             // Tạo instance của form TrangMiengUser
-            TrangMiengUser trangMiengUser = new TrangMiengUser();
+            TrangMiengUser trangMiengForm = new TrangMiengUser();
+
+            // Đăng ký sự kiện ProductSelected để nhận dữ liệu
+            trangMiengForm.ProductSelected += (object s, object args) =>
+            {
+                if (args is ProductSelectedEventArgs productArgs)
+                {
+                    AddProductToCart(productArgs.ProductName, productArgs.TotalPrice);
+                }
+            };
 
             // Hiển thị form TrangMiengUser
-            trangMiengUser.ShowDialog();
+            trangMiengForm.ShowDialog();
         }
 
         private void AddProductToCart(string productName, decimal totalPrice)
         {
             // Đảm bảo FlowLayoutPanel không bị null
-            if (flowLayoutPanelCart == null)
-            {
-                MessageBox.Show("Giỏ hàng chưa được khởi tạo.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
+            EnsureFlowLayoutPanelInitialized();
 
             // Kiểm tra nếu sản phẩm đã tồn tại trong giỏ hàng
             foreach (Control control in flowLayoutPanelCart.Controls)
@@ -112,5 +141,56 @@ namespace OrderMillTeaProgram.Giao_diện_của_User
         {
             AddProductToCart("Product Name", 100000);
         }
+    }
+
+    public class ProductSelectedEventArgs : EventArgs
+    {
+        public string ProductName { get; set; }
+        public decimal TotalPrice { get; set; }
+    }
+}
+
+public class TraSuaUser : Form
+{
+    public event EventHandler<ProductSelectedEventArgs> ProductSelected;
+
+    public TraSuaUser()
+    {
+        // Giả sử có các form con được tạo tại đây
+        Button btnSubForm = new Button { Text = "Open Sub Form" };
+        btnSubForm.Click += (s, e) =>
+        {
+            // Ví dụ gọi form con
+            TSKhoaiMon subForm = new TSKhoaiMon();
+            subForm.ProductSelected += (sender, args) =>
+            {
+                // Kích hoạt sự kiện của form TraSuaUser
+                ProductSelected?.Invoke(this, args);
+            };
+            subForm.ShowDialog();
+        };
+        Controls.Add(btnSubForm);
+    }
+
+    // Method to raise the ProductSelected event
+    protected virtual void OnProductSelected(ProductSelectedEventArgs e)
+    {
+        ProductSelected?.Invoke(this, e);
+    }
+}
+
+public class TSKhoaiMon : Form
+{
+    public event EventHandler<ProductSelectedEventArgs> ProductSelected;
+
+    public TSKhoaiMon()
+    {
+        Button btnAddToCart = new Button { Text = "Thêm vào giỏ hàng" };
+        btnAddToCart.Click += (s, e) =>
+        {
+            // Giả sử sản phẩm có tên "Khoai Môn" và giá là 20000
+            ProductSelected?.Invoke(this, new ProductSelectedEventArgs { ProductName = "Khoai Môn", TotalPrice = 20000 });
+        };
+        Controls.Add(btnAddToCart);
     }
 }
