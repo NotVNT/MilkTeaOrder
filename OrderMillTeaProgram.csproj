@@ -73,6 +73,7 @@
     </Reference>
     <Reference Include="Microsoft.Identity.Client, Version=4.61.3.0, Culture=neutral, PublicKeyToken=0a613f4dd989e8ae, processorArchitecture=MSIL">
       <HintPath>packages\Microsoft.Identity.Client.4.61.3\lib\net462\Microsoft.Identity.Client.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.Identity.Client.Extensions.Msal, Version=4.61.3.0, Culture=neutral, PublicKeyToken=0a613f4dd989e8ae, processorArchitecture=MSIL">
       <HintPath>packages\Microsoft.Identity.Client.Extensions.Msal.4.61.3\lib\netstandard2.0\Microsoft.Identity.Client.Extensions.Msal.dll</HintPath>
@@ -261,6 +262,13 @@
     <Compile Include="Giao diện\Giao Diện của User\Dashboard.Designer.cs">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="Đăng Nhập Đăng ký của User\ForgotPassword_child.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Đăng Nhập Đăng ký của User\ForgotPassword_child.Designer.cs">
+      <DependentUpon>ForgotPassword_child.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Đăng Nhập Đăng ký của User\ForgotPassword_child1.cs" />
     <Compile Include="Đăng Nhập Đăng ký của User\Modify.cs" />
     <Compile Include="Đăng Nhập Đăng ký của User\SignForm.cs">
       <SubType>Form</SubType>
@@ -312,6 +320,9 @@
     <EmbeddedResource Include="Giao diện\Giao Diện của User\Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Đăng Nhập Đăng ký của User\ForgotPassword_child.resx">
+      <DependentUpon>ForgotPassword_child.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Đăng Nhập Đăng ký của User\SignForm.resx">
       <DependentUpon>SignForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -362,7 +373,7 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="EntityFramework">
-      <Version>6.2.0</Version>
+      <Version>6.5.1</Version>
     </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

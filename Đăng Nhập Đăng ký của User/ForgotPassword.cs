@@ -1,4 +1,5 @@
-﻿using System;
+﻿using OrderMillTeaProgram.Đăng_Nhập_Đăng_ký_của_User;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -47,6 +48,9 @@ namespace OrderMillTeaProgram
                     
                 }
             }
+            FogotPassword_child childForm = new FogotPassword_child(email);
+            childForm.Show();
+            this.Hide(); // Ẩn form hiện tại
 
         }
 

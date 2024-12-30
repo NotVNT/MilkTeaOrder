@@ -12,7 +12,7 @@ namespace OrderMillTeaProgram.Database
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Drink()
         {
-            CTHDs = new HashSet<CTHD>();
+            CTHD = new HashSet<CTHD>();
         }
 
         [Key]
@@ -29,7 +29,7 @@ namespace OrderMillTeaProgram.Database
         public string idLoai { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<CTHD> CTHDs { get; set; }
+        public virtual ICollection<CTHD> CTHD { get; set; }
 
         public virtual Loai Loai { get; set; }
     }

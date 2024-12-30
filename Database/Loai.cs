@@ -12,7 +12,7 @@ namespace OrderMillTeaProgram.Database
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Loai()
         {
-            Drinks = new HashSet<Drink>();
+            Drink = new HashSet<Drink>();
         }
 
         [Key]
@@ -23,6 +23,6 @@ namespace OrderMillTeaProgram.Database
         public string TenLoai { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Drink> Drinks { get; set; }
+        public virtual ICollection<Drink> Drink { get; set; }
     }
 }
