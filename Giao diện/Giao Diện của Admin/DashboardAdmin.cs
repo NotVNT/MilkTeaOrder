@@ -20,6 +20,9 @@ namespace OrderMillTeaProgram.Giao_diện_của_User
         TraSuaAdmin trasuaAdmin;
         AnVatAdmin anvatAdmin;
         ToppingAdmin toppingAdmin;
+        QLDT qldt;
+        QLTK qltk;
+
         public DashboardAdmin()
         {
             InitializeComponent();
@@ -194,14 +197,66 @@ namespace OrderMillTeaProgram.Giao_diện_của_User
             toppingAdmin = null;
         }
 
+
+
+
         private void btnLogout_Click(object sender, EventArgs e)
         {
-            if(MessageBox.Show("Bạn có muốn đăng xuất không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes )
+            if(MessageBox.Show("Bạn có muốn đăng xuất không?", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Information) == DialogResult.OK )
             {
                 this.Hide();
                 LoginForm loginForm = new LoginForm();
                 loginForm.ShowDialog();
             }
+        }
+
+
+
+
+
+        private void btnQLDT_Click(object sender, EventArgs e)
+        {
+            if (qldt == null)
+            {
+                qldt = new QLDT();
+                qldt.FormClosed += TraSuaAdmin_FormClosed;
+                qldt.MdiParent = this;
+                qldt.Dock = DockStyle.Fill;
+                qldt.Show();
+            }
+            else
+            {
+                qldt.Activate();
+            }
+        }
+        private void QLDT_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            qldt = null;
+        }
+
+
+
+
+
+
+        private void btnQLTK_Click(object sender, EventArgs e)
+        {
+            if (qltk == null)
+            {
+                qltk = new QLTK();
+                qltk.FormClosed += TraSuaAdmin_FormClosed;
+                qltk.MdiParent = this;
+                qltk.Dock = DockStyle.Fill;
+                qltk.Show();
+            }
+            else
+            {
+                qltk.Activate();
+            }
+        }
+        private void QLTK_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            qltk = null;
         }
     }
 }

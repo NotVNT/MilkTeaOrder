@@ -79,7 +79,9 @@
             this.sidebar.Location = new System.Drawing.Point(0, 0);
             this.sidebar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.sidebar.Name = "sidebar";
-            this.sidebar.Size = new System.Drawing.Size(293, 1102);
+
+            this.sidebar.Size = new System.Drawing.Size(220, 894);
+
             this.sidebar.TabIndex = 1;
             // 
             // panel3
@@ -258,6 +260,7 @@
             this.btnQLDT.TabIndex = 7;
             this.btnQLDT.Text = "          Quản Lý Doanh Thu";
             this.btnQLDT.UseVisualStyleBackColor = true;
+            this.btnQLDT.Click += new System.EventHandler(this.btnQLDT_Click);
             // 
             // btnQLTK
             // 
@@ -274,6 +277,7 @@
             this.btnQLTK.TabIndex = 8;
             this.btnQLTK.Text = "        Quản Lý Tài Khoản";
             this.btnQLTK.UseVisualStyleBackColor = true;
+            this.btnQLTK.Click += new System.EventHandler(this.btnQLTK_Click);
             // 
             // btnKho
             // 
@@ -350,7 +354,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Linen;
-            this.ClientSize = new System.Drawing.Size(1942, 1102);
+
+            this.ClientSize = new System.Drawing.Size(1455, 894);
+
             this.Controls.Add(this.sidebar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.IsMdiContainer = true;

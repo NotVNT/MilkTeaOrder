@@ -1,4 +1,6 @@
-namespace OrderMillTeaProgram
+
+namespace OrderMillTeaProgram.Database
+
 {
     using System;
     using System.Collections.Generic;

@@ -1,4 +1,6 @@
-namespace OrderMillTeaProgram
+
+namespace OrderMillTeaProgram.Database
+
 {
     using System;
     using System.Collections.Generic;
@@ -9,6 +11,14 @@ namespace OrderMillTeaProgram
     [Table("HoaDon")]
     public partial class HoaDon
     {
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public HoaDon()
+        {
+            CTHDs = new HashSet<CTHD>();
+        }
+
+
         [Key]
         [StringLength(50)]
         public string idHoaDon { get; set; }
@@ -17,5 +27,9 @@ namespace OrderMillTeaProgram
 
         [StringLength(50)]
         public string TrangThai { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<CTHD> CTHDs { get; set; }
+
     }
 }

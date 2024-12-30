@@ -25,7 +25,11 @@ namespace OrderMillTeaProgram
                     {
                         while (dataReader.Read())
                         {
-                            accounts.Add(new Account(dataReader.GetString(0), dataReader.GetString(1)));
+
+                            string username = dataReader.IsDBNull(0) ? null : dataReader.GetString(0);
+                            string hoten = dataReader.IsDBNull(1) ? null : dataReader.GetString(1);
+                            accounts.Add(new Account(username, hoten));
+
                         }
                     }
                 }
@@ -34,6 +38,7 @@ namespace OrderMillTeaProgram
         }
         // hàm này dùng để Đăng ký tài khoản
         public void Command(string query, Dictionary<string, object> parameters = null)
+
         {
             using (SqlConnection sqlConnection = Connection.GetSqlConnection())
             {
@@ -48,6 +53,25 @@ namespace OrderMillTeaProgram
                         }
                     }
                     sqlCommand.ExecuteNonQuery();
+                }
+            }
+        }
+
+
+        public bool CheckExistingUser(string username, string email)
+
+        {
+            string query = "SELECT COUNT(*) FROM UserInfo WHERE UserName = @username OR Email = @email";
+            using (SqlConnection sqlConnection = Connection.GetSqlConnection())
+            {
+                sqlConnection.Open();
+                using (SqlCommand sqlCommand = new SqlCommand(query, sqlConnection))
+                {
+                    sqlCommand.Parameters.AddWithValue("@username", username);
+                    sqlCommand.Parameters.AddWithValue("@email", email);
+                    int count = (int)sqlCommand.ExecuteScalar();
+                    return count > 0;
+
                 }
             }
         }
