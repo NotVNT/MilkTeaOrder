@@ -181,6 +181,7 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+
     <Compile Include="Database\CTHD.cs" />
     <Compile Include="Database\Drink.cs" />
     <Compile Include="Database\HoaDon.cs" />
@@ -198,6 +199,7 @@
     <Compile Include="Giao diện\Giao Diện của Admin\Bảng điều hướng của Admin\QLDT.Designer.cs">
       <DependentUpon>QLDT.cs</DependentUpon>
     </Compile>
+
     <Compile Include="Giao diện\Giao Diện của Admin\Bảng điều hướng của Admin\ToppingAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -360,6 +362,7 @@
   <ItemGroup>
     <Folder Include="Giao diện\Giao Diện của User\Bảng điều hướng của User\" />
   </ItemGroup>
+
   <ItemGroup>
     <PackageReference Include="EntityFramework">
       <Version>6.5.1</Version>
@@ -368,6 +371,7 @@
       <Version>1.9.0</Version>
     </PackageReference>
   </ItemGroup>
+
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="packages\Microsoft.Data.SqlClient.SNI.5.2.0\build\net462\Microsoft.Data.SqlClient.SNI.targets" Condition="Exists('packages\Microsoft.Data.SqlClient.SNI.5.2.0\build\net462\Microsoft.Data.SqlClient.SNI.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

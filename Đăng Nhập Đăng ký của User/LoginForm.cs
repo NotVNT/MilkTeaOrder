@@ -81,8 +81,10 @@ namespace OrderMillTeaProgram
 
                 using (SqlConnection sqlConnection = Connection.GetSqlConnection())
                 {
+                
                     sqlConnection.Open();
                     using (SqlCommand sqlCommand = new SqlCommand(query, sqlConnection))
+
                     {
                         sqlCommand.Parameters.AddWithValue("@username", username);
                         sqlCommand.Parameters.AddWithValue("@password", password);
