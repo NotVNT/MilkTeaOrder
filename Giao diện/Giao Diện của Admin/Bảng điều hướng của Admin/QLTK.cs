@@ -24,6 +24,7 @@ namespace OrderMillTeaProgram.Giao_diện.Giao_Diện_của_Admin
 
         private void QLTK_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'userInfoDataSet.UserInfo' table. You can move, or remove it, as needed.
             this.ControlBox = false;
         }
     }

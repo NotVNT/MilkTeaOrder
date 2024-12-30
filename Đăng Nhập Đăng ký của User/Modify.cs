@@ -25,7 +25,9 @@ namespace OrderMillTeaProgram
                     {
                         while (dataReader.Read())
                         {
-                            accounts.Add(new Account(dataReader.GetString(0), dataReader.GetString(1)));
+                            string username = dataReader.IsDBNull(0) ? null : dataReader.GetString(0);
+                            string hoten = dataReader.IsDBNull(1) ? null : dataReader.GetString(1);
+                            accounts.Add(new Account(username, hoten));
                         }
                     }
                 }

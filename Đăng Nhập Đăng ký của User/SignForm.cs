@@ -85,7 +85,7 @@ namespace OrderMillTeaProgram
             string password = txtMatKhau.Text;
             string xacnhanpassword = txtCheckPass.Text;
             string email = txtEmail.Text;
-            string magioithieu = txtMaGioiThieu.Text;
+            string sdt = txtSDT.Text;
             if(!CheckAccount(username))
             {
                 MessageBox.Show("Vui lòng nhập tên tài khoản có độ dài từ 6-26 ký tự!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -104,6 +104,12 @@ namespace OrderMillTeaProgram
             if (!CheckEmail(email))
             {
                 MessageBox.Show("Vui lòng nhập đúng định dạng Email!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
+            if (!Regex.IsMatch(sdt, @"^0\d{10}$"))
+            {
+                MessageBox.Show("Vui lòng nhập số điện thoại hợp lệ (bắt đầu bằng 0, tối đa 11 chữ số)!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
 
@@ -129,13 +135,16 @@ namespace OrderMillTeaProgram
                 }
 
 
-                string query = "INSERT INTO UserInfo (UserName, Password, Email) VALUES (@username, @password, @email)";
+                string query = "INSERT INTO UserInfo (UserName, Password, Email, SDT, Role) VALUES (@username, @password, @email, @sdt, @role)";
                 var parameters = new Dictionary<string, object>
-                {
-                    { "@username", username },
-                    { "@password", password },
-                    { "@email", email }
-                };
+        {
+            { "@username", username },
+            { "@password", password },
+            { "@email", email },
+            { "@sdt", sdt }, 
+            { "@role", "Người dùng" }
+
+        };
                 modify.Command(query, parameters);
 
                 if (MessageBox.Show("Đăng ký thành công! Bạn có muốn đăng nhập luôn không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
@@ -156,6 +165,13 @@ namespace OrderMillTeaProgram
                     MessageBox.Show("Đã xảy ra lỗi trong quá trình đăng ký. Vui lòng thử lại sau!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            LoginForm loginForm = new LoginForm();
+            loginForm.Show();
+            this.Hide();
         }
     }
 }

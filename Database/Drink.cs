@@ -1,4 +1,4 @@
-namespace OrderMillTeaProgram
+namespace OrderMillTeaProgram.Database
 {
     using System;
     using System.Collections.Generic;
@@ -9,6 +9,12 @@ namespace OrderMillTeaProgram
     [Table("Drink")]
     public partial class Drink
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Drink()
+        {
+            CTHDs = new HashSet<CTHD>();
+        }
+
         [Key]
         [StringLength(50)]
         public string IdDrink { get; set; }
@@ -21,6 +27,9 @@ namespace OrderMillTeaProgram
 
         [StringLength(50)]
         public string idLoai { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<CTHD> CTHDs { get; set; }
 
         public virtual Loai Loai { get; set; }
     }

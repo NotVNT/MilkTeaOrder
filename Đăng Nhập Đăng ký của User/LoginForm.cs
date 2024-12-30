@@ -121,5 +121,25 @@ namespace OrderMillTeaProgram
             Sign.Show();
             this.Hide();
         }
+
+     
+
+        private void txtDangNhap_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Tab)
+            {
+                txtMatKhau.Focus();
+                e.Handled = true;
+            }
+        }
+
+        private void txtMatKhau_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Tab)
+            {
+                txtDangNhap.Focus(); // Thay đổi dòng này
+                e.Handled = true;
+            }
+        }
     }
 }
