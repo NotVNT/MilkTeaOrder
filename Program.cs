@@ -16,7 +16,7 @@ namespace OrderMillTeaProgram
         static void Main()
         {
             Application.EnableVisualStyles();
-            Application.Run( new Dashboard());
+            Application.Run( new DashboardAdmin());
         }
     }
 }
