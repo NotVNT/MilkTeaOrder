@@ -107,7 +107,7 @@ namespace OrderMillTeaProgram
                 return;
             }
 
-            if (!Regex.IsMatch(sdt, @"^0\d{10}$"))
+            if (!Regex.IsMatch(sdt, @"^0\d{9,10}$"))
             {
                 MessageBox.Show("Vui lòng nhập số điện thoại hợp lệ (bắt đầu bằng 0, tối đa 11 chữ số)!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;

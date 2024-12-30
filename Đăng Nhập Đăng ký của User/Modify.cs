@@ -53,6 +53,23 @@ namespace OrderMillTeaProgram
                 }
             }
         }
+
+
+        public bool CheckExistingUser(string username, string email)
+        {
+            string query = "SELECT COUNT(*) FROM UserInfo WHERE UserName = @username OR Email = @email";
+            using (SqlConnection sqlConnection = Connection.GetSqlConnection())
+            {
+                sqlConnection.Open();
+                using (SqlCommand sqlCommand = new SqlCommand(query, sqlConnection))
+                {
+                    sqlCommand.Parameters.AddWithValue("@username", username);
+                    sqlCommand.Parameters.AddWithValue("@email", email);
+                    int count = (int)sqlCommand.ExecuteScalar();
+                    return count > 0;
+                }
+            }
+        }
     }
 }
 
