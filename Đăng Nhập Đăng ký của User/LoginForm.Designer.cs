@@ -86,7 +86,8 @@
             this.btnhidepass.Location = new System.Drawing.Point(598, 360);
             this.btnhidepass.Name = "btnhidepass";
             this.btnhidepass.Size = new System.Drawing.Size(26, 19);
-            this.btnhidepass.TabIndex = 9;
+            this.btnhidepass.TabIndex = 3;
+            this.btnhidepass.TabStop = false;
             this.btnhidepass.Click += new System.EventHandler(this.btnhidepass_Click);
             // 
             // btnshowpass
@@ -115,8 +116,7 @@
             this.lblDangKy.Location = new System.Drawing.Point(413, 491);
             this.lblDangKy.Name = "lblDangKy";
             this.lblDangKy.Size = new System.Drawing.Size(94, 17);
-            this.lblDangKy.TabIndex = 8;
-            this.lblDangKy.TabStop = true;
+            this.lblDangKy.TabIndex = 7;
             this.lblDangKy.Text = "Đăng ký ngay";
             this.lblDangKy.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblDangKy_LinkClicked);
             // 
@@ -128,7 +128,8 @@
             this.guna2HtmlLabel1.Location = new System.Drawing.Point(291, 491);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
             this.guna2HtmlLabel1.Size = new System.Drawing.Size(116, 18);
-            this.guna2HtmlLabel1.TabIndex = 7;
+            this.guna2HtmlLabel1.TabIndex = 6;
+            this.guna2HtmlLabel1.TabStop = false;
             this.guna2HtmlLabel1.Text = "Chưa có tài khoản ?";
             // 
             // lblQuenMatKhau
@@ -141,8 +142,7 @@
             this.lblQuenMatKhau.Location = new System.Drawing.Point(192, 405);
             this.lblQuenMatKhau.Name = "lblQuenMatKhau";
             this.lblQuenMatKhau.Size = new System.Drawing.Size(139, 21);
-            this.lblQuenMatKhau.TabIndex = 6;
-            this.lblQuenMatKhau.TabStop = true;
+            this.lblQuenMatKhau.TabIndex = 4;
             this.lblQuenMatKhau.Text = "Quên mật khẩu ?";
             this.lblQuenMatKhau.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblQuenMatKhau_LinkClicked);
             // 
@@ -159,6 +159,7 @@
             this.btnDangNhap.Name = "btnDangNhap";
             this.btnDangNhap.Size = new System.Drawing.Size(430, 45);
             this.btnDangNhap.TabIndex = 5;
+            this.btnDangNhap.TabStop = false;
             this.btnDangNhap.Text = "Đăng Nhập";
             this.btnDangNhap.Click += new System.EventHandler(this.btnDangNhap_Click);
             // 
@@ -181,7 +182,8 @@
             this.txtMatKhau.PlaceholderText = "Nhập mật khẩu";
             this.txtMatKhau.SelectedText = "";
             this.txtMatKhau.Size = new System.Drawing.Size(429, 39);
-            this.txtMatKhau.TabIndex = 4;
+            this.txtMatKhau.TabIndex = 2;
+            this.txtMatKhau.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtMatKhau_KeyDown);
             // 
             // txtDangNhap
             // 
@@ -202,8 +204,9 @@
             this.txtDangNhap.PlaceholderText = "Nhập email hoặc tên tài khoản";
             this.txtDangNhap.SelectedText = "";
             this.txtDangNhap.Size = new System.Drawing.Size(430, 39);
-            this.txtDangNhap.TabIndex = 4;
+            this.txtDangNhap.TabIndex = 1;
             this.txtDangNhap.TextChanged += new System.EventHandler(this.txtDangNhap_TextChanged);
+            this.txtDangNhap.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtDangNhap_KeyDown);
             // 
             // lblMk
             // 
@@ -212,7 +215,7 @@
             this.lblMk.Location = new System.Drawing.Point(204, 330);
             this.lblMk.Name = "lblMk";
             this.lblMk.Size = new System.Drawing.Size(67, 16);
-            this.lblMk.TabIndex = 3;
+            this.lblMk.TabIndex = 9;
             this.lblMk.Text = "Mật khẩu";
             // 
             // label3
@@ -232,7 +235,7 @@
             this.lblTenDN.Location = new System.Drawing.Point(203, 239);
             this.lblTenDN.Name = "lblTenDN";
             this.lblTenDN.Size = new System.Drawing.Size(104, 16);
-            this.lblTenDN.TabIndex = 3;
+            this.lblTenDN.TabIndex = 10;
             this.lblTenDN.Text = "Tên Đăng Nhập";
             // 
             // lblTextLogo
@@ -242,7 +245,7 @@
             this.lblTextLogo.Location = new System.Drawing.Point(201, 154);
             this.lblTextLogo.Name = "lblTextLogo";
             this.lblTextLogo.Size = new System.Drawing.Size(349, 32);
-            this.lblTextLogo.TabIndex = 2;
+            this.lblTextLogo.TabIndex = 8;
             this.lblTextLogo.Text = "Đăng Nhập Quán Trà Sữa ";
             // 
             // logobox

@@ -39,7 +39,7 @@
             this.btnDangKy = new Guna.UI2.WinForms.Guna2Button();
             this.txtCheckPass = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtMatKhau = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtMaGioiThieu = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtSDT = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtEmail = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtDangNhap = new Guna.UI2.WinForms.Guna2TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -49,7 +49,7 @@
             this.lblTenDN = new System.Windows.Forms.Label();
             this.lblTextLogo = new System.Windows.Forms.Label();
             this.logobox = new Guna.UI2.WinForms.Guna2CirclePictureBox();
-            this.btnExit = new Guna.UI2.WinForms.Guna2CircleButton();
+            this.btnBack = new Guna.UI2.WinForms.Guna2CircleButton();
             this.frmSignForm.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logobox)).BeginInit();
             this.SuspendLayout();
@@ -67,7 +67,7 @@
             this.frmSignForm.Controls.Add(this.btnDangKy);
             this.frmSignForm.Controls.Add(this.txtCheckPass);
             this.frmSignForm.Controls.Add(this.txtMatKhau);
-            this.frmSignForm.Controls.Add(this.txtMaGioiThieu);
+            this.frmSignForm.Controls.Add(this.txtSDT);
             this.frmSignForm.Controls.Add(this.txtEmail);
             this.frmSignForm.Controls.Add(this.txtDangNhap);
             this.frmSignForm.Controls.Add(this.label1);
@@ -77,7 +77,7 @@
             this.frmSignForm.Controls.Add(this.lblTenDN);
             this.frmSignForm.Controls.Add(this.lblTextLogo);
             this.frmSignForm.Controls.Add(this.logobox);
-            this.frmSignForm.Controls.Add(this.btnExit);
+            this.frmSignForm.Controls.Add(this.btnBack);
             this.frmSignForm.Location = new System.Drawing.Point(507, -2);
             this.frmSignForm.Name = "frmSignForm";
             this.frmSignForm.Size = new System.Drawing.Size(926, 1564);
@@ -236,26 +236,26 @@
             this.txtMatKhau.Size = new System.Drawing.Size(429, 39);
             this.txtMatKhau.TabIndex = 4;
             // 
-            // txtMaGioiThieu
+            // txtSDT
             // 
-            this.txtMaGioiThieu.BorderThickness = 2;
-            this.txtMaGioiThieu.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtMaGioiThieu.DefaultText = "";
-            this.txtMaGioiThieu.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtMaGioiThieu.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtMaGioiThieu.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtMaGioiThieu.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtMaGioiThieu.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtMaGioiThieu.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.txtMaGioiThieu.ForeColor = System.Drawing.Color.Black;
-            this.txtMaGioiThieu.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtMaGioiThieu.Location = new System.Drawing.Point(205, 541);
-            this.txtMaGioiThieu.Name = "txtMaGioiThieu";
-            this.txtMaGioiThieu.PasswordChar = '\0';
-            this.txtMaGioiThieu.PlaceholderText = "Nhập mã giới thiệu";
-            this.txtMaGioiThieu.SelectedText = "";
-            this.txtMaGioiThieu.Size = new System.Drawing.Size(430, 39);
-            this.txtMaGioiThieu.TabIndex = 4;
+            this.txtSDT.BorderThickness = 2;
+            this.txtSDT.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtSDT.DefaultText = "";
+            this.txtSDT.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtSDT.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtSDT.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtSDT.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtSDT.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtSDT.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.txtSDT.ForeColor = System.Drawing.Color.Black;
+            this.txtSDT.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtSDT.Location = new System.Drawing.Point(205, 541);
+            this.txtSDT.Name = "txtSDT";
+            this.txtSDT.PasswordChar = '\0';
+            this.txtSDT.PlaceholderText = "Nhập số điện thoại";
+            this.txtSDT.SelectedText = "";
+            this.txtSDT.Size = new System.Drawing.Size(430, 39);
+            this.txtSDT.TabIndex = 4;
             // 
             // txtEmail
             // 
@@ -305,9 +305,9 @@
             this.label1.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(205, 522);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(125, 16);
+            this.label1.Size = new System.Drawing.Size(126, 16);
             this.label1.TabIndex = 3;
-            this.label1.Text = "Nhập mã giới thiệu";
+            this.label1.Text = "Nhập số điện thoại";
             // 
             // lblXNMK
             // 
@@ -372,26 +372,26 @@
             this.logobox.TabIndex = 1;
             this.logobox.TabStop = false;
             // 
-            // btnExit
+            // btnBack
             // 
-            this.btnExit.BackColor = System.Drawing.Color.Transparent;
-            this.btnExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnExit.BorderColor = System.Drawing.Color.Transparent;
-            this.btnExit.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnExit.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnExit.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnExit.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnExit.FillColor = System.Drawing.Color.White;
-            this.btnExit.Font = new System.Drawing.Font("Segoe UI Light", 9F);
-            this.btnExit.ForeColor = System.Drawing.Color.Transparent;
-            this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
-            this.btnExit.Location = new System.Drawing.Point(899, 0);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.btnExit.Size = new System.Drawing.Size(24, 31);
-            this.btnExit.TabIndex = 0;
-            this.btnExit.UseTransparentBackground = true;
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            this.btnBack.BackColor = System.Drawing.Color.Transparent;
+            this.btnBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnBack.BorderColor = System.Drawing.Color.Transparent;
+            this.btnBack.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnBack.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnBack.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnBack.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnBack.FillColor = System.Drawing.Color.White;
+            this.btnBack.Font = new System.Drawing.Font("Segoe UI Light", 9F);
+            this.btnBack.ForeColor = System.Drawing.Color.Transparent;
+            this.btnBack.Image = ((System.Drawing.Image)(resources.GetObject("btnBack.Image")));
+            this.btnBack.Location = new System.Drawing.Point(3, 0);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.btnBack.Size = new System.Drawing.Size(24, 31);
+            this.btnBack.TabIndex = 0;
+            this.btnBack.UseTransparentBackground = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // SignForm
             // 
@@ -415,7 +415,7 @@
         #endregion
 
         private Guna.UI2.WinForms.Guna2Panel frmSignForm;
-        private Guna.UI2.WinForms.Guna2CircleButton btnExit;
+        private Guna.UI2.WinForms.Guna2CircleButton btnBack;
         private Guna.UI2.WinForms.Guna2CirclePictureBox logobox;
         private System.Windows.Forms.Label lblTextLogo;
         private Guna.UI2.WinForms.Guna2TextBox txtDangNhap;
@@ -433,7 +433,7 @@
         private Guna.UI2.WinForms.Guna2TextBox txtEmail;
         private System.Windows.Forms.Label lblXNMK;
         private System.Windows.Forms.Label lblEmail;
-        private Guna.UI2.WinForms.Guna2TextBox txtMaGioiThieu;
+        private Guna.UI2.WinForms.Guna2TextBox txtSDT;
         private System.Windows.Forms.Label label1;
     }
 }
