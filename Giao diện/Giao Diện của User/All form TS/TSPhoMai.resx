@@ -117,41 +117,53 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="trasuakhoaimon (1) (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\trasuakhoaimon (1) (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="trasuachantrau" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\trasuachantrau.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="hongtratac" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\hongtratac.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="tradaocamsa (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\tradaocamsa (1).jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="tiramisu" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\tiramisu.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="trasuaphomai" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\trasuaphomai.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="cheesecake" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cheesecake.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="banhflan" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\banhflan.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="tra-sua-oreo-cake-cream-674310" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\tra-sua-oreo-cake-cream-674310.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="z6146294792187_ca06630f68215aeb8706890c1f7b64db" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\z6146294792187_ca06630f68215aeb8706890c1f7b64db.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="tra_sua_socola-min (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\tra_sua_socola-min (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="cupcake" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cupcake.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btnExit.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        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
+</value>
   </data>
 </root>
