@@ -75,6 +75,22 @@ namespace OrderMillTeaProgram
                 }
             }
         }
+
+        //Hàm kiểm tra Email đã có trên hệ thống hay chưa
+        public bool CheckExistingEmail(string email)
+        {
+            string query = "SELECT COUNT(*) FROM UserInfo WHERE Email = @email";
+            using (SqlConnection sqlConnection = Connection.GetSqlConnection())
+            {
+                sqlConnection.Open();
+                using (SqlCommand sqlCommand = new SqlCommand(query, sqlConnection))
+                {
+                    sqlCommand.Parameters.AddWithValue("@email", email);
+                    int count = (int)sqlCommand.ExecuteScalar();
+                    return count > 0;
+                }
+            }
+        }
     }
 }
 

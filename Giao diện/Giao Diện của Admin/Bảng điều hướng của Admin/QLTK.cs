@@ -29,6 +29,8 @@ namespace OrderMillTeaProgram.Giao_diện.Giao_Diện_của_Admin
             this.ControlBox = false;
             LoadUserInfo();
             cmbChucVu.SelectedIndex = cmbChucVu.FindStringExact("Người dùng");
+            btnUpdate.Enabled = false;
+            btnExitEdit.Visible = false;
         }
 
         private void LoadUserInfo()
@@ -211,6 +213,7 @@ namespace OrderMillTeaProgram.Giao_diện.Giao_Diện_của_Admin
 
         private void dgvQLTK_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+           
             if (e.RowIndex >= 0) // Kiểm tra xem có dòng nào được chọn hay không
             {
                 DataGridViewRow selectedRow = dgvQLTK.Rows[e.RowIndex];
@@ -219,12 +222,18 @@ namespace OrderMillTeaProgram.Giao_diện.Giao_Diện_của_Admin
                 if (string.IsNullOrEmpty(userName)) // Kiểm tra xem UserName có null hay rỗng không
                 {
                     btnDelete.Enabled = false; // Vô hiệu hóa nút Xóa
-                                               // Hoặc hiển thị thông báo: 
-                                               // MessageBox.Show("Không thể thao tác với dòng dữ liệu trống!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    btnEdit.Enabled = false;    
+                    btnUpdate.Enabled = false;
                 }
                 else
                 {
                     btnDelete.Enabled = true; // Kích hoạt nút Xóa nếu dòng hợp lệ
+                    btnEdit.Enabled = true;
+                  
+                }
+                if (btnUpdate.Enabled)
+                {
+                    btnUpdate.Enabled = false; // Disable btnUpdate after cell click
                 }
             }
         }
@@ -260,6 +269,183 @@ namespace OrderMillTeaProgram.Giao_diện.Giao_Diện_của_Admin
                     // 6. Gán DataTable cho DataSource của DataGridView
                     dgvQLTK.DataSource = dt;
                 }
+            }
+        }
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            btnExitEdit.Visible = true;
+            if (dgvQLTK.SelectedRows.Count > 0)
+            {
+                DataGridViewRow selectedRow = dgvQLTK.SelectedRows[0];
+                string userName = selectedRow.Cells["UserName"].Value?.ToString();
+
+                if (string.IsNullOrEmpty(userName))
+                {
+                    btnEdit.Enabled = false; // Vô hiệu hóa nút Edit
+                                             // Hoặc bạn có thể ẩn nút Edit: btnEdit.Visible = false;
+                }
+                else
+                {
+                    try
+                    {
+                        // Lấy thông tin từ dòng được chọn và hiển thị lên các textbox
+                        txtTenTaiKhoan.Text = selectedRow.Cells["UserName"].Value.ToString();
+                        txtHoTen.Text = selectedRow.Cells["HoTen"].Value.ToString();
+                        txtEmail.Text = selectedRow.Cells["Email"].Value.ToString();
+                        txtSDT.Text = selectedRow.Cells["SDT"].Value.ToString();
+
+                        // Xử lý cmbChucVu
+                        string role = selectedRow.Cells["Role"].Value.ToString();
+                        cmbChucVu.SelectedIndex = cmbChucVu.FindStringExact(role);
+
+                        // Vô hiệu hóa textbox tên tài khoản vì không được phép sửa
+                        txtTenTaiKhoan.Enabled = false;
+
+                        // Ẩn txtMatKhau
+                        txtMatKhau.Visible = false;
+
+                        // Kích hoạt nút Edit (nếu trước đó bị vô hiệu hóa)
+                        btnEdit.Enabled = true;
+                        // Kích hoạt nút Update (nếu trước đó bị vô hiệu hóa)
+                        btnAdd.Enabled = false;
+                        btnDelete.Enabled = true;
+                        btnUpdate.Enabled = true;
+                        btnExitEdit.Visible = true;
+                    }
+                    catch (NullReferenceException ex)
+                    {
+                        MessageBox.Show("Lỗi: Một số cột không có giá trị. " + ex.Message, "Thông báo lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Vui lòng chọn tài khoản cần sửa!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+
+        //Kiểm tra Email khi nhấn nút btnUpdate nếu Email đã tồn tài  trên hệ thống thì sẽ thông báo cho người chỉnh sửa YÊU CẦU NHẬP EMAIL KHÁC
+        private string GetOriginalEmail(string userName)
+        {
+            string originalEmail = "";
+            string query = "SELECT Email FROM UserInfo WHERE UserName = @UserName";
+
+            using (SqlConnection connection = Connection.GetSqlConnection())
+            {
+                connection.Open();
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@UserName", userName);
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            originalEmail = reader["Email"].ToString();
+                        }
+                    }
+                }
+            }
+            return originalEmail;
+        }
+
+
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string userName = txtTenTaiKhoan.Text;
+                string hoTen = txtHoTen.Text;
+                string sdt = txtSDT.Text;
+                string email = txtEmail.Text;
+                string role = cmbChucVu.SelectedItem.ToString();
+
+                // Kiểm tra số điện thoại
+                if (!Regex.IsMatch(sdt, @"^0\d{9,10}$"))
+                {
+                    MessageBox.Show("Vui lòng nhập số điện thoại hợp lệ (bắt đầu bằng 0, tối đa 11 chữ số)!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
+
+                // Kiểm tra định dạng email
+                if (!CheckEmail(email))
+                {
+                    MessageBox.Show("Vui lòng nhập đúng định dạng Email!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
+
+                // Kiểm tra email đã tồn tại (trừ email của user hiện tại)
+                Modify modify = new Modify();
+                string originalEmail = GetOriginalEmail(userName); // You'll need to implement this function
+
+                if (email != originalEmail && modify.CheckExistingEmail(email))
+                {
+                    MessageBox.Show("Email này đã tồn tại trên hệ thống. Vui lòng chọn Email khác!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+
+                // Kiểm tra dữ liệu đầu vào khác (tương tự như btnAdd_Click) ...
+
+                string query = "UPDATE UserInfo SET HoTen = @HoTen, Email = @Email, SDT = @SDT, Role = @Role " +
+                                "WHERE UserName = @UserName";
+
+                Dictionary<string, object> parameters = new Dictionary<string, object>
+        {
+            { "@UserName", userName },
+            { "@HoTen", hoTen },
+            { "@Email", email },
+            { "@SDT", sdt },
+            { "@Role", role }
+        };
+
+
+                modify.Command(query, parameters);
+
+                LoadUserInfo(); // Cập nhật lại DataGridView
+
+                MessageBox.Show("Cập nhật thông tin thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                txtTenTaiKhoan.Clear();
+                txtHoTen.Clear();
+                txtEmail.Clear();
+                txtSDT.Clear();
+                cmbChucVu.SelectedIndex = cmbChucVu.FindStringExact("Người dùng");
+
+                btnAdd.Enabled = true;
+                btnUpdate.Enabled = true;
+                btnExitEdit.Visible = false;
+
+                txtTenTaiKhoan.Enabled = true;
+                txtMatKhau.Visible = true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi khi cập nhật thông tin người dùng: " + ex.Message);
+            }
+        }
+
+        private void btnExitEdit_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Bạn có muốn thoát khỏi chỉnh sửa không?", "Xác nhận thoát", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
+            {
+                btnAdd.Enabled = true;
+                btnDelete.Enabled = true;
+                btnUpdate.Enabled = false;
+                btnExitEdit.Visible = false;
+
+                txtTenTaiKhoan.Enabled = true;
+                txtMatKhau.Visible = true;
+
+                txtTenTaiKhoan.Clear() ;
+                txtHoTen.Clear() ;
+                txtSDT.Clear() ;
+                txtEmail.Clear() ;
+                cmbChucVu.SelectedIndex = cmbChucVu.FindStringExact("Người dùng");
             }
         }
     }
