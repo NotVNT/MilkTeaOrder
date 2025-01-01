@@ -52,9 +52,10 @@
             this.frmForgotPass.Controls.Add(this.lblTextLogo);
             this.frmForgotPass.Controls.Add(this.logobox);
             this.frmForgotPass.Controls.Add(this.btnExit);
-            this.frmForgotPass.Location = new System.Drawing.Point(507, -2);
+            this.frmForgotPass.Location = new System.Drawing.Point(676, -2);
+            this.frmForgotPass.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.frmForgotPass.Name = "frmForgotPass";
-            this.frmForgotPass.Size = new System.Drawing.Size(926, 1564);
+            this.frmForgotPass.Size = new System.Drawing.Size(1235, 1925);
             this.frmForgotPass.TabIndex = 0;
             // 
             // lblEmailDaDangKy
@@ -63,9 +64,10 @@
             this.lblEmailDaDangKy.BackColor = System.Drawing.Color.White;
             this.lblEmailDaDangKy.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEmailDaDangKy.ForeColor = System.Drawing.Color.White;
-            this.lblEmailDaDangKy.Location = new System.Drawing.Point(204, 300);
+            this.lblEmailDaDangKy.Location = new System.Drawing.Point(272, 369);
+            this.lblEmailDaDangKy.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblEmailDaDangKy.Name = "lblEmailDaDangKy";
-            this.lblEmailDaDangKy.Size = new System.Drawing.Size(110, 14);
+            this.lblEmailDaDangKy.Size = new System.Drawing.Size(129, 18);
             this.lblEmailDaDangKy.TabIndex = 6;
             this.lblEmailDaDangKy.Text = "Email không hợp lệ";
             // 
@@ -78,9 +80,10 @@
             this.btnTieptuc.FillColor = System.Drawing.Color.MediumSlateBlue;
             this.btnTieptuc.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold);
             this.btnTieptuc.ForeColor = System.Drawing.Color.White;
-            this.btnTieptuc.Location = new System.Drawing.Point(205, 317);
+            this.btnTieptuc.Location = new System.Drawing.Point(273, 390);
+            this.btnTieptuc.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnTieptuc.Name = "btnTieptuc";
-            this.btnTieptuc.Size = new System.Drawing.Size(430, 45);
+            this.btnTieptuc.Size = new System.Drawing.Size(573, 55);
             this.btnTieptuc.TabIndex = 5;
             this.btnTieptuc.Text = "Tiếp tục";
             this.btnTieptuc.Click += new System.EventHandler(this.btnTieptuc_Click);
@@ -99,12 +102,13 @@
             this.txtEmail.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.txtEmail.ForeColor = System.Drawing.Color.Black;
             this.txtEmail.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtEmail.Location = new System.Drawing.Point(205, 258);
+            this.txtEmail.Location = new System.Drawing.Point(273, 318);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.PasswordChar = '\0';
             this.txtEmail.PlaceholderText = "Nhập email ";
             this.txtEmail.SelectedText = "";
-            this.txtEmail.Size = new System.Drawing.Size(430, 39);
+            this.txtEmail.Size = new System.Drawing.Size(573, 48);
             this.txtEmail.TabIndex = 4;
             this.txtEmail.TextChanged += new System.EventHandler(this.txtEmail_TextChanged);
             // 
@@ -112,9 +116,10 @@
             // 
             this.lblEmail.AutoSize = true;
             this.lblEmail.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmail.Location = new System.Drawing.Point(203, 239);
+            this.lblEmail.Location = new System.Drawing.Point(271, 294);
+            this.lblEmail.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(39, 16);
+            this.lblEmail.Size = new System.Drawing.Size(56, 21);
             this.lblEmail.TabIndex = 3;
             this.lblEmail.Text = "Email";
             // 
@@ -122,9 +127,10 @@
             // 
             this.lblTextLogo.AutoSize = true;
             this.lblTextLogo.Font = new System.Drawing.Font("Arial Rounded MT Bold", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTextLogo.Location = new System.Drawing.Point(201, 154);
+            this.lblTextLogo.Location = new System.Drawing.Point(268, 190);
+            this.lblTextLogo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTextLogo.Name = "lblTextLogo";
-            this.lblTextLogo.Size = new System.Drawing.Size(308, 32);
+            this.lblTextLogo.Size = new System.Drawing.Size(390, 39);
             this.lblTextLogo.TabIndex = 2;
             this.lblTextLogo.Text = "Cập nhật mật khẩu mới";
             // 
@@ -133,10 +139,11 @@
             this.logobox.FillColor = System.Drawing.Color.Transparent;
             this.logobox.Image = ((System.Drawing.Image)(resources.GetObject("logobox.Image")));
             this.logobox.ImageRotate = 0F;
-            this.logobox.Location = new System.Drawing.Point(175, 52);
+            this.logobox.Location = new System.Drawing.Point(233, 64);
+            this.logobox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.logobox.Name = "logobox";
             this.logobox.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.logobox.Size = new System.Drawing.Size(132, 119);
+            this.logobox.Size = new System.Drawing.Size(176, 146);
             this.logobox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.logobox.TabIndex = 1;
             this.logobox.TabStop = false;
@@ -154,22 +161,24 @@
             this.btnExit.Font = new System.Drawing.Font("Segoe UI Light", 9F);
             this.btnExit.ForeColor = System.Drawing.Color.Transparent;
             this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
-            this.btnExit.Location = new System.Drawing.Point(899, 0);
+            this.btnExit.Location = new System.Drawing.Point(1199, 0);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnExit.Name = "btnExit";
             this.btnExit.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.btnExit.Size = new System.Drawing.Size(24, 31);
+            this.btnExit.Size = new System.Drawing.Size(32, 38);
             this.btnExit.TabIndex = 0;
             this.btnExit.UseTransparentBackground = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // ForgotPassword
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ClientSize = new System.Drawing.Size(1556, 769);
+            this.ClientSize = new System.Drawing.Size(1942, 946);
             this.Controls.Add(this.frmForgotPass);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "ForgotPassword";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
