@@ -434,7 +434,7 @@ namespace OrderMillTeaProgram.Giao_diện.Giao_Diện_của_Admin
             if (result == DialogResult.Yes)
             {
                 btnAdd.Enabled = true;
-                btnDelete.Enabled = true;
+                btnDelete.Enabled = false;
                 btnUpdate.Enabled = false;
                 btnExitEdit.Visible = false;
 
@@ -447,6 +447,12 @@ namespace OrderMillTeaProgram.Giao_diện.Giao_Diện_của_Admin
                 txtEmail.Clear() ;
                 cmbChucVu.SelectedIndex = cmbChucVu.FindStringExact("Người dùng");
             }
+            if (dgvQLTK.SelectedRows.Count > 0 &&
+          !string.IsNullOrEmpty(dgvQLTK.SelectedRows[0].Cells["UserName"].Value?.ToString()))
+            {
+                btnDelete.Enabled = true; // Enable Delete button only if there's a valid UserName
+            }
+
         }
     }
 }
