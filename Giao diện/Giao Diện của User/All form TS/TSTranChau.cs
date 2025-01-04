@@ -131,7 +131,6 @@ namespace OrderMillTeaProgram.Giao_diện.Giao_Diện_của_User.All_form_TS
             numericQuantity.ValueChanged += (s, e) => UpdateTotalPrice();
             btnDatMon.Click += PlaceOrder;
             btnExit.Click += BtnExit_Click;
-            btnAddGioHang.Click += AddToCart;
         }
 
         private void UpdateTotalPrice()
@@ -195,7 +194,15 @@ namespace OrderMillTeaProgram.Giao_diện.Giao_Diện_của_User.All_form_TS
             MessageBox.Show("Đặt món thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
-        private void AddToCart(object sender, EventArgs e)
+        private void BtnExit_Click(object sender, EventArgs e)
+        {
+
+            {
+                Close();
+            }
+        }
+
+        private void BtnAddToCart_Click(object sender, EventArgs e)
         {
             try
             {
@@ -210,7 +217,7 @@ namespace OrderMillTeaProgram.Giao_diện.Giao_Diện_của_User.All_form_TS
                 string totalPriceText = lbBasePrice.Text.Replace("Tổng giá: ", "").Replace(" VNĐ", "").Replace(",", "");
                 decimal totalPrice = decimal.Parse(totalPriceText);
 
-                ProductSelected?.Invoke($"Trà Sữa Oreo Cake Cream - {size} ({toppings})", totalPrice);
+                ProductSelected?.Invoke($"Trà Sữa Trân Châu - {size} ({toppings})", totalPrice);
 
                 MessageBox.Show($"Sản phẩm đã được thêm vào giỏ hàng:\n" +
                                 $"Size: {size}\n" +
@@ -220,19 +227,13 @@ namespace OrderMillTeaProgram.Giao_diện.Giao_Diện_của_User.All_form_TS
                                 "Thông báo",
                                 MessageBoxButtons.OK,
                                 MessageBoxIcon.Information);
+                MessageBox.Show("Thêm sản phẩm thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 Close();
             }
             catch (Exception ex)
             {
                 MessageBox.Show($"Lỗi khi thêm vào giỏ hàng: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        private void BtnExit_Click(object sender, EventArgs e)
-        {
-            {
-                Close();
             }
         }
     }

@@ -221,7 +221,7 @@
     <Compile Include="Database\Drink.cs" />
     <Compile Include="Database\HoaDon.cs" />
     <Compile Include="Database\Loai.cs" />
-    <Compile Include="Database\UserInfo.cs" />
+    <Compile Include="Database\Userinfo.cs" />
     <Compile Include="Giao diện\Giao Diện của Admin\Bảng điều hướng của Admin\QLTK.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -288,11 +288,11 @@
     <Compile Include="Giao diện\Giao Diện của User\All form tráng miệng\Tiramisu.Designer.cs">
       <DependentUpon>Tiramisu.cs</DependentUpon>
     </Compile>
-    <Compile Include="Giao diện\Giao Diện của User\All form TS\hongtratac.cs">
+    <Compile Include="Giao diện\Giao Diện của User\All form TS\Hongtratac.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Giao diện\Giao Diện của User\All form TS\hongtratac.Designer.cs">
-      <DependentUpon>hongtratac.cs</DependentUpon>
+    <Compile Include="Giao diện\Giao Diện của User\All form TS\Hongtratac.Designer.cs">
+      <DependentUpon>Hongtratac.cs</DependentUpon>
     </Compile>
     <Compile Include="Giao diện\Giao Diện của User\All form TS\TraDaoCamSa.cs">
       <SubType>Form</SubType>
@@ -306,11 +306,11 @@
     <Compile Include="Giao diện\Giao Diện của User\All form TS\TraSuaThaiXanh.Designer.cs">
       <DependentUpon>TraSuaThaiXanh.cs</DependentUpon>
     </Compile>
-    <Compile Include="Giao diện\Giao Diện của User\All form TS\TSkhoaimon.cs">
+    <Compile Include="Giao diện\Giao Diện của User\All form TS\tskhoaimon.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Giao diện\Giao Diện của User\All form TS\TSkhoaimon.Designer.cs">
-      <DependentUpon>TSkhoaimon.cs</DependentUpon>
+    <Compile Include="Giao diện\Giao Diện của User\All form TS\tskhoaimon.Designer.cs">
+      <DependentUpon>tskhoaimon.cs</DependentUpon>
     </Compile>
     <Compile Include="Giao diện\Giao Diện của User\All form TS\TSOreoCakeCream.cs">
       <SubType>Form</SubType>
@@ -429,8 +429,8 @@
     <EmbeddedResource Include="Giao diện\Giao Diện của User\All form tráng miệng\Tiramisu.resx">
       <DependentUpon>Tiramisu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Giao diện\Giao Diện của User\All form TS\hongtratac.resx">
-      <DependentUpon>hongtratac.cs</DependentUpon>
+    <EmbeddedResource Include="Giao diện\Giao Diện của User\All form TS\Hongtratac.resx">
+      <DependentUpon>Hongtratac.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Giao diện\Giao Diện của User\All form TS\TraDaoCamSa.resx">
       <DependentUpon>TraDaoCamSa.cs</DependentUpon>
@@ -438,8 +438,8 @@
     <EmbeddedResource Include="Giao diện\Giao Diện của User\All form TS\TraSuaThaiXanh.resx">
       <DependentUpon>TraSuaThaiXanh.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Giao diện\Giao Diện của User\All form TS\TSkhoaimon.resx">
-      <DependentUpon>TSkhoaimon.cs</DependentUpon>
+    <EmbeddedResource Include="Giao diện\Giao Diện của User\All form TS\TsKhoaiMon.resx">
+      <DependentUpon>tskhoaimon.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Giao diện\Giao Diện của User\All form TS\TSOreoCakeCream.resx">
       <DependentUpon>TSOreoCakeCream.cs</DependentUpon>
@@ -535,12 +535,13 @@
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Giao diện\Giao Diện của User\Bảng điều hướng của User\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <PackageReference Include="EntityFramework">
       <Version>6.5.1</Version>
+    </PackageReference>
+    <PackageReference Include="EnvDTE">
+      <Version>17.12.40391</Version>
     </PackageReference>
     <PackageReference Include="Portable.BouncyCastle">
       <Version>1.9.0</Version>

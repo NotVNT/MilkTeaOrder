@@ -10,7 +10,7 @@ namespace OrderMillTeaProgram
     class Connection
     {
 
-        private static string stringConnection = @"Data Source=VinhNgocTran\SQLEXPRESS02;Initial Catalog=UserInfo;Integrated Security=True;TrustServerCertificate=True";
+        private static readonly string stringConnection = @"Data Source=laptop-o9g07qpa;Initial Catalog=UserInfo;Persist Security Info=True;User ID=sa;Password=***********;TrustServerCertificate=True";
 
         public static SqlConnection GetSqlConnection()
         {

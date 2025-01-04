@@ -1,14 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data;
 using System.Linq;
 using System.Windows.Forms;
 
 namespace OrderMillTeaProgram.Giao_diện.Giao_Diện_của_User.All_form_TS
 {
-    public partial class TSkhoaimon : Form
+    public partial class tskhoaimon : Form
     {
-        private const int BasePrice = 30000;
+        private const int BasePrice = 25000;
         public event Action<string, decimal> ProductSelected; // Sự kiện gửi dữ liệu về form chính
         private readonly Dictionary<string, int> toppingQuantities = new Dictionary<string, int>();
         private readonly Dictionary<string, int> toppingPrices = new Dictionary<string, int>();
@@ -16,7 +15,7 @@ namespace OrderMillTeaProgram.Giao_diện.Giao_Diện_của_User.All_form_TS
         private bool isHandlingItemCheck = false;
         private ContextMenuStrip toppingContextMenu;
 
-        public TSkhoaimon()
+        public tskhoaimon()
         {
             InitializeComponent();
             LoadFormData();
@@ -132,7 +131,6 @@ namespace OrderMillTeaProgram.Giao_diện.Giao_Diện_của_User.All_form_TS
             numericQuantity.ValueChanged += (s, e) => UpdateTotalPrice();
             btnDatMon.Click += PlaceOrder;
             btnExit.Click += BtnExit_Click;
-            btnAddGioHang.Click += AddToCart;
         }
 
         private void UpdateTotalPrice()
@@ -196,7 +194,15 @@ namespace OrderMillTeaProgram.Giao_diện.Giao_Diện_của_User.All_form_TS
             MessageBox.Show("Đặt món thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
-        private void AddToCart(object sender, EventArgs e)
+        private void BtnExit_Click(object sender, EventArgs e)
+        {
+
+            {
+                Close();
+            }
+        }
+
+        private void BtnAddToCart_Click(object sender, EventArgs e)
         {
             try
             {
@@ -211,7 +217,7 @@ namespace OrderMillTeaProgram.Giao_diện.Giao_Diện_của_User.All_form_TS
                 string totalPriceText = lbBasePrice.Text.Replace("Tổng giá: ", "").Replace(" VNĐ", "").Replace(",", "");
                 decimal totalPrice = decimal.Parse(totalPriceText);
 
-                ProductSelected?.Invoke($"Hồng trà tắc - {size} ({toppings})", totalPrice);
+                ProductSelected?.Invoke($"Trà Sữa Khoai Môn - {size} ({toppings})", totalPrice);
 
                 MessageBox.Show($"Sản phẩm đã được thêm vào giỏ hàng:\n" +
                                 $"Size: {size}\n" +
@@ -221,20 +227,12 @@ namespace OrderMillTeaProgram.Giao_diện.Giao_Diện_của_User.All_form_TS
                                 "Thông báo",
                                 MessageBoxButtons.OK,
                                 MessageBoxIcon.Information);
-
+                MessageBox.Show("Thêm sản phẩm thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Close();
             }
             catch (Exception ex)
             {
                 MessageBox.Show($"Lỗi khi thêm vào giỏ hàng: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        private void BtnExit_Click(object sender, EventArgs e)
-        {
-
-            {
-                Close();
             }
         }
     }

@@ -19,17 +19,17 @@ namespace OrderMillTeaProgram
             InitializeComponent();
         }
 
-        private void btnExit_Click(object sender, EventArgs e)
+        private void BtnExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
-        private void btnshowhidepass_Click(object sender, EventArgs e)
+        private void Btnshowhidepass_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void btnhidepass_Click(object sender, EventArgs e)
+        private void Btnhidepass_Click(object sender, EventArgs e)
         {
             if (txtMatKhau.PasswordChar == '*')
             {
@@ -38,7 +38,7 @@ namespace OrderMillTeaProgram
             }
         }
 
-        private void btnshowpass_Click(object sender, EventArgs e)
+        private void Btnshowpass_Click(object sender, EventArgs e)
         {
             if (txtMatKhau.PasswordChar == '\0')
             {
@@ -47,21 +47,19 @@ namespace OrderMillTeaProgram
             }
         }
 
-        private void lblQuenMatKhau_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void LblQuenMatKhau_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             ForgotPassword Forgot = new ForgotPassword();
             Forgot.Show();
             this.Hide();
         }
 
-     
-
-        private void txtDangNhap_TextChanged(object sender, EventArgs e)
+        private void TxtDangNhap_TextChanged(object sender, EventArgs e)
         {
 
         }
-        Modify modify = new Modify();
-        private void btnDangNhap_Click(object sender, EventArgs e)
+
+        private void BtnDangNhap_Click(object sender, EventArgs e)
         {
             string username = txtDangNhap.Text;
             string password = txtMatKhau.Text;
@@ -81,7 +79,7 @@ namespace OrderMillTeaProgram
 
                 using (SqlConnection sqlConnection = Connection.GetSqlConnection())
                 {
-                
+
                     sqlConnection.Open();
                     using (SqlCommand sqlCommand = new SqlCommand(query, sqlConnection))
 
@@ -129,16 +127,14 @@ namespace OrderMillTeaProgram
                 }
             }
         }
-        private void lblDangKy_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void LblDangKy_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             SignForm Sign = new SignForm();
             Sign.Show();
             this.Hide();
         }
 
-     
-
-        private void txtDangNhap_KeyDown(object sender, KeyEventArgs e)
+        private void TxtDangNhap_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Tab)
             {
@@ -147,7 +143,7 @@ namespace OrderMillTeaProgram
             }
         }
 
-        private void txtMatKhau_KeyDown(object sender, KeyEventArgs e)
+        private void TxtMatKhau_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Tab)
             {

@@ -37,7 +37,6 @@ namespace OrderMillTeaProgram.Giao_diện_của_User
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
-            this.flowLayoutPanelCart = new System.Windows.Forms.FlowLayoutPanel();
             this.guna2Panel4 = new Guna.UI2.WinForms.Guna2Panel();
             this.btnClose = new Guna.UI2.WinForms.Guna2CircleButton();
             this.splitter1 = new System.Windows.Forms.Splitter();
@@ -45,7 +44,6 @@ namespace OrderMillTeaProgram.Giao_diện_của_User
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.btnTraSua = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
             this.btnTrangMieng = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.guna2Panel10 = new Guna.UI2.WinForms.Guna2Panel();
@@ -104,7 +102,6 @@ namespace OrderMillTeaProgram.Giao_diện_của_User
             this.guna2Panel2.BackColor = System.Drawing.Color.White;
             this.guna2Panel2.BorderColor = System.Drawing.Color.Gainsboro;
             this.guna2Panel2.BorderThickness = 4;
-            this.guna2Panel2.Controls.Add(this.flowLayoutPanelCart);
             this.guna2Panel2.Controls.Add(this.guna2Panel4);
             this.guna2Panel2.CustomBorderColor = System.Drawing.Color.White;
             this.guna2Panel2.Dock = System.Windows.Forms.DockStyle.Right;
@@ -113,15 +110,6 @@ namespace OrderMillTeaProgram.Giao_diện_của_User
             this.guna2Panel2.Name = "guna2Panel2";
             this.guna2Panel2.Size = new System.Drawing.Size(404, 1102);
             this.guna2Panel2.TabIndex = 12;
-            // 
-            // flowLayoutPanelCart
-            // 
-            this.flowLayoutPanelCart.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanelCart.Location = new System.Drawing.Point(0, 160);
-            this.flowLayoutPanelCart.Name = "flowLayoutPanelCart";
-            this.flowLayoutPanelCart.Size = new System.Drawing.Size(404, 942);
-            this.flowLayoutPanelCart.TabIndex = 13;
-            this.flowLayoutPanelCart.Paint += new System.Windows.Forms.PaintEventHandler(this.AddProductToCart_Paint);
             // 
             // guna2Panel4
             // 
@@ -188,7 +176,6 @@ namespace OrderMillTeaProgram.Giao_diện_của_User
             this.guna2Panel1.BorderThickness = 4;
             this.guna2Panel1.Controls.Add(this.btnTraSua);
             this.guna2Panel1.Controls.Add(this.button3);
-            this.guna2Panel1.Controls.Add(this.button4);
             this.guna2Panel1.Controls.Add(this.btnTrangMieng);
             this.guna2Panel1.Controls.Add(this.label2);
             this.guna2Panel1.Controls.Add(this.label1);
@@ -202,7 +189,6 @@ namespace OrderMillTeaProgram.Giao_diện_của_User
             this.guna2Panel1.Size = new System.Drawing.Size(385, 1102);
             this.guna2Panel1.TabIndex = 0;
             // 
-
             // btnTraSua
             // 
             this.btnTraSua.FlatAppearance.BorderColor = System.Drawing.Color.White;
@@ -221,7 +207,6 @@ namespace OrderMillTeaProgram.Giao_diện_của_User
             this.btnTraSua.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnTraSua.UseVisualStyleBackColor = true;
             this.btnTraSua.Click += new System.EventHandler(this.BtnTraSua_Click);
-
             // 
             // button3
             // 
@@ -232,9 +217,7 @@ namespace OrderMillTeaProgram.Giao_diện_của_User
             this.button3.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
             this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-
-            this.button3.Location = new System.Drawing.Point(12, 548);
-
+            this.button3.Location = new System.Drawing.Point(10, 467);
             this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(365, 63);
@@ -243,27 +226,6 @@ namespace OrderMillTeaProgram.Giao_diện_của_User
             this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button3.UseVisualStyleBackColor = true;
             // 
-            // button4
-            // 
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Coral;
-            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MistyRose;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
-            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-
-            this.button4.Location = new System.Drawing.Point(12, 477);
-
-            this.button4.Margin = new System.Windows.Forms.Padding(4);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(365, 63);
-            this.button4.TabIndex = 0;
-            this.button4.Text = "        Ăn vặt";
-            this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-
             // btnTrangMieng
             // 
             this.btnTrangMieng.FlatAppearance.BorderSize = 0;
@@ -282,7 +244,6 @@ namespace OrderMillTeaProgram.Giao_diện_của_User
             this.btnTrangMieng.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnTrangMieng.UseVisualStyleBackColor = true;
             this.btnTrangMieng.Click += new System.EventHandler(this.BtnTrangMieng_Click);
-
             // 
             // label2
             // 
@@ -290,7 +251,7 @@ namespace OrderMillTeaProgram.Giao_diện_của_User
             this.label2.BackColor = System.Drawing.Color.White;
             this.label2.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.DimGray;
-            this.label2.Location = new System.Drawing.Point(33, 636);
+            this.label2.Location = new System.Drawing.Point(22, 534);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(127, 24);
@@ -395,20 +356,6 @@ namespace OrderMillTeaProgram.Giao_diện_của_User
             this.label4.TabIndex = 0;
             this.label4.Text = "Since 12/2024";
             // 
- // button6
-            // 
-            this.button6.BackColor = System.Drawing.Color.LimeGreen;
-            this.button6.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button6.Location = new System.Drawing.Point(303, 249);
-            this.button6.Margin = new System.Windows.Forms.Padding(4);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(100, 42);
-            this.button6.TabIndex = 13;
-            this.button6.Text = "Nạp tiền";
-            this.button6.UseVisualStyleBackColor = false;
-            // 
-
             // guna2BorderlessForm1
             // 
             this.guna2BorderlessForm1.ContainerControl = this;
@@ -434,23 +381,10 @@ namespace OrderMillTeaProgram.Giao_diện_của_User
             this.panelContent.Size = new System.Drawing.Size(1153, 942);
             this.panelContent.TabIndex = 14;
             // 
-
             // sqlCommand1
             // 
             this.sqlCommand1.CommandTimeout = 30;
             this.sqlCommand1.EnableOptimizedParameterBinding = false;
-
-            this.guna2Panel5.BackColor = System.Drawing.Color.White;
-            this.guna2Panel5.BorderColor = System.Drawing.Color.Gainsboro;
-            this.guna2Panel5.BorderThickness = 4;
-            this.guna2Panel5.CustomBorderColor = System.Drawing.Color.White;
-            this.guna2Panel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.guna2Panel5.Location = new System.Drawing.Point(385, 160);
-            this.guna2Panel5.Margin = new System.Windows.Forms.Padding(4);
-            this.guna2Panel5.Name = "guna2Panel5";
-            this.guna2Panel5.Size = new System.Drawing.Size(1153, 942);
-            this.guna2Panel5.TabIndex = 14;
-
             // 
             // Dashboard
             // 
@@ -525,7 +459,6 @@ namespace OrderMillTeaProgram.Giao_diện_của_User
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button btnTrangMieng;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button4;
         private Guna.UI2.WinForms.Guna2BorderlessForm guna2BorderlessForm1;
         private Guna.UI2.WinForms.Guna2BorderlessForm guna2BorderlessForm2;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel6;
@@ -539,7 +472,6 @@ namespace OrderMillTeaProgram.Giao_diện_của_User
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox picAvatar;
         private System.Windows.Forms.Button btnUpload;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelCart;
     }
 }
 

@@ -1,6 +1,4 @@
-
 namespace OrderMillTeaProgram.Database
-
 {
     using System;
     using System.Collections.Generic;
@@ -15,7 +13,6 @@ namespace OrderMillTeaProgram.Database
         [StringLength(50)]
         public string UserName { get; set; }
 
-
         [StringLength(100)]
         public string HoTen { get; set; }
 
@@ -24,17 +21,14 @@ namespace OrderMillTeaProgram.Database
         public string Password { get; set; }
 
         [Required]
-
         [StringLength(50)]
         public string Email { get; set; }
 
         [StringLength(50)]
-
         public string SDT { get; set; }
 
         [Required]
         [StringLength(50)]
-
         public string Role { get; set; }
     }
 }

@@ -20,12 +20,12 @@ namespace OrderMillTeaProgram
             InitializeComponent();
         }
 
-        private void btnExit_Click(object sender, EventArgs e)
+        private void BtnExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
-        private void btnhidepass_Click(object sender, EventArgs e)
+        private void Btnhidepass_Click(object sender, EventArgs e)
         {
             if (txtMatKhau.PasswordChar == '*')
             {
@@ -34,7 +34,7 @@ namespace OrderMillTeaProgram
             }
         }
 
-        private void btnshowpass_Click(object sender, EventArgs e)
+        private void Btnshowpass_Click(object sender, EventArgs e)
         {
             if (txtMatKhau.PasswordChar == '\0')
             {
@@ -43,7 +43,7 @@ namespace OrderMillTeaProgram
             }
         }
 
-        private void btnhidepass2_Click(object sender, EventArgs e)
+        private void Btnhidepass2_Click(object sender, EventArgs e)
         {
             if (txtCheckPass.PasswordChar == '\0')
             {
@@ -52,7 +52,7 @@ namespace OrderMillTeaProgram
             }
         }
 
-        private void btnshowpass2_Click(object sender, EventArgs e)
+        private void Btnshowpass2_Click(object sender, EventArgs e)
         {
            
             if (txtCheckPass.PasswordChar == '*')
@@ -62,7 +62,7 @@ namespace OrderMillTeaProgram
             }
         }
 
-        private void lblDangNhap_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void LblDangNhap_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             LoginForm Login = new LoginForm();
             Login.Show();
@@ -78,8 +78,8 @@ namespace OrderMillTeaProgram
             return Regex.IsMatch(checkEm, @"^[a-zA-Z0-9_.]{4,20}@gmail.com(.vn|)$");
         }
 
-        Modify modify = new Modify();
-        private void btnDangKy_Click(object sender, EventArgs e)
+        readonly Modify modify = new Modify();
+        private void BtnDangKy_Click(object sender, EventArgs e)
         {
             string username = txtDangNhap.Text;
             string password = txtMatKhau.Text;
@@ -169,7 +169,7 @@ namespace OrderMillTeaProgram
             }
         }
 
-        private void btnBack_Click(object sender, EventArgs e)
+        private void BtnBack_Click(object sender, EventArgs e)
         {
             LoginForm loginForm = new LoginForm();
             loginForm.Show();

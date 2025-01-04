@@ -99,7 +99,7 @@
             this.btnshowpass2.Name = "btnshowpass2";
             this.btnshowpass2.Size = new System.Drawing.Size(26, 19);
             this.btnshowpass2.TabIndex = 9;
-            this.btnshowpass2.Click += new System.EventHandler(this.btnshowpass2_Click);
+            this.btnshowpass2.Click += new System.EventHandler(this.Btnshowpass2_Click);
             // 
             // btnhidepass
             // 
@@ -117,7 +117,7 @@
             this.btnhidepass.Name = "btnhidepass";
             this.btnhidepass.Size = new System.Drawing.Size(26, 19);
             this.btnhidepass.TabIndex = 9;
-            this.btnhidepass.Click += new System.EventHandler(this.btnhidepass_Click);
+            this.btnhidepass.Click += new System.EventHandler(this.Btnhidepass_Click);
             // 
             // btnhidepass2
             // 
@@ -134,7 +134,7 @@
             this.btnhidepass2.Name = "btnhidepass2";
             this.btnhidepass2.Size = new System.Drawing.Size(26, 19);
             this.btnhidepass2.TabIndex = 9;
-            this.btnhidepass2.Click += new System.EventHandler(this.btnhidepass2_Click);
+            this.btnhidepass2.Click += new System.EventHandler(this.Btnhidepass2_Click);
             // 
             // btnshowpass
             // 
@@ -151,7 +151,7 @@
             this.btnshowpass.Name = "btnshowpass";
             this.btnshowpass.Size = new System.Drawing.Size(26, 19);
             this.btnshowpass.TabIndex = 9;
-            this.btnshowpass.Click += new System.EventHandler(this.btnshowpass_Click);
+            this.btnshowpass.Click += new System.EventHandler(this.Btnshowpass_Click);
             // 
             // lblDangNhap
             // 
@@ -165,7 +165,7 @@
             this.lblDangNhap.TabIndex = 8;
             this.lblDangNhap.TabStop = true;
             this.lblDangNhap.Text = "Đăng nhập ngay";
-            this.lblDangNhap.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblDangNhap_LinkClicked);
+            this.lblDangNhap.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LblDangNhap_LinkClicked);
             // 
             // guna2HtmlLabel1
             // 
@@ -192,7 +192,7 @@
             this.btnDangKy.Size = new System.Drawing.Size(430, 45);
             this.btnDangKy.TabIndex = 5;
             this.btnDangKy.Text = "Tiếp tục ";
-            this.btnDangKy.Click += new System.EventHandler(this.btnDangKy_Click);
+            this.btnDangKy.Click += new System.EventHandler(this.BtnDangKy_Click);
             // 
             // txtCheckPass
             // 
@@ -391,7 +391,7 @@
             this.btnBack.Size = new System.Drawing.Size(24, 31);
             this.btnBack.TabIndex = 0;
             this.btnBack.UseTransparentBackground = true;
-            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            this.btnBack.Click += new System.EventHandler(this.BtnBack_Click);
             // 
             // SignForm
             // 

@@ -17,24 +17,23 @@ namespace OrderMillTeaProgram.Giao_diện_của_User
     public partial class DashboardStaff : Form
     {
         BangDieuKhienStaff bangdieukhienstaff;
-        TraSuaStaff trasuastaff;
         AnVatAdmin anvatAdmin;
         ToppingAdmin toppingAdmin;
         public DashboardStaff()
         {
             InitializeComponent();
-            mdiProp();
+            MdiProp();
         }
-      
+    
         bool menuExpand = false;
 
-        private void mdiProp()
+        private void MdiProp()
         {
             this.SetBevel(false);
             Controls.OfType<MdiClient>().FirstOrDefault().BackColor = Color.FromArgb(232, 234, 237);
         }
 
-        private void menuTransition_Tick(object sender, EventArgs e)
+        private void MenuTransition_Tick(object sender, EventArgs e)
         {
             if (menuExpand == false)
             {
@@ -56,14 +55,14 @@ namespace OrderMillTeaProgram.Giao_diện_của_User
             }
         }
 
-        private void btnDanhMuc_Click(object sender, EventArgs e)
+        private void BtnDanhMuc_Click(object sender, EventArgs e)
         {
             menuTransition.Start();
         }
 
         bool sidebarExpand = true;
 
-        private void sidebarTransition_Tick(object sender, EventArgs e)
+        private void SidebarTransition_Tick(object sender, EventArgs e)
         {
             if(sidebarExpand )
             {
@@ -91,8 +90,6 @@ namespace OrderMillTeaProgram.Giao_diện_của_User
                     //btnThongBao.Text = "";
                     //btnLogout.Text = "";
                     //menuContainer.Text = "";
-
-
                 }
             } else
             {
@@ -107,12 +104,12 @@ namespace OrderMillTeaProgram.Giao_diện_của_User
             }
         }
 
-        private void sidebarclick_Click(object sender, EventArgs e)
+        private void Sidebarclick_Click(object sender, EventArgs e)
         {
             sidebarTransition.Start();
         }
 
-        private void btnDashboard_Click(object sender, EventArgs e)
+        private void BtnDashboard_Click(object sender, EventArgs e)
         {
             if(bangdieukhienstaff == null)
             {
@@ -133,27 +130,31 @@ namespace OrderMillTeaProgram.Giao_diện_của_User
             bangdieukhienstaff = null;
         }
 
-        private void btnTraSua_Click(object sender, EventArgs e)
+        private Form trasuaAdminForm = null; // Biến tham chiếu đến form TraSuaAdmin
+
+        private void BtnTraSua_Click(object sender, EventArgs e)
         {
-            if (trasuastaff == null)
+            if (trasuaAdminForm == null) // Nếu form chưa được tạo
             {
-                trasuastaff = new TraSuaStaff();
-                trasuastaff.FormClosed += TraSuaAdmin_FormClosed;
-                trasuastaff.MdiParent = this;
-                trasuastaff.Dock = DockStyle.Fill;
-                trasuastaff.Show();
+                trasuaAdminForm = new TraSuaAdmin(); // Tạo instance của TraSuaAdmin
+                trasuaAdminForm.FormClosed += TraSuaAdmin_FormClosed; // Gắn sự kiện FormClosed
+                trasuaAdminForm.MdiParent = this; // Đặt TraSuaAdmin làm form con trong MDI
+                trasuaAdminForm.Dock = DockStyle.Fill; // Hiển thị form full màn hình trong container
+                trasuaAdminForm.Show(); // Hiển thị form
             }
             else
             {
-                trasuastaff.Activate();
+                trasuaAdminForm.Activate(); // Nếu đã có, đưa form ra phía trước
             }
         }
+
         private void TraSuaAdmin_FormClosed(object sender, FormClosedEventArgs e)
         {
-            trasuastaff = null;
+            trasuaAdminForm = null; // Khi form đóng, set tham chiếu về null để có thể mở lại
         }
 
-        private void btnTrangMieng_Click(object sender, EventArgs e)
+
+        private void BtnTrangMieng_Click(object sender, EventArgs e)
         {
             if (anvatAdmin == null)
             {
@@ -173,7 +174,7 @@ namespace OrderMillTeaProgram.Giao_diện_của_User
             anvatAdmin = null;
         }
 
-        private void btnTopping_Click(object sender, EventArgs e)
+        private void BtnTopping_Click(object sender, EventArgs e)
         {
             if (toppingAdmin == null)
             {
@@ -194,7 +195,7 @@ namespace OrderMillTeaProgram.Giao_diện_của_User
             toppingAdmin = null;
         }
 
-        private void btnLogout_Click(object sender, EventArgs e)
+        private void BtnLogout_Click(object sender, EventArgs e)
         {
             if(MessageBox.Show("Bạn có muốn đăng xuất không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes )
             {

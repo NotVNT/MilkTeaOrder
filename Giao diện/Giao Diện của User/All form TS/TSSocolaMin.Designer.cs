@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace OrderMillTeaProgram.Giao_diện.Giao_Diện_của_User.All_form_TS
+﻿namespace OrderMillTeaProgram.Giao_diện.Giao_Diện_của_User.All_form_TS
 {
     partial class TSSocolaMin
     {
@@ -31,14 +29,16 @@ namespace OrderMillTeaProgram.Giao_diện.Giao_Diện_của_User.All_form_TS
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TSSocolaMin));
+            this.btnExit = new Guna.UI2.WinForms.Guna2CircleButton();
+            this.btnAddToCart = new System.Windows.Forms.Button();
             this.btnDatMon = new System.Windows.Forms.Button();
             this.clbDa = new System.Windows.Forms.CheckedListBox();
             this.clbDuong = new System.Windows.Forms.CheckedListBox();
             this.clbSize = new System.Windows.Forms.CheckedListBox();
             this.label4 = new System.Windows.Forms.Label();
             this.clbTopping = new System.Windows.Forms.CheckedListBox();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.btnAddGioHang = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.txtNote = new System.Windows.Forms.TextBox();
             this.numericQuantity = new System.Windows.Forms.NumericUpDown();
             this.label8 = new System.Windows.Forms.Label();
@@ -48,15 +48,46 @@ namespace OrderMillTeaProgram.Giao_diện.Giao_Diện_của_User.All_form_TS
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnExit = new Guna.UI2.WinForms.Guna2CircleButton();
             this.lbBasePrice = new System.Windows.Forms.Label();
-            this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericQuantity)).BeginInit();
-            this.panel1.SuspendLayout();
+            this.panel2 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericQuantity)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // btnExit
+            // 
+            this.btnExit.BackColor = System.Drawing.Color.Transparent;
+            this.btnExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnExit.BorderColor = System.Drawing.Color.Transparent;
+            this.btnExit.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnExit.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnExit.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnExit.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnExit.FillColor = System.Drawing.Color.Silver;
+            this.btnExit.Font = new System.Drawing.Font("Segoe UI Light", 9F);
+            this.btnExit.ForeColor = System.Drawing.Color.Transparent;
+            this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
+            this.btnExit.Location = new System.Drawing.Point(950, 2);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(4);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.btnExit.Size = new System.Drawing.Size(32, 38);
+            this.btnExit.TabIndex = 27;
+            this.btnExit.UseTransparentBackground = true;
+            // 
+            // btnAddToCart
+            // 
+            this.btnAddToCart.BackColor = System.Drawing.SystemColors.Control;
+            this.btnAddToCart.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnAddToCart.Location = new System.Drawing.Point(311, 558);
+            this.btnAddToCart.Name = "btnAddToCart";
+            this.btnAddToCart.Size = new System.Drawing.Size(139, 87);
+            this.btnAddToCart.TabIndex = 16;
+            this.btnAddToCart.Text = "Thêm vào giỏ hàng";
+            this.btnAddToCart.UseVisualStyleBackColor = false;
+            this.btnAddToCart.Click += new System.EventHandler(this.BtnAddToCart_Click);
             // 
             // btnDatMon
             // 
@@ -108,43 +139,28 @@ namespace OrderMillTeaProgram.Giao_diện.Giao_Diện_của_User.All_form_TS
             this.clbTopping.FormattingEnabled = true;
             this.clbTopping.Location = new System.Drawing.Point(26, 128);
             this.clbTopping.Name = "clbTopping";
-            this.clbTopping.Size = new System.Drawing.Size(291, 89);
+            this.clbTopping.Size = new System.Drawing.Size(255, 89);
             this.clbTopping.TabIndex = 10;
             // 
-            // panel2
+            // pictureBox1
             // 
-            this.panel2.BackColor = System.Drawing.SystemColors.Control;
-            this.panel2.Controls.Add(this.btnAddGioHang);
-            this.panel2.Controls.Add(this.btnDatMon);
-            this.panel2.Controls.Add(this.clbDa);
-            this.panel2.Controls.Add(this.clbDuong);
-            this.panel2.Controls.Add(this.clbSize);
-            this.panel2.Controls.Add(this.label4);
-            this.panel2.Controls.Add(this.clbTopping);
-            this.panel2.Controls.Add(this.txtNote);
-            this.panel2.Controls.Add(this.numericQuantity);
-            this.panel2.Controls.Add(this.label8);
-            this.panel2.Controls.Add(this.label7);
-            this.panel2.Controls.Add(this.label6);
-            this.panel2.Controls.Add(this.label5);
-            this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.label2);
-            this.panel2.Controls.Add(this.label1);
-            this.panel2.Location = new System.Drawing.Point(314, 41);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(583, 656);
-            this.panel2.TabIndex = 18;
+            this.pictureBox1.BackColor = System.Drawing.SystemColors.Control;
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Image = global::OrderMillTeaProgram.Properties.Resources.tra_sua_socola_min__1_;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(260, 330);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
-            // btnAddGioHang
+            // panel1
             // 
-            this.btnAddGioHang.BackColor = System.Drawing.SystemColors.Control;
-            this.btnAddGioHang.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btnAddGioHang.Location = new System.Drawing.Point(311, 558);
-            this.btnAddGioHang.Name = "btnAddGioHang";
-            this.btnAddGioHang.Size = new System.Drawing.Size(139, 87);
-            this.btnAddGioHang.TabIndex = 16;
-            this.btnAddGioHang.Text = "Thêm vào giỏ hàng";
-            this.btnAddGioHang.UseVisualStyleBackColor = false;
+            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Location = new System.Drawing.Point(51, 42);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(260, 330);
+            this.panel1.TabIndex = 25;
             // 
             // txtNote
             // 
@@ -226,101 +242,78 @@ namespace OrderMillTeaProgram.Giao_diện.Giao_Diện_của_User.All_form_TS
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label1.Location = new System.Drawing.Point(22, 18);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(295, 36);
+            this.label1.Size = new System.Drawing.Size(284, 36);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Trà Sữa Socola Min";
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Location = new System.Drawing.Point(27, 42);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(260, 330);
-            this.panel1.TabIndex = 17;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.SystemColors.Control;
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Image = global::OrderMillTeaProgram.Properties.Resources.tra_sua_socola_min__1_;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(260, 330);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
-            // btnExit
-            // 
-            this.btnExit.BackColor = System.Drawing.Color.Transparent;
-            this.btnExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnExit.BorderColor = System.Drawing.Color.Transparent;
-            this.btnExit.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnExit.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnExit.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnExit.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnExit.FillColor = System.Drawing.Color.Silver;
-            this.btnExit.Font = new System.Drawing.Font("Segoe UI Light", 9F);
-            this.btnExit.ForeColor = System.Drawing.Color.Transparent;
-            this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
-            this.btnExit.Location = new System.Drawing.Point(926, 11);
-            this.btnExit.Margin = new System.Windows.Forms.Padding(4);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.btnExit.Size = new System.Drawing.Size(32, 38);
-            this.btnExit.TabIndex = 19;
-            this.btnExit.UseTransparentBackground = true;
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            this.label1.Text = "Trà Sữa Socolamin";
             // 
             // lbBasePrice
             // 
             this.lbBasePrice.AutoSize = true;
-            this.lbBasePrice.Location = new System.Drawing.Point(24, 403);
+            this.lbBasePrice.Location = new System.Drawing.Point(48, 403);
             this.lbBasePrice.Name = "lbBasePrice";
             this.lbBasePrice.Size = new System.Drawing.Size(28, 16);
-            this.lbBasePrice.TabIndex = 20;
+            this.lbBasePrice.TabIndex = 28;
             this.lbBasePrice.Text = "Giá";
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.SystemColors.Control;
+            this.panel2.Controls.Add(this.btnAddToCart);
+            this.panel2.Controls.Add(this.btnDatMon);
+            this.panel2.Controls.Add(this.clbDa);
+            this.panel2.Controls.Add(this.clbDuong);
+            this.panel2.Controls.Add(this.clbSize);
+            this.panel2.Controls.Add(this.label4);
+            this.panel2.Controls.Add(this.clbTopping);
+            this.panel2.Controls.Add(this.txtNote);
+            this.panel2.Controls.Add(this.numericQuantity);
+            this.panel2.Controls.Add(this.label8);
+            this.panel2.Controls.Add(this.label7);
+            this.panel2.Controls.Add(this.label6);
+            this.panel2.Controls.Add(this.label5);
+            this.panel2.Controls.Add(this.label3);
+            this.panel2.Controls.Add(this.label2);
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Location = new System.Drawing.Point(338, 41);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(583, 656);
+            this.panel2.TabIndex = 26;
             // 
             // TSSocolaMin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(984, 709);
-            this.Controls.Add(this.lbBasePrice);
+            this.ClientSize = new System.Drawing.Size(985, 709);
             this.Controls.Add(this.btnExit);
-            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.lbBasePrice);
+            this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "TSSocolaMin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TSSocolaMin";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.numericQuantity)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericQuantity)).EndInit();
-            this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
-        private void btnExit_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
         #endregion
 
         private Guna.UI2.WinForms.Guna2CircleButton btnExit;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button btnAddToCart;
         private System.Windows.Forms.Button btnDatMon;
         private System.Windows.Forms.CheckedListBox clbDa;
         private System.Windows.Forms.CheckedListBox clbDuong;
         private System.Windows.Forms.CheckedListBox clbSize;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.CheckedListBox clbTopping;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox txtNote;
         private System.Windows.Forms.NumericUpDown numericQuantity;
         private System.Windows.Forms.Label label8;
@@ -330,8 +323,7 @@ namespace OrderMillTeaProgram.Giao_diện.Giao_Diện_của_User.All_form_TS
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button btnAddGioHang;
         private System.Windows.Forms.Label lbBasePrice;
+        private System.Windows.Forms.Panel panel2;
     }
 }

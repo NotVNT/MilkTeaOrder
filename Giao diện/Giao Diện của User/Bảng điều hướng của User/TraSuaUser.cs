@@ -34,8 +34,8 @@ namespace OrderMillTeaProgram
             lblTSChanTrau.Click += (s, e) => OpenTeaForm(new TSTranChau());
 
             // Sự kiện mở form Trà Sữa Khoai Môn
-            picTSKhoaiMon.Click += (s, e) => OpenTeaForm(new TSKhoaiMon());
-            lblTSKhoaiMon.Click += (s, e) => OpenTeaForm(new TSKhoaiMon());
+            pictskhoaimon.Click += (s, e) => OpenTeaForm(new tskhoaimon());
+            lbltskhoaimon.Click += (s, e) => OpenTeaForm(new tskhoaimon());
 
             // Sự kiện mở form Trà Sữa Oreo Cake Cream
             picTSOreoCakeCream.Click += (s, e) => OpenTeaForm(new TSOreoCakeCream());
@@ -66,8 +66,21 @@ namespace OrderMillTeaProgram
         {
             try
             {
-                this.Show(); // Hiển thị lại form chính khi form con đóng
-                teaForm.FormClosed += (s, e) => this.Show();
+                // Thêm lớp phủ làm mờ form chính
+                AddOverlay();
+
+                // Sự kiện khi đóng form con sẽ gỡ lớp phủ
+                teaForm.FormClosed += (s, e) =>
+                {
+                    RemoveOverlay();
+                };
+
+                // Sự kiện đóng form con để hiển thị lại form chính
+                teaForm.FormClosed += (s, e) =>
+                {
+                    this.Enabled = true; // Bật lại form chính
+                    this.BringToFront(); // Đưa form chính ra trước
+                };
 
                 // Nếu form con hỗ trợ sự kiện ProductSelected, đăng ký sự kiện này
                 if (teaForm is IProductSelectable selectableForm)
@@ -82,6 +95,33 @@ namespace OrderMillTeaProgram
                 // Hiển thị lỗi nếu xảy ra
                 MessageBox.Show($"Đã xảy ra lỗi: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 this.Show();
+                RemoveOverlay(); // Gỡ lớp phủ nếu lỗi
+            }
+        }
+
+        private Panel overlayPanel;
+
+        private void AddOverlay()
+        {
+            // Tạo một lớp phủ
+            overlayPanel = new Panel
+            {
+                Dock = DockStyle.Fill,
+                BackColor = Color.FromArgb(50, 0, 0, 0), // Màu đen, alpha = 100 (bán trong suốt)
+            };
+
+            // Thêm lớp phủ lên form chính
+            this.Controls.Add(overlayPanel);
+            overlayPanel.BringToFront(); // Đưa lên trên cùng
+        }
+
+        private void RemoveOverlay()
+        {
+            if (overlayPanel != null)
+            {
+                this.Controls.Remove(overlayPanel); // Loại bỏ lớp phủ
+                overlayPanel.Dispose(); // Giải phóng bộ nhớ
+                overlayPanel = null;
             }
         }
 

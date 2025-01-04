@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TSTranChau));
             this.btnExit = new Guna.UI2.WinForms.Guna2CircleButton();
-            this.btnAddGioHang = new System.Windows.Forms.Button();
+            this.btnAddToCart = new System.Windows.Forms.Button();
             this.btnDatMon = new System.Windows.Forms.Button();
             this.clbDa = new System.Windows.Forms.CheckedListBox();
             this.clbDuong = new System.Windows.Forms.CheckedListBox();
@@ -69,7 +69,7 @@
             this.btnExit.Font = new System.Drawing.Font("Segoe UI Light", 9F);
             this.btnExit.ForeColor = System.Drawing.Color.Transparent;
             this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
-            this.btnExit.Location = new System.Drawing.Point(940, 13);
+            this.btnExit.Location = new System.Drawing.Point(950, 2);
             this.btnExit.Margin = new System.Windows.Forms.Padding(4);
             this.btnExit.Name = "btnExit";
             this.btnExit.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
@@ -77,16 +77,17 @@
             this.btnExit.TabIndex = 27;
             this.btnExit.UseTransparentBackground = true;
             // 
-            // btnAddGioHang
+            // btnAddToCart
             // 
-            this.btnAddGioHang.BackColor = System.Drawing.SystemColors.Control;
-            this.btnAddGioHang.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btnAddGioHang.Location = new System.Drawing.Point(311, 558);
-            this.btnAddGioHang.Name = "btnAddGioHang";
-            this.btnAddGioHang.Size = new System.Drawing.Size(139, 87);
-            this.btnAddGioHang.TabIndex = 16;
-            this.btnAddGioHang.Text = "Thêm vào giỏ hàng";
-            this.btnAddGioHang.UseVisualStyleBackColor = false;
+            this.btnAddToCart.BackColor = System.Drawing.SystemColors.Control;
+            this.btnAddToCart.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnAddToCart.Location = new System.Drawing.Point(311, 558);
+            this.btnAddToCart.Name = "btnAddToCart";
+            this.btnAddToCart.Size = new System.Drawing.Size(139, 87);
+            this.btnAddToCart.TabIndex = 16;
+            this.btnAddToCart.Text = "Thêm vào giỏ hàng";
+            this.btnAddToCart.UseVisualStyleBackColor = false;
+            this.btnAddToCart.Click += new System.EventHandler(this.BtnAddToCart_Click);
             // 
             // btnDatMon
             // 
@@ -156,7 +157,7 @@
             // panel1
             // 
             this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Location = new System.Drawing.Point(28, 42);
+            this.panel1.Location = new System.Drawing.Point(51, 42);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(260, 330);
             this.panel1.TabIndex = 25;
@@ -248,7 +249,7 @@
             // lbBasePrice
             // 
             this.lbBasePrice.AutoSize = true;
-            this.lbBasePrice.Location = new System.Drawing.Point(25, 403);
+            this.lbBasePrice.Location = new System.Drawing.Point(48, 403);
             this.lbBasePrice.Name = "lbBasePrice";
             this.lbBasePrice.Size = new System.Drawing.Size(28, 16);
             this.lbBasePrice.TabIndex = 28;
@@ -257,7 +258,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.Control;
-            this.panel2.Controls.Add(this.btnAddGioHang);
+            this.panel2.Controls.Add(this.btnAddToCart);
             this.panel2.Controls.Add(this.btnDatMon);
             this.panel2.Controls.Add(this.clbDa);
             this.panel2.Controls.Add(this.clbDuong);
@@ -273,7 +274,7 @@
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.label1);
-            this.panel2.Location = new System.Drawing.Point(315, 41);
+            this.panel2.Location = new System.Drawing.Point(338, 41);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(583, 656);
             this.panel2.TabIndex = 26;
@@ -290,7 +291,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "TSTranChau";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "TSTranChau";
+            this.Text = "Trà Sữa Trân Châu";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.numericQuantity)).EndInit();
@@ -304,7 +305,7 @@
         #endregion
 
         private Guna.UI2.WinForms.Guna2CircleButton btnExit;
-        private System.Windows.Forms.Button btnAddGioHang;
+        private System.Windows.Forms.Button btnAddToCart;
         private System.Windows.Forms.Button btnDatMon;
         private System.Windows.Forms.CheckedListBox clbDa;
         private System.Windows.Forms.CheckedListBox clbDuong;

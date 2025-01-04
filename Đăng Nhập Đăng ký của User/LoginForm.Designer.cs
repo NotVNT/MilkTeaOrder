@@ -88,7 +88,7 @@
             this.btnhidepass.Size = new System.Drawing.Size(26, 19);
             this.btnhidepass.TabIndex = 3;
             this.btnhidepass.TabStop = false;
-            this.btnhidepass.Click += new System.EventHandler(this.btnhidepass_Click);
+            this.btnhidepass.Click += new System.EventHandler(this.Btnhidepass_Click);
             // 
             // btnshowpass
             // 
@@ -105,7 +105,7 @@
             this.btnshowpass.Name = "btnshowpass";
             this.btnshowpass.Size = new System.Drawing.Size(26, 19);
             this.btnshowpass.TabIndex = 9;
-            this.btnshowpass.Click += new System.EventHandler(this.btnshowpass_Click);
+            this.btnshowpass.Click += new System.EventHandler(this.Btnshowpass_Click);
             // 
             // lblDangKy
             // 
@@ -118,7 +118,7 @@
             this.lblDangKy.Size = new System.Drawing.Size(94, 17);
             this.lblDangKy.TabIndex = 7;
             this.lblDangKy.Text = "Đăng ký ngay";
-            this.lblDangKy.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblDangKy_LinkClicked);
+            this.lblDangKy.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LblDangKy_LinkClicked);
             // 
             // guna2HtmlLabel1
             // 
@@ -144,7 +144,7 @@
             this.lblQuenMatKhau.Size = new System.Drawing.Size(139, 21);
             this.lblQuenMatKhau.TabIndex = 4;
             this.lblQuenMatKhau.Text = "Quên mật khẩu ?";
-            this.lblQuenMatKhau.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblQuenMatKhau_LinkClicked);
+            this.lblQuenMatKhau.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LblQuenMatKhau_LinkClicked);
             // 
             // btnDangNhap
             // 
@@ -161,7 +161,7 @@
             this.btnDangNhap.TabIndex = 5;
             this.btnDangNhap.TabStop = false;
             this.btnDangNhap.Text = "Đăng Nhập";
-            this.btnDangNhap.Click += new System.EventHandler(this.btnDangNhap_Click);
+            this.btnDangNhap.Click += new System.EventHandler(this.BtnDangNhap_Click);
             // 
             // txtMatKhau
             // 
@@ -183,7 +183,7 @@
             this.txtMatKhau.SelectedText = "";
             this.txtMatKhau.Size = new System.Drawing.Size(429, 39);
             this.txtMatKhau.TabIndex = 2;
-            this.txtMatKhau.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtMatKhau_KeyDown);
+            this.txtMatKhau.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtMatKhau_KeyDown);
             // 
             // txtDangNhap
             // 
@@ -205,8 +205,8 @@
             this.txtDangNhap.SelectedText = "";
             this.txtDangNhap.Size = new System.Drawing.Size(430, 39);
             this.txtDangNhap.TabIndex = 1;
-            this.txtDangNhap.TextChanged += new System.EventHandler(this.txtDangNhap_TextChanged);
-            this.txtDangNhap.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtDangNhap_KeyDown);
+            this.txtDangNhap.TextChanged += new System.EventHandler(this.TxtDangNhap_TextChanged);
+            this.txtDangNhap.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtDangNhap_KeyDown);
             // 
             // lblMk
             // 
@@ -280,7 +280,7 @@
             this.btnExit.Size = new System.Drawing.Size(24, 31);
             this.btnExit.TabIndex = 0;
             this.btnExit.UseTransparentBackground = true;
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            this.btnExit.Click += new System.EventHandler(this.BtnExit_Click);
             // 
             // LoginForm
             // 
