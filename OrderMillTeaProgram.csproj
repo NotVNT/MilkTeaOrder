@@ -222,6 +222,18 @@
     <Compile Include="Database\HoaDon.cs" />
     <Compile Include="Database\Loai.cs" />
     <Compile Include="Database\UserInfo.cs" />
+    <Compile Include="Giao diện\Giao Diện của Admin\Bảng điều hướng của Admin\Kho.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Giao diện\Giao Diện của Admin\Bảng điều hướng của Admin\Kho.Designer.cs">
+      <DependentUpon>Kho.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Giao diện\Giao Diện của Admin\Bảng điều hướng của Admin\Nofications.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Giao diện\Giao Diện của Admin\Bảng điều hướng của Admin\Nofications.Designer.cs">
+      <DependentUpon>Nofications.cs</DependentUpon>
+    </Compile>
     <Compile Include="Giao diện\Giao Diện của Admin\Bảng điều hướng của Admin\QLTK.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -396,6 +408,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Giao diện\Giao Diện của Admin\Bảng điều hướng của Admin\Kho.resx">
+      <DependentUpon>Kho.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Giao diện\Giao Diện của Admin\Bảng điều hướng của Admin\Nofications.resx">
+      <DependentUpon>Nofications.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Giao diện\Giao Diện của Admin\Bảng điều hướng của Admin\QLTK.resx">
       <DependentUpon>QLTK.cs</DependentUpon>
     </EmbeddedResource>
