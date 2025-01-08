@@ -450,7 +450,7 @@ namespace OrderMillTeaProgram.Giao_diện.Giao_Diện_của_Admin
             if (dgvQLTK.SelectedRows.Count > 0 &&
           !string.IsNullOrEmpty(dgvQLTK.SelectedRows[0].Cells["UserName"].Value?.ToString()))
             {
-                btnDelete.Enabled = true; // Enable Delete button only if there's a valid UserName
+                btnDelete.Enabled = true; 
             }
 
         }

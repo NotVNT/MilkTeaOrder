@@ -17,12 +17,11 @@ namespace OrderMillTeaProgram.Giao_diện_của_User
     public partial class DashboardAdmin : Form
     {
         BangDieuKhien bangdieukhien;
-        TraSuaAdmin trasuaAdmin;
-        AnVatAdmin anvatAdmin;
-        ToppingAdmin toppingAdmin;
+        ThongTinDanhMuc thongtindanhmuc;
+        ChinhSuaMonAn chinhsuamonan;
         QLDT qldt;
         QLTK qltk;
-
+        HoaDonFromAdmin hoadonfromadmin;
         public DashboardAdmin()
         {
             InitializeComponent();
@@ -42,7 +41,7 @@ namespace OrderMillTeaProgram.Giao_diện_của_User
             if (menuExpand == false)
             {
                 menuContainer.Height += 10;
-                if(menuContainer.Height >= 187)
+                if(menuContainer.Height >= 140)
                 {
                     menuTransition.Stop();
                     menuExpand = true;
@@ -136,69 +135,6 @@ namespace OrderMillTeaProgram.Giao_diện_của_User
             bangdieukhien = null;
         }
 
-        private void btnTraSua_Click(object sender, EventArgs e)
-        {
-            if (trasuaAdmin == null)
-            {
-                trasuaAdmin = new TraSuaAdmin();
-                trasuaAdmin.FormClosed += TraSuaAdmin_FormClosed;
-                trasuaAdmin.MdiParent = this;
-                trasuaAdmin.Dock = DockStyle.Fill;
-                trasuaAdmin.Show();
-            }
-            else
-            {
-                trasuaAdmin.Activate();
-            }
-        }
-        private void TraSuaAdmin_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            trasuaAdmin = null;
-        }
-
-        private void btnTrangMieng_Click(object sender, EventArgs e)
-        {
-            if (anvatAdmin == null)
-            {
-                anvatAdmin = new AnVatAdmin();
-                anvatAdmin.FormClosed += TraSuaAdmin_FormClosed;
-                anvatAdmin.MdiParent = this;
-                anvatAdmin.Dock = DockStyle.Fill;
-                anvatAdmin.Show();
-            }
-            else
-            {
-                anvatAdmin.Activate();
-            }
-        }
-        private void AnVatAdmin_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            anvatAdmin = null;
-        }
-
-        private void btnTopping_Click(object sender, EventArgs e)
-        {
-            if (toppingAdmin == null)
-            {
-                toppingAdmin = new ToppingAdmin();
-                toppingAdmin.FormClosed += TraSuaAdmin_FormClosed;
-                toppingAdmin.MdiParent = this;
-                toppingAdmin.Dock = DockStyle.Fill;
-                toppingAdmin.Show();
-            }
-            else
-            {
-                toppingAdmin.Activate();
-            }
-        }
-
-        private void ToppingAdmin_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            toppingAdmin = null;
-        }
-
-
-
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
@@ -210,16 +146,12 @@ namespace OrderMillTeaProgram.Giao_diện_của_User
             }
         }
 
-
-
-
-
         private void btnQLDT_Click(object sender, EventArgs e)
         {
             if (qldt == null)
             {
                 qldt = new QLDT();
-                qldt.FormClosed += TraSuaAdmin_FormClosed;
+                qldt.FormClosed += QLDT_FormClosed;
                 qldt.MdiParent = this;
                 qldt.Dock = DockStyle.Fill;
                 qldt.Show();
@@ -231,20 +163,15 @@ namespace OrderMillTeaProgram.Giao_diện_của_User
         }
         private void QLDT_FormClosed(object sender, FormClosedEventArgs e)
         {
-            qldt = null;
+            hoadonfromadmin = null;
         }
-
-
-
-
-
 
         private void btnQLTK_Click(object sender, EventArgs e)
         {
             if (qltk == null)
             {
                 qltk = new QLTK();
-                qltk.FormClosed += TraSuaAdmin_FormClosed;
+                qltk.FormClosed += QLTK_FormClosed;
                 qltk.MdiParent = this;
                 qltk.Dock = DockStyle.Fill;
                 qltk.Show();
@@ -258,5 +185,71 @@ namespace OrderMillTeaProgram.Giao_diện_của_User
         {
             qltk = null;
         }
+
+        private void btnChinhDanhMuc_Click(object sender, EventArgs e)
+        {
+            if (thongtindanhmuc == null)
+            {
+                thongtindanhmuc = new ThongTinDanhMuc();
+                thongtindanhmuc.FormClosed += ThongTinDanhMuc_FormClosed;
+                thongtindanhmuc.MdiParent = this;
+                thongtindanhmuc.Dock = DockStyle.Fill;
+                thongtindanhmuc.Show();
+            }
+            else
+            {
+                thongtindanhmuc.Activate();
+            }
+        }
+
+        private void ThongTinDanhMuc_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            thongtindanhmuc = null;
+        }
+
+        private void btnChinhSuaMon_Click(object sender, EventArgs e)
+        {
+            if (chinhsuamonan == null)
+            {
+                chinhsuamonan = new ChinhSuaMonAn();
+                chinhsuamonan.FormClosed += ChinhSuaMonAn_FormClosed;
+                chinhsuamonan.MdiParent = this;
+                chinhsuamonan.Dock = DockStyle.Fill;
+                chinhsuamonan.Show();
+            }
+            else
+            {
+                chinhsuamonan.Activate();
+            }
+        }
+
+        private void ChinhSuaMonAn_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            chinhsuamonan = null;
+        }
+
+        private void btnDonhang_Click(object sender, EventArgs e)
+        {
+            if (hoadonfromadmin == null)
+            {
+                hoadonfromadmin = new HoaDonFromAdmin();
+                hoadonfromadmin.FormClosed += HoaDonFromAdmin_FormClosed;
+                hoadonfromadmin.MdiParent = this;
+                hoadonfromadmin.Dock = DockStyle.Fill;
+                hoadonfromadmin.Show();
+            }
+            else
+            {
+                qldt.Activate();
+            }
+        }
+
+
+        private void HoaDonFromAdmin_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            chinhsuamonan = null;
+        }
+
+
     }
 }

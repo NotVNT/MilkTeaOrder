@@ -40,9 +40,8 @@
             this.btnDashboard = new System.Windows.Forms.Button();
             this.menuContainer = new System.Windows.Forms.FlowLayoutPanel();
             this.btnDanhMuc = new System.Windows.Forms.Button();
-            this.btnTraSua = new System.Windows.Forms.Button();
-            this.btnTrangMieng = new System.Windows.Forms.Button();
-            this.btnTopping = new System.Windows.Forms.Button();
+            this.btnChinhDanhMuc = new System.Windows.Forms.Button();
+            this.btnChinhSuaMon = new System.Windows.Forms.Button();
             this.btnQLDT = new System.Windows.Forms.Button();
             this.btnQLTK = new System.Windows.Forms.Button();
             this.btnKho = new System.Windows.Forms.Button();
@@ -154,9 +153,8 @@
             // 
             this.menuContainer.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.menuContainer.Controls.Add(this.btnDanhMuc);
-            this.menuContainer.Controls.Add(this.btnTraSua);
-            this.menuContainer.Controls.Add(this.btnTrangMieng);
-            this.menuContainer.Controls.Add(this.btnTopping);
+            this.menuContainer.Controls.Add(this.btnChinhDanhMuc);
+            this.menuContainer.Controls.Add(this.btnChinhSuaMon);
             this.menuContainer.Location = new System.Drawing.Point(3, 244);
             this.menuContainer.Name = "menuContainer";
             this.menuContainer.Size = new System.Drawing.Size(217, 46);
@@ -181,59 +179,39 @@
             this.btnDanhMuc.UseVisualStyleBackColor = false;
             this.btnDanhMuc.Click += new System.EventHandler(this.btnDanhMuc_Click);
             // 
-            // btnTraSua
+            // btnChinhDanhMuc
             // 
-            this.btnTraSua.BackColor = System.Drawing.Color.LightGray;
-            this.btnTraSua.FlatAppearance.BorderSize = 0;
-            this.btnTraSua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTraSua.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTraSua.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.btnTraSua.Image = ((System.Drawing.Image)(resources.GetObject("btnTraSua.Image")));
-            this.btnTraSua.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTraSua.Location = new System.Drawing.Point(0, 46);
-            this.btnTraSua.Margin = new System.Windows.Forms.Padding(0);
-            this.btnTraSua.Name = "btnTraSua";
-            this.btnTraSua.Size = new System.Drawing.Size(217, 46);
-            this.btnTraSua.TabIndex = 3;
-            this.btnTraSua.Text = "Trà Sữa";
-            this.btnTraSua.UseVisualStyleBackColor = false;
-            this.btnTraSua.Click += new System.EventHandler(this.btnTraSua_Click);
+            this.btnChinhDanhMuc.BackColor = System.Drawing.Color.LightGray;
+            this.btnChinhDanhMuc.FlatAppearance.BorderSize = 0;
+            this.btnChinhDanhMuc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnChinhDanhMuc.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnChinhDanhMuc.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.btnChinhDanhMuc.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnChinhDanhMuc.Location = new System.Drawing.Point(0, 46);
+            this.btnChinhDanhMuc.Margin = new System.Windows.Forms.Padding(0);
+            this.btnChinhDanhMuc.Name = "btnChinhDanhMuc";
+            this.btnChinhDanhMuc.Size = new System.Drawing.Size(217, 46);
+            this.btnChinhDanhMuc.TabIndex = 3;
+            this.btnChinhDanhMuc.Text = "Thông Tin Danh Mục";
+            this.btnChinhDanhMuc.UseVisualStyleBackColor = false;
+            this.btnChinhDanhMuc.Click += new System.EventHandler(this.btnChinhDanhMuc_Click);
             // 
-            // btnTrangMieng
+            // btnChinhSuaMon
             // 
-            this.btnTrangMieng.BackColor = System.Drawing.Color.LightGray;
-            this.btnTrangMieng.FlatAppearance.BorderSize = 0;
-            this.btnTrangMieng.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTrangMieng.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTrangMieng.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.btnTrangMieng.Image = ((System.Drawing.Image)(resources.GetObject("btnTrangMieng.Image")));
-            this.btnTrangMieng.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTrangMieng.Location = new System.Drawing.Point(0, 92);
-            this.btnTrangMieng.Margin = new System.Windows.Forms.Padding(0);
-            this.btnTrangMieng.Name = "btnTrangMieng";
-            this.btnTrangMieng.Size = new System.Drawing.Size(217, 46);
-            this.btnTrangMieng.TabIndex = 7;
-            this.btnTrangMieng.Text = "Tráng Miệng";
-            this.btnTrangMieng.UseVisualStyleBackColor = false;
-            this.btnTrangMieng.Click += new System.EventHandler(this.btnTrangMieng_Click);
-            // 
-            // btnTopping
-            // 
-            this.btnTopping.BackColor = System.Drawing.Color.LightGray;
-            this.btnTopping.FlatAppearance.BorderSize = 0;
-            this.btnTopping.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTopping.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTopping.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.btnTopping.Image = ((System.Drawing.Image)(resources.GetObject("btnTopping.Image")));
-            this.btnTopping.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTopping.Location = new System.Drawing.Point(0, 138);
-            this.btnTopping.Margin = new System.Windows.Forms.Padding(0);
-            this.btnTopping.Name = "btnTopping";
-            this.btnTopping.Size = new System.Drawing.Size(217, 46);
-            this.btnTopping.TabIndex = 8;
-            this.btnTopping.Text = "Topping";
-            this.btnTopping.UseVisualStyleBackColor = false;
-            this.btnTopping.Click += new System.EventHandler(this.btnTopping_Click);
+            this.btnChinhSuaMon.BackColor = System.Drawing.Color.LightGray;
+            this.btnChinhSuaMon.FlatAppearance.BorderSize = 0;
+            this.btnChinhSuaMon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnChinhSuaMon.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnChinhSuaMon.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.btnChinhSuaMon.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnChinhSuaMon.Location = new System.Drawing.Point(0, 92);
+            this.btnChinhSuaMon.Margin = new System.Windows.Forms.Padding(0);
+            this.btnChinhSuaMon.Name = "btnChinhSuaMon";
+            this.btnChinhSuaMon.Size = new System.Drawing.Size(217, 46);
+            this.btnChinhSuaMon.TabIndex = 7;
+            this.btnChinhSuaMon.Text = "Chỉnh Sửa Món";
+            this.btnChinhSuaMon.UseVisualStyleBackColor = false;
+            this.btnChinhSuaMon.Click += new System.EventHandler(this.btnChinhSuaMon_Click);
             // 
             // btnQLDT
             // 
@@ -297,6 +275,7 @@
             this.btnDonhang.TabIndex = 10;
             this.btnDonhang.Text = "Đơn Hàng";
             this.btnDonhang.UseVisualStyleBackColor = true;
+            this.btnDonhang.Click += new System.EventHandler(this.btnDonhang_Click);
             // 
             // btnThongBao
             // 
@@ -368,9 +347,8 @@
         private System.Windows.Forms.Button btnDashboard;
         private System.Windows.Forms.FlowLayoutPanel menuContainer;
         private System.Windows.Forms.Button btnDanhMuc;
-        private System.Windows.Forms.Button btnTraSua;
-        private System.Windows.Forms.Button btnTrangMieng;
-        private System.Windows.Forms.Button btnTopping;
+        private System.Windows.Forms.Button btnChinhDanhMuc;
+        private System.Windows.Forms.Button btnChinhSuaMon;
         private System.Windows.Forms.Button btnQLDT;
         private System.Windows.Forms.Button btnQLTK;
         private System.Windows.Forms.Button btnKho;
