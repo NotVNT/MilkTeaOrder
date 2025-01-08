@@ -209,7 +209,6 @@
             this.btnTrangMieng.TabIndex = 7;
             this.btnTrangMieng.Text = "Tráng Miệng";
             this.btnTrangMieng.UseVisualStyleBackColor = false;
-            this.btnTrangMieng.Click += new System.EventHandler(this.btnTrangMieng_Click);
             // 
             // btnTopping
             // 

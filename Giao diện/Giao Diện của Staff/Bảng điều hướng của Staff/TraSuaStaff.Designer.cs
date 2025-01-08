@@ -1,6 +1,6 @@
 ﻿namespace OrderMillTeaProgram.Giao_diện.Giao_Diện_của_Admin
 {
-    partial class TraSuaAdmin
+    partial class TraSuaStaff
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TraSuaAdmin));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TraSuaStaff));
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblDashboard = new System.Windows.Forms.Label();
             this.pictureThaiXanh = new System.Windows.Forms.PictureBox();
@@ -620,12 +620,12 @@
             this.sidebar2.BackColor = System.Drawing.Color.Gainsboro;
             this.sidebar2.Dock = System.Windows.Forms.DockStyle.Right;
             this.sidebar2.Location = new System.Drawing.Point(1092, 51);
-            this.sidebar2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.sidebar2.Margin = new System.Windows.Forms.Padding(2);
             this.sidebar2.Name = "sidebar2";
             this.sidebar2.Size = new System.Drawing.Size(237, 766);
             this.sidebar2.TabIndex = 16;
             // 
-            // TraSuaAdmin
+            // TraSuaStaff
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -641,10 +641,10 @@
             this.Controls.Add(this.btnTraSuaThaiXanh);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "TraSuaAdmin";
+            this.Name = "TraSuaStaff";
             this.Text = "TraSuaAdmin";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.TraSuaAdmin_FormClosed);
-            this.Load += new System.EventHandler(this.TraSuaAdmin_Load);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.TraSuaStaff_FormClosed);
+            this.Load += new System.EventHandler(this.TraSuaStaff_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureThaiXanh)).EndInit();

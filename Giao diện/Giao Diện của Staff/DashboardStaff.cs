@@ -17,7 +17,7 @@ namespace OrderMillTeaProgram.Giao_diện_của_User
     public partial class DashboardStaff : Form
     {
         BangDieuKhienStaff bangdieukhienstaff;
-        TraSuaAdmin trasuastaff;
+        TraSuaStaff trasuastaff;
         ChinhSuaMonAn anvatAdmin;
   
         public DashboardStaff()
@@ -137,8 +137,8 @@ namespace OrderMillTeaProgram.Giao_diện_của_User
         {
             if (trasuastaff == null)
             {
-                trasuastaff = new TraSuaAdmin();
-                trasuastaff.FormClosed += TraSuaAdmin_FormClosed;
+                trasuastaff = new TraSuaStaff();
+                trasuastaff.FormClosed += TraSuaStaff_FormClosed;
                 trasuastaff.MdiParent = this;
                 trasuastaff.Dock = DockStyle.Fill;
                 trasuastaff.Show();
@@ -148,29 +148,10 @@ namespace OrderMillTeaProgram.Giao_diện_của_User
                 trasuastaff.Activate();
             }
         }
-        private void TraSuaAdmin_FormClosed(object sender, FormClosedEventArgs e)
+
+        private void TraSuaStaff_FormClosed(object sender, FormClosedEventArgs e)
         {
             trasuastaff = null;
-        }
-
-        private void btnTrangMieng_Click(object sender, EventArgs e)
-        {
-            if (anvatAdmin == null)
-            {
-                anvatAdmin = new ChinhSuaMonAn();
-                anvatAdmin.FormClosed += TraSuaAdmin_FormClosed;
-                anvatAdmin.MdiParent = this;
-                anvatAdmin.Dock = DockStyle.Fill;
-                anvatAdmin.Show();
-            }
-            else
-            {
-                anvatAdmin.Activate();
-            }
-        }
-        private void AnVatAdmin_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            anvatAdmin = null;
         }
 
         private void btnLogout_Click(object sender, EventArgs e)
