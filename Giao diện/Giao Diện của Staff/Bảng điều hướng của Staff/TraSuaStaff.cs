@@ -10,21 +10,11 @@ using System.Windows.Forms;
 
 namespace OrderMillTeaProgram.Giao_diện.Giao_Diện_của_Admin
 {
-    public partial class TraSuaAdmin : Form
+    public partial class TraSuaStaff : Form
     {
-        public TraSuaAdmin()
+        public TraSuaStaff()
         {
             InitializeComponent();
-        }
-
-        private void TraSuaAdmin_FormClosed(object sender, FormClosedEventArgs e)
-        {
-
-        }
-
-        private void TraSuaAdmin_Load(object sender, EventArgs e)
-        {
-            this.ControlBox = false;
         }
 
         private void btnTraSuaThaiXanh_MouseHover(object sender, EventArgs e)
@@ -105,6 +95,16 @@ namespace OrderMillTeaProgram.Giao_diện.Giao_Diện_của_Admin
         private void btnHongTraTac_MouseLeave(object sender, EventArgs e)
         {
             btnHongTraTac.BackColor = SystemColors.Control;
+        }
+
+        private void TraSuaStaff_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            
+        }
+
+        private void TraSuaStaff_Load(object sender, EventArgs e)
+        {
+            this.ControlBox = false;
         }
     }
 }
