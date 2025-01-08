@@ -10,19 +10,26 @@ namespace OrderMillTeaProgram.Database
     public partial class CTHD
     {
         [Key]
-        [StringLength(50)]
-        public string IdCTHD { get; set; }
-
+        [Column(Order = 0)]
         [StringLength(50)]
         public string IdHoaDon { get; set; }
 
+        [Key]
+        [Column(Order = 1)]
         [StringLength(50)]
         public string IdDrink { get; set; }
 
         public int? SoLuong { get; set; }
 
-        public virtual Drink Drink { get; set; }
+        [StringLength(10)]
+        public string price { get; set; }
 
-        public virtual HoaDon HoaDon { get; set; }
+        [Key]
+        [Column(Order = 2)]
+        [StringLength(50)]
+        public string UserName { get; set; }
+
+        [StringLength(50)]
+        public string KhuyenMai { get; set; }
     }
 }

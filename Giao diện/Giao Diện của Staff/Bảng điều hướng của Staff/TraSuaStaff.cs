@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace OrderMillTeaProgram.Giao_diện.Giao_Diện_của_Admin
 {
-    public partial class TraSuaStaff : Form
+    public partial class TraSuaAdmin : Form
     {
-        public TraSuaStaff()
+        public TraSuaAdmin()
         {
             InitializeComponent();
         }

@@ -120,7 +120,7 @@
   <metadata name="UserName.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="userInfoBindingSource1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <metadata name="userInfoBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>191, 17</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
@@ -164,24 +164,7 @@
         sK+KRB0VYuHzeIALJcWjTqtHPmBM8xcnxlvqFw1E2gAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="btnsearch.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1
-        MAAA6mAAADqYAAAXb5JfxUYAAAAJcEhZcwAALiIAAC4iAari3ZIAAAAHdElNRQfoDB4HITTrkQkxAAAC
-        UklEQVRoQ+2XO2hVQRCGP1EQMWoQhWBEjJLCRERBsLCxSPCBChELMYVgYZNKQa0UBBvB0mAhVsFO1BSi
-        YCcEAhpiISmS4CNpjE+URIyPKD/MgWW412s0nHMi88HChfPvufOf3ZmdhSAIgiAI5owFQCOwC+gEjgOH
-        ge1AvReXERnYAVwFhoEpYAb4CXwHPgD9wBlgrZ9cFpYB54DXFnitMQgc8C8pGm2X68nXz8ZnYBwYBSZs
-        VdLn72zblYJFwGUX4FugG2gHNli+tFi+3AO+OTP7/UuL4CAwmQT2FGizfKlEHXAa+JTMeQys8cI8WQrc
-        TwIaA3Z6UQVk8qxbmZNelCcK+mMSjKrRn7IceJDMfWgFoxBOJYG8BDZ6QQ2U6FmBeANs8YK80HmRGdEW
-        W+wFNdhqya75X4tKeu3zG4kR/a6W4NVosrzS/B/AES/IC50dmZFeK8WzYZOdL5qvxO/wgrw4nxgZAhq8
-        oAYKXFtK81U01N4Uwj7gS7LHj3rBb9Dq9SQf4gmw2ovyQn88kATzCFjnRVU45A7FS16QN12WqFlAd4D1
-        XuTYAzxL5jwHWr0ob1ZY8FlQGlqlY9aqqyQvtC5gM3CxQod8154XTjPQ54JTFdKdROfLbTu5XzlNNqZt
-        ay3xLy4CmblVoVWvNt7baZ4aL40Z9U8n7Baou4gPXkMt/k27BqvqvSirGbHSWnk1kVeAa3ZnkcltrpXZ
-        XXYzsyHMlJX/2oyq4AU7i+Yd3szIXzSkpUFmZEArouZyXm6vDN1X9gKr/IMgCIIgCIIg+Gd+AfTL189r
-        HQR6AAAAAElFTkSuQmCC
-</value>
-  </data>
-  <metadata name="userInfoBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>25</value>
   </metadata>
 </root>

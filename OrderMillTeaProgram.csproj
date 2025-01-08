@@ -56,12 +56,13 @@
     <Reference Include="Azure.Identity, Version=1.13.1.0, Culture=neutral, PublicKeyToken=92742159e12e44c8, processorArchitecture=MSIL">
       <HintPath>packages\Azure.Identity.1.13.1\lib\netstandard2.0\Azure.Identity.dll</HintPath>
     </Reference>
-    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
-    </Reference>
-    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
-    </Reference>
+    <Reference Include="DevExpress.Data.Desktop.v24.2, Version=24.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Data.v24.2, Version=24.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Drawing.v24.2, Version=24.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v24.2.Core, Version=24.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Sparkline.v24.2.Core, Version=24.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v24.2, Version=24.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraEditors.v24.2, Version=24.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="Guna.UI2, Version=2.0.4.6, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
       <HintPath>packages\Guna.UI2.WinForms.2.0.4.6\lib\net472\Guna.UI2.dll</HintPath>
     </Reference>
@@ -134,6 +135,7 @@
       <HintPath>packages\System.Configuration.ConfigurationManager.9.0.0\lib\net462\System.Configuration.ConfigurationManager.dll</HintPath>
     </Reference>
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
     <Reference Include="System.Data.OracleClient" />
     <Reference Include="System.Design" />
     <Reference Include="System.Diagnostics.DiagnosticSource, Version=9.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
@@ -222,6 +224,24 @@
     <Compile Include="Database\HoaDon.cs" />
     <Compile Include="Database\Loai.cs" />
     <Compile Include="Database\UserInfo.cs" />
+    <Compile Include="Giao diện\Giao Diện của Admin\Bảng điều hướng của Admin\HoaDonFromAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Giao diện\Giao Diện của Admin\Bảng điều hướng của Admin\HoaDonFromAdmin.Designer.cs">
+      <DependentUpon>HoaDonFromAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Giao diện\Giao Diện của Admin\Bảng điều hướng của Admin\Kho.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Giao diện\Giao Diện của Admin\Bảng điều hướng của Admin\Kho.Designer.cs">
+      <DependentUpon>Kho.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Giao diện\Giao Diện của Admin\Bảng điều hướng của Admin\Nofications.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Giao diện\Giao Diện của Admin\Bảng điều hướng của Admin\Nofications.Designer.cs">
+      <DependentUpon>Nofications.cs</DependentUpon>
+    </Compile>
     <Compile Include="Giao diện\Giao Diện của Admin\Bảng điều hướng của Admin\QLTK.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -234,23 +254,23 @@
     <Compile Include="Giao diện\Giao Diện của Admin\Bảng điều hướng của Admin\QLDT.Designer.cs">
       <DependentUpon>QLDT.cs</DependentUpon>
     </Compile>
-    <Compile Include="Giao diện\Giao Diện của Admin\Bảng điều hướng của Admin\ToppingAdmin.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Giao diện\Giao Diện của Admin\Bảng điều hướng của Admin\ToppingAdmin.Designer.cs">
-      <DependentUpon>ToppingAdmin.cs</DependentUpon>
-    </Compile>
     <Compile Include="Giao diện\Giao Diện của Admin\Bảng điều hướng của Admin\BangDieuKhien.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Giao diện\Giao Diện của Admin\Bảng điều hướng của Admin\BangDieuKhien.Designer.cs">
       <DependentUpon>BangDieuKhien.cs</DependentUpon>
     </Compile>
-    <Compile Include="Giao diện\Giao Diện của Admin\Bảng điều hướng của Admin\AnVatAdmin.cs">
+    <Compile Include="Giao diện\Giao Diện của Admin\Bảng điều hướng của Admin\ChinhSuaMonAn.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Giao diện\Giao Diện của Admin\Bảng điều hướng của Admin\AnVatAdmin.Designer.cs">
-      <DependentUpon>AnVatAdmin.cs</DependentUpon>
+    <Compile Include="Giao diện\Giao Diện của Admin\Bảng điều hướng của Admin\ChinhSuaMonAn.Designer.cs">
+      <DependentUpon>ChinhSuaMonAn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Giao diện\Giao Diện của Admin\Bảng điều hướng của Admin\TimKiem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Giao diện\Giao Diện của Admin\Bảng điều hướng của Admin\TimKiem.Designer.cs">
+      <DependentUpon>TimKiem.cs</DependentUpon>
     </Compile>
     <Compile Include="Giao diện\Giao Diện của Admin\DashboardAdmin.cs">
       <SubType>Form</SubType>
@@ -258,11 +278,17 @@
     <Compile Include="Giao diện\Giao Diện của Admin\DashboardAdmin.Designer.cs">
       <DependentUpon>DashboardAdmin.cs</DependentUpon>
     </Compile>
-    <Compile Include="Giao diện\Giao Diện của Admin\Bảng điều hướng của Admin\TraSuaAdmin.cs">
+    <Compile Include="Giao diện\Giao Diện của Admin\Bảng điều hướng của Admin\ThongTinDanhMuc.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Giao diện\Giao Diện của Admin\Bảng điều hướng của Admin\TraSuaAdmin.Designer.cs">
-      <DependentUpon>TraSuaAdmin.cs</DependentUpon>
+    <Compile Include="Giao diện\Giao Diện của Admin\Bảng điều hướng của Admin\ThongTinDanhMuc.Designer.cs">
+      <DependentUpon>ThongTinDanhMuc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Giao diện\Giao Diện của Admin\Report\ReportDoanhThuT1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Giao diện\Giao Diện của Admin\Report\ReportDoanhThuT1.Designer.cs">
+      <DependentUpon>ReportDoanhThuT1.cs</DependentUpon>
     </Compile>
     <Compile Include="Giao diện\Giao Diện của User\All form tráng miệng\BanhFlan.cs">
       <SubType>Form</SubType>
@@ -396,27 +422,40 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Giao diện\Giao Diện của Admin\Bảng điều hướng của Admin\HoaDonFromAdmin.resx">
+      <DependentUpon>HoaDonFromAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Giao diện\Giao Diện của Admin\Bảng điều hướng của Admin\Kho.resx">
+      <DependentUpon>Kho.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Giao diện\Giao Diện của Admin\Bảng điều hướng của Admin\Nofications.resx">
+      <DependentUpon>Nofications.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Giao diện\Giao Diện của Admin\Bảng điều hướng của Admin\QLTK.resx">
       <DependentUpon>QLTK.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Giao diện\Giao Diện của Admin\Bảng điều hướng của Admin\QLDT.resx">
       <DependentUpon>QLDT.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Giao diện\Giao Diện của Admin\Bảng điều hướng của Admin\ToppingAdmin.resx">
-      <DependentUpon>ToppingAdmin.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Giao diện\Giao Diện của Admin\Bảng điều hướng của Admin\BangDieuKhien.resx">
       <DependentUpon>BangDieuKhien.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Giao diện\Giao Diện của Admin\Bảng điều hướng của Admin\AnVatAdmin.resx">
-      <DependentUpon>AnVatAdmin.cs</DependentUpon>
+    <EmbeddedResource Include="Giao diện\Giao Diện của Admin\Bảng điều hướng của Admin\ChinhSuaMonAn.resx">
+      <DependentUpon>ChinhSuaMonAn.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Giao diện\Giao Diện của Admin\Bảng điều hướng của Admin\TraSuaAdmin.resx">
-      <DependentUpon>TraSuaAdmin.cs</DependentUpon>
+    <EmbeddedResource Include="Giao diện\Giao Diện của Admin\Bảng điều hướng của Admin\ThongTinDanhMuc.resx">
+      <DependentUpon>ThongTinDanhMuc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Giao diện\Giao Diện của Admin\Bảng điều hướng của Admin\TimKiem.resx">
+      <DependentUpon>TimKiem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Giao diện\Giao Diện của Admin\DashboardAdmin.resx">
       <DependentUpon>DashboardAdmin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Giao diện\Giao Diện của Admin\Report\ReportDoanhThuT1.resx">
+      <DependentUpon>ReportDoanhThuT1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Giao diện\Giao Diện của Admin\Report\ReportDoanhThuThang1.rdlc" />
     <EmbeddedResource Include="Giao diện\Giao Diện của User\All form tráng miệng\BanhFlan.resx">
       <DependentUpon>BanhFlan.cs</DependentUpon>
     </EmbeddedResource>
@@ -468,6 +507,7 @@
     <EmbeddedResource Include="Giao diện\Giao Diện của Staff\DashboardStaff.resx">
       <DependentUpon>DashboardStaff.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Đăng Nhập Đăng ký của User\ForgotPassword.resx">
       <DependentUpon>ForgotPassword.cs</DependentUpon>
     </EmbeddedResource>
@@ -491,6 +531,11 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\OrderMillTeaProgram.Database.CTHD.datasource" />
+    <None Include="Properties\DataSources\OrderMillTeaProgram.Database.DoanhThu.datasource" />
+    <None Include="Properties\DataSources\OrderMillTeaProgram.Database.Drink.datasource" />
+    <None Include="Properties\DataSources\OrderMillTeaProgram.Database.HoaDon.datasource" />
+    <None Include="Properties\DataSources\OrderMillTeaProgram.Database.Loai.datasource" />
     <None Include="Properties\DataSources\OrderMillTeaProgram.Database.UserInfo.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -541,6 +586,9 @@
   <ItemGroup>
     <PackageReference Include="EntityFramework">
       <Version>6.5.1</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.ReportingServices.ReportViewerControl.Winforms">
+      <Version>150.1652.0</Version>
     </PackageReference>
     <PackageReference Include="Portable.BouncyCastle">
       <Version>1.9.0</Version>

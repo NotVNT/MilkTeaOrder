@@ -17,9 +17,9 @@ namespace OrderMillTeaProgram.Giao_diện_của_User
     public partial class DashboardStaff : Form
     {
         BangDieuKhienStaff bangdieukhienstaff;
-        TraSuaStaff trasuastaff;
-        AnVatAdmin anvatAdmin;
-        ToppingAdmin toppingAdmin;
+        TraSuaAdmin trasuastaff;
+        ChinhSuaMonAn anvatAdmin;
+  
         public DashboardStaff()
         {
             InitializeComponent();
@@ -137,7 +137,7 @@ namespace OrderMillTeaProgram.Giao_diện_của_User
         {
             if (trasuastaff == null)
             {
-                trasuastaff = new TraSuaStaff();
+                trasuastaff = new TraSuaAdmin();
                 trasuastaff.FormClosed += TraSuaAdmin_FormClosed;
                 trasuastaff.MdiParent = this;
                 trasuastaff.Dock = DockStyle.Fill;
@@ -157,7 +157,7 @@ namespace OrderMillTeaProgram.Giao_diện_của_User
         {
             if (anvatAdmin == null)
             {
-                anvatAdmin = new AnVatAdmin();
+                anvatAdmin = new ChinhSuaMonAn();
                 anvatAdmin.FormClosed += TraSuaAdmin_FormClosed;
                 anvatAdmin.MdiParent = this;
                 anvatAdmin.Dock = DockStyle.Fill;
@@ -171,27 +171,6 @@ namespace OrderMillTeaProgram.Giao_diện_của_User
         private void AnVatAdmin_FormClosed(object sender, FormClosedEventArgs e)
         {
             anvatAdmin = null;
-        }
-
-        private void btnTopping_Click(object sender, EventArgs e)
-        {
-            if (toppingAdmin == null)
-            {
-                toppingAdmin = new ToppingAdmin();
-                toppingAdmin.FormClosed += TraSuaAdmin_FormClosed;
-                toppingAdmin.MdiParent = this;
-                toppingAdmin.Dock = DockStyle.Fill;
-                toppingAdmin.Show();
-            }
-            else
-            {
-                toppingAdmin.Activate();
-            }
-        }
-
-        private void ToppingAdmin_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            toppingAdmin = null;
         }
 
         private void btnLogout_Click(object sender, EventArgs e)
