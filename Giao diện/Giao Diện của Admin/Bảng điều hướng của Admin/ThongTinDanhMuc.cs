@@ -188,7 +188,7 @@ namespace OrderMillTeaProgram.Giao_diện.Giao_Diện_của_Admin
                 txtTenLoai.Clear();
 
                 btnAdd.Enabled = true;
-                btnUpdate.Enabled = true;
+                btnUpdate.Enabled = false;
                 btnExitEdit.Visible = false;
 
                 txtMaLoai.Enabled = true;
@@ -214,11 +214,15 @@ namespace OrderMillTeaProgram.Giao_diện.Giao_Diện_của_Admin
 
                 txtMaLoai.Clear();
                 txtTenLoai.Clear();
+
+                btnEdit.Enabled = true;
+
             }
             if (dgvLoai.SelectedRows.Count > 0 &&
                 !string.IsNullOrEmpty(dgvLoai.SelectedRows[0].Cells["MaLoai"].Value?.ToString()))
+              
             {
-                btnDelete.Enabled = true;
+                btnEdit.Enabled = true;
             }
         }
 
@@ -267,27 +271,23 @@ namespace OrderMillTeaProgram.Giao_diện.Giao_Diện_của_Admin
 
         private void dgvLoai_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex >= 0)
+            if (e.RowIndex >= 0) // Check if a valid row is clicked
             {
                 DataGridViewRow selectedRow = dgvLoai.Rows[e.RowIndex];
-                string idLoai = selectedRow.Cells["MaLoai"].Value?.ToString();
+                string idDrink = selectedRow.Cells["MaLoai"].Value?.ToString();
 
-                if (string.IsNullOrEmpty(idLoai))
-                {
-                    btnDelete.Enabled = false;
-                    btnEdit.Enabled = false;
-                    btnUpdate.Enabled = false;
-                }
-                else
-                {
-                    btnDelete.Enabled = true;
-                    btnEdit.Enabled = true;
-                }
-                if (btnUpdate.Enabled)
-                {
-                    btnUpdate.Enabled = false;
-                }
+                // Disable btnEdit if STT is null
+                btnEdit.Enabled = !string.IsNullOrEmpty(idDrink);
+                btnDelete.Enabled = !string.IsNullOrEmpty(idDrink);
+                btnUpdate.Enabled = false;
+
             }
+            else
+            {
+                btnEdit.Enabled = false; 
+                btnDelete.Enabled = false;
+            }
+
         }
 
         private void txtTimTen_TextChanged(object sender, EventArgs e)

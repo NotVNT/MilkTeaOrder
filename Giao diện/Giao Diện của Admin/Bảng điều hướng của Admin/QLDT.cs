@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using OrderMillTeaProgram.Giao_diện.Giao_Diện_của_Admin.Bảng_điều_hướng_của_Admin;
+using OrderMillTeaProgram.Giao_diện.Giao_Diện_của_Admin.Report;
 
 namespace OrderMillTeaProgram.Giao_diện.Giao_Diện_của_Admin
 {
@@ -130,6 +131,12 @@ namespace OrderMillTeaProgram.Giao_diện.Giao_Diện_của_Admin
                 decimal tongTienDoanhThu = CalculateTongTienDoanhThu(dv.ToTable());
                 txtTongTienDoanhThu.Text = string.Format("{0:n0} VND", tongTienDoanhThu);
             }
+        }
+
+        private void btnDoanhThuThang1_Click(object sender, EventArgs e)
+        {
+            ReportDoanhThuT1 reportdoanhthuthang1 = new ReportDoanhThuT1();
+            reportdoanhthuthang1.ShowDialog();
         }
     }
 }
