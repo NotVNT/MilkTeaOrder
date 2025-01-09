@@ -39,10 +39,9 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.btnTimKiem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnTimKiemNhanVien = new System.Windows.Forms.ToolStripMenuItem();
-            this.hóaĐơnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnDoanhThuT1 = new System.Windows.Forms.ToolStripMenuItem();
             this.doanhThuTháng1ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.doanhThuTháng1ToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnDoanhThuThang1 = new System.Windows.Forms.ToolStripMenuItem();
             this.doanhThuTháng2ToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.doanhThuTháng3ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.doanhThuTháng2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -133,8 +132,7 @@
             // btnTimKiem
             // 
             this.btnTimKiem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.btnTimKiemNhanVien,
-            this.hóaĐơnToolStripMenuItem});
+            this.btnTimKiemNhanVien});
             this.btnTimKiem.Name = "btnTimKiem";
             this.btnTimKiem.Size = new System.Drawing.Size(82, 22);
             this.btnTimKiem.Text = "Tìm Kiếm";
@@ -145,12 +143,6 @@
             this.btnTimKiemNhanVien.Size = new System.Drawing.Size(213, 22);
             this.btnTimKiemNhanVien.Text = "Tài Khoản Nhân Viên";
             this.btnTimKiemNhanVien.Click += new System.EventHandler(this.btnTimKiemNhanVien_Click);
-            // 
-            // hóaĐơnToolStripMenuItem
-            // 
-            this.hóaĐơnToolStripMenuItem.Name = "hóaĐơnToolStripMenuItem";
-            this.hóaĐơnToolStripMenuItem.Size = new System.Drawing.Size(213, 22);
-            this.hóaĐơnToolStripMenuItem.Text = "Hóa Đơn";
             // 
             // btnDoanhThuT1
             // 
@@ -165,18 +157,19 @@
             // doanhThuTháng1ToolStripMenuItem
             // 
             this.doanhThuTháng1ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.doanhThuTháng1ToolStripMenuItem1,
+            this.btnDoanhThuThang1,
             this.doanhThuTháng2ToolStripMenuItem1,
             this.doanhThuTháng3ToolStripMenuItem});
             this.doanhThuTháng1ToolStripMenuItem.Name = "doanhThuTháng1ToolStripMenuItem";
-            this.doanhThuTháng1ToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
+            this.doanhThuTháng1ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.doanhThuTháng1ToolStripMenuItem.Text = "Theo Tháng";
             // 
-            // doanhThuTháng1ToolStripMenuItem1
+            // btnDoanhThuThang1
             // 
-            this.doanhThuTháng1ToolStripMenuItem1.Name = "doanhThuTháng1ToolStripMenuItem1";
-            this.doanhThuTháng1ToolStripMenuItem1.Size = new System.Drawing.Size(209, 22);
-            this.doanhThuTháng1ToolStripMenuItem1.Text = "Doanh Thu Tháng 1";
+            this.btnDoanhThuThang1.Name = "btnDoanhThuThang1";
+            this.btnDoanhThuThang1.Size = new System.Drawing.Size(209, 22);
+            this.btnDoanhThuThang1.Text = "Doanh Thu Tháng 1";
+            this.btnDoanhThuThang1.Click += new System.EventHandler(this.btnDoanhThuThang1_Click);
             // 
             // doanhThuTháng2ToolStripMenuItem1
             // 
@@ -196,7 +189,7 @@
             this.quý1ToolStripMenuItem,
             this.quý2ToolStripMenuItem});
             this.doanhThuTháng2ToolStripMenuItem.Name = "doanhThuTháng2ToolStripMenuItem";
-            this.doanhThuTháng2ToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
+            this.doanhThuTháng2ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.doanhThuTháng2ToolStripMenuItem.Text = "Theo Quý";
             // 
             // quý1ToolStripMenuItem
@@ -216,7 +209,7 @@
             this.theoNămToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.năm2025ToolStripMenuItem});
             this.theoNămToolStripMenuItem.Name = "theoNămToolStripMenuItem";
-            this.theoNămToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
+            this.theoNămToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.theoNămToolStripMenuItem.Text = "Theo Năm";
             // 
             // năm2025ToolStripMenuItem
@@ -601,7 +594,7 @@
         private System.Windows.Forms.Panel panel4;
         private Guna.UI2.WinForms.Guna2TextBox txtTongTienDoanhThu;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ToolStripMenuItem doanhThuTháng1ToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem btnDoanhThuThang1;
         private System.Windows.Forms.ToolStripMenuItem doanhThuTháng2ToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem doanhThuTháng3ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem quý1ToolStripMenuItem;
@@ -614,7 +607,6 @@
         private System.Windows.Forms.ToolStripMenuItem năm2025ToolStripMenuItem1;
         private Guna.UI2.WinForms.Guna2DataGridView dgvQLDT;
         private System.Windows.Forms.ToolStripMenuItem btnTimKiemNhanVien;
-        private System.Windows.Forms.ToolStripMenuItem hóaĐơnToolStripMenuItem;
         private System.Windows.Forms.DataGridViewTextBoxColumn TaiKhoan;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaHoaDon;
         private System.Windows.Forms.DataGridViewTextBoxColumn NgayVao;
