@@ -335,9 +335,14 @@
     <EmbeddedResource Include="Giao diện\Giao Diện của Admin\Report\ReportDoanhThuT1.resx">
       <DependentUpon>ReportDoanhThuT1.cs</DependentUpon>
     </EmbeddedResource>
+
     <EmbeddedResource Include="Giao diện\Giao Diện của Admin\Report\ReportDoanhThuThang1.rdlc" />
     <EmbeddedResource Include="Giao diện\Giao Diện của Staff\HoaDon.resx">
       <DependentUpon>HoaDon.cs</DependentUpon>
+
+    <EmbeddedResource Include="Giao diện\Giao Diện của Admin\Report\ReportDoanhThuThang1.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+
     </EmbeddedResource>
     <EmbeddedResource Include="Giao diện\Giao Diện của User\All form tráng miệng\BanhFlan.resx">
       <DependentUpon>BanhFlan.cs</DependentUpon>

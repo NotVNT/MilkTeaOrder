@@ -117,7 +117,9 @@
             this.lblDangKy.Name = "lblDangKy";
             this.lblDangKy.Size = new System.Drawing.Size(94, 17);
             this.lblDangKy.TabIndex = 7;
+            this.lblDangKy.TabStop = true;
             this.lblDangKy.Text = "Đăng ký ngay";
+            this.lblDangKy.Visible = false;
             this.lblDangKy.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblDangKy_LinkClicked);
             // 
             // guna2HtmlLabel1
@@ -131,6 +133,7 @@
             this.guna2HtmlLabel1.TabIndex = 6;
             this.guna2HtmlLabel1.TabStop = false;
             this.guna2HtmlLabel1.Text = "Chưa có tài khoản ?";
+            this.guna2HtmlLabel1.Visible = false;
             // 
             // lblQuenMatKhau
             // 
@@ -143,6 +146,7 @@
             this.lblQuenMatKhau.Name = "lblQuenMatKhau";
             this.lblQuenMatKhau.Size = new System.Drawing.Size(139, 21);
             this.lblQuenMatKhau.TabIndex = 4;
+            this.lblQuenMatKhau.TabStop = true;
             this.lblQuenMatKhau.Text = "Quên mật khẩu ?";
             this.lblQuenMatKhau.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblQuenMatKhau_LinkClicked);
             // 
