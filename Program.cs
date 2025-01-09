@@ -7,8 +7,15 @@ using OrderMillTeaProgram.Giao_diện.Giao_Diện_của_Admin;
 using OrderMillTeaProgram.Giao_diện.Giao_Diện_của_User.All_form_TS;
 using OrderMillTeaProgram.Giao_diện.Giao_Diện_của_User.All_form_tráng_miệng;
 using OrderMillTeaProgram.Giao_diện_của_User;
+
+using OrderMillTeaProgram.Database;
+using OrderMillTeaProgram.Giao_diện.Giao_Diện_của_Staff.Bảng_điều_hướng_của_Staff;
+using HoaDon = OrderMillTeaProgram.Giao_diện.Giao_Diện_của_Staff.Bảng_điều_hướng_của_Staff.HoaDon;
+
+
 using Microsoft.Reporting.WinForms;
 using OrderMillTeaProgram.Giao_diện.Giao_Diện_của_Admin.Report;
+
 
 namespace OrderMillTeaProgram
 {
@@ -18,7 +25,7 @@ namespace OrderMillTeaProgram
         static void Main()
         {
             Application.EnableVisualStyles();
-            Application.Run( new DashboardStaff());
+            Application.Run(new DashboardAdmin());
         }
     }
 }
