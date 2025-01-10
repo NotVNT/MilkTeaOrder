@@ -20,7 +20,7 @@ namespace OrderMillTeaProgram
         static void Main()
         {
             Application.EnableVisualStyles();
-            Application.Run(new DashboardAdmin());
+            Application.Run(new HoaDon());
         }
     }
 }

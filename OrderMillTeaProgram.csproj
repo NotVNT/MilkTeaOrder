@@ -164,6 +164,12 @@
     <Compile Include="Giao diện\Giao Diện của Admin\Report\ReportDoanhThuT1.Designer.cs">
       <DependentUpon>ReportDoanhThuT1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Giao diện\Giao Diện của Staff\DonHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Giao diện\Giao Diện của Staff\DonHang.Designer.cs">
+      <DependentUpon>DonHang.cs</DependentUpon>
+    </Compile>
     <Compile Include="Giao diện\Giao Diện của Staff\HoaDon.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -336,6 +342,9 @@
       <DependentUpon>ReportDoanhThuT1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Giao diện\Giao Diện của Admin\Report\ReportDoanhThuThang1.rdlc" />
+    <EmbeddedResource Include="Giao diện\Giao Diện của Staff\DonHang.resx">
+      <DependentUpon>DonHang.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Giao diện\Giao Diện của Staff\HoaDon.resx">
       <DependentUpon>HoaDon.cs</DependentUpon>
     </EmbeddedResource>

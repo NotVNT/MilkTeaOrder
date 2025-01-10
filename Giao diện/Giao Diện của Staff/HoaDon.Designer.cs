@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HoaDon));
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -83,18 +82,10 @@
             this.btnTimKiem = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnExit = new Guna.UI2.WinForms.Guna2CircleButton();
-            this.idHoaDonDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idDrinkDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.soLuongDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.priceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.userNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.khuyenMaiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cTHDBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDanhSachHang)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.cTHDBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // Column6
@@ -276,16 +267,7 @@
             // 
             // dgvDanhSachHang
             // 
-            this.dgvDanhSachHang.AutoGenerateColumns = false;
             this.dgvDanhSachHang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDanhSachHang.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idHoaDonDataGridViewTextBoxColumn,
-            this.idDrinkDataGridViewTextBoxColumn,
-            this.soLuongDataGridViewTextBoxColumn,
-            this.priceDataGridViewTextBoxColumn,
-            this.userNameDataGridViewTextBoxColumn,
-            this.khuyenMaiDataGridViewTextBoxColumn});
-            this.dgvDanhSachHang.DataSource = this.cTHDBindingSource;
             this.dgvDanhSachHang.Location = new System.Drawing.Point(14, 151);
             this.dgvDanhSachHang.Name = "dgvDanhSachHang";
             this.dgvDanhSachHang.RowHeadersWidth = 51;
@@ -645,58 +627,6 @@
             this.btnExit.UseTransparentBackground = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
-            // idHoaDonDataGridViewTextBoxColumn
-            // 
-            this.idHoaDonDataGridViewTextBoxColumn.DataPropertyName = "IdHoaDon";
-            this.idHoaDonDataGridViewTextBoxColumn.HeaderText = "IdHoaDon";
-            this.idHoaDonDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.idHoaDonDataGridViewTextBoxColumn.Name = "idHoaDonDataGridViewTextBoxColumn";
-            this.idHoaDonDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // idDrinkDataGridViewTextBoxColumn
-            // 
-            this.idDrinkDataGridViewTextBoxColumn.DataPropertyName = "IdDrink";
-            this.idDrinkDataGridViewTextBoxColumn.HeaderText = "IdDrink";
-            this.idDrinkDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.idDrinkDataGridViewTextBoxColumn.Name = "idDrinkDataGridViewTextBoxColumn";
-            this.idDrinkDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // soLuongDataGridViewTextBoxColumn
-            // 
-            this.soLuongDataGridViewTextBoxColumn.DataPropertyName = "SoLuong";
-            this.soLuongDataGridViewTextBoxColumn.HeaderText = "SoLuong";
-            this.soLuongDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.soLuongDataGridViewTextBoxColumn.Name = "soLuongDataGridViewTextBoxColumn";
-            this.soLuongDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // priceDataGridViewTextBoxColumn
-            // 
-            this.priceDataGridViewTextBoxColumn.DataPropertyName = "price";
-            this.priceDataGridViewTextBoxColumn.HeaderText = "price";
-            this.priceDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.priceDataGridViewTextBoxColumn.Name = "priceDataGridViewTextBoxColumn";
-            this.priceDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // userNameDataGridViewTextBoxColumn
-            // 
-            this.userNameDataGridViewTextBoxColumn.DataPropertyName = "UserName";
-            this.userNameDataGridViewTextBoxColumn.HeaderText = "UserName";
-            this.userNameDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.userNameDataGridViewTextBoxColumn.Name = "userNameDataGridViewTextBoxColumn";
-            this.userNameDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // khuyenMaiDataGridViewTextBoxColumn
-            // 
-            this.khuyenMaiDataGridViewTextBoxColumn.DataPropertyName = "KhuyenMai";
-            this.khuyenMaiDataGridViewTextBoxColumn.HeaderText = "KhuyenMai";
-            this.khuyenMaiDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.khuyenMaiDataGridViewTextBoxColumn.Name = "khuyenMaiDataGridViewTextBoxColumn";
-            this.khuyenMaiDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // cTHDBindingSource
-            // 
-            this.cTHDBindingSource.DataSource = typeof(OrderMillTeaProgram.Database.CTHD);
-            // 
             // HoaDon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -718,7 +648,6 @@
             this.groupBox1.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.cTHDBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -778,13 +707,6 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TextBox txtGhiChu;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idHoaDonDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idDrinkDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn soLuongDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn priceDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn userNameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn khuyenMaiDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource cTHDBindingSource;
         private Guna.UI2.WinForms.Guna2CircleButton btnExit;
     }
 }
