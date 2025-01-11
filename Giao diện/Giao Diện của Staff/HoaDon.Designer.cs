@@ -60,7 +60,7 @@
             this.txtTenHang = new System.Windows.Forms.TextBox();
             this.txtSoLuong = new System.Windows.Forms.TextBox();
             this.txtMaHang = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.txtTongTien = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dtpNgayXuat = new System.Windows.Forms.DateTimePicker();
             this.cmbMaNhanVien = new System.Windows.Forms.ComboBox();
@@ -71,7 +71,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txtSoDienThoai = new System.Windows.Forms.TextBox();
             this.txtTenKhachHang = new System.Windows.Forms.TextBox();
             this.txtTenNhanVien = new System.Windows.Forms.TextBox();
             this.txtMaHoaDon = new System.Windows.Forms.TextBox();
@@ -207,7 +207,7 @@
             this.groupBox2.Controls.Add(this.txtTenHang);
             this.groupBox2.Controls.Add(this.txtSoLuong);
             this.groupBox2.Controls.Add(this.txtMaHang);
-            this.groupBox2.Controls.Add(this.textBox10);
+            this.groupBox2.Controls.Add(this.txtTongTien);
             this.groupBox2.Location = new System.Drawing.Point(37, 345);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
@@ -392,14 +392,14 @@
             this.txtMaHang.Size = new System.Drawing.Size(161, 35);
             this.txtMaHang.TabIndex = 1;
             // 
-            // textBox10
+            // txtTongTien
             // 
-            this.textBox10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.textBox10.Location = new System.Drawing.Point(759, 388);
-            this.textBox10.Multiline = true;
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(257, 35);
-            this.textBox10.TabIndex = 1;
+            this.txtTongTien.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtTongTien.Location = new System.Drawing.Point(759, 388);
+            this.txtTongTien.Multiline = true;
+            this.txtTongTien.Name = "txtTongTien";
+            this.txtTongTien.Size = new System.Drawing.Size(257, 35);
+            this.txtTongTien.TabIndex = 1;
             // 
             // groupBox1
             // 
@@ -414,7 +414,7 @@
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.textBox5);
+            this.groupBox1.Controls.Add(this.txtSoDienThoai);
             this.groupBox1.Controls.Add(this.txtTenKhachHang);
             this.groupBox1.Controls.Add(this.txtTenNhanVien);
             this.groupBox1.Controls.Add(this.txtMaHoaDon);
@@ -442,6 +442,7 @@
             this.cmbMaNhanVien.Name = "cmbMaNhanVien";
             this.cmbMaNhanVien.Size = new System.Drawing.Size(257, 24);
             this.cmbMaNhanVien.TabIndex = 10;
+            this.cmbMaNhanVien.SelectedIndexChanged += new System.EventHandler(this.cmbMaNhanVien_SelectedIndexChanged);
             // 
             // cmbMaKhachHang
             // 
@@ -450,6 +451,7 @@
             this.cmbMaKhachHang.Name = "cmbMaKhachHang";
             this.cmbMaKhachHang.Size = new System.Drawing.Size(257, 24);
             this.cmbMaKhachHang.TabIndex = 9;
+            this.cmbMaKhachHang.SelectedIndexChanged += new System.EventHandler(this.cmbMaKhachHang_SelectedIndexChanged);
             // 
             // label7
             // 
@@ -505,14 +507,14 @@
             this.label2.TabIndex = 4;
             this.label2.Text = "Ngày xuất";
             // 
-            // textBox5
+            // txtSoDienThoai
             // 
-            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.textBox5.Location = new System.Drawing.Point(689, 121);
-            this.textBox5.Multiline = true;
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(257, 35);
-            this.textBox5.TabIndex = 1;
+            this.txtSoDienThoai.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtSoDienThoai.Location = new System.Drawing.Point(689, 121);
+            this.txtSoDienThoai.Multiline = true;
+            this.txtSoDienThoai.Name = "txtSoDienThoai";
+            this.txtSoDienThoai.Size = new System.Drawing.Size(257, 35);
+            this.txtSoDienThoai.TabIndex = 1;
             // 
             // txtTenKhachHang
             // 
@@ -641,6 +643,7 @@
             this.Name = "HoaDon";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "HoaDon";
+            this.Load += new System.EventHandler(this.HoaDon_Load);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDanhSachHang)).EndInit();
@@ -669,7 +672,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox txtSoDienThoai;
         private System.Windows.Forms.TextBox txtTenKhachHang;
         private System.Windows.Forms.TextBox txtMaHoaDon;
         private System.Windows.Forms.Label label1;
@@ -691,7 +694,7 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.TextBox txtTongTien;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Button btnXuatHoaDon;

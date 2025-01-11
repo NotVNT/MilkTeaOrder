@@ -16,13 +16,15 @@ namespace OrderMillTeaProgram.Giao_diện.Giao_Diện_của_Staff.Bảng_điều
 {
     public partial class HoaDon : Form
     {
+        private string connectionString = "Data Source=QUOCTUAN\\QUOCTUAN;Initial Catalog=UserInfo;Integrated Security=True;Encrypt=True;TrustServerCertificate=True"; 
         public HoaDon()
         {
             InitializeComponent();
             SetupDataGridView(); // Thiết lập các cột cho DataGridView
         }
 
-    
+        private List<CartItem> cart = new List<CartItem>();
+
 
         private void btnThemVaoHoaDon_Click(object sender, EventArgs e)
         {
@@ -54,6 +56,7 @@ namespace OrderMillTeaProgram.Giao_diện.Giao_Diện_của_Staff.Bảng_điều
 
             // Xóa dữ liệu trong các textbox
             ClearHangInputs();
+            //Kiểm tra dữ liệu đầu vào trước khi thêm
         }
         // Hàm tính tổng tiền
         private void UpdateTongTien()
@@ -290,5 +293,116 @@ namespace OrderMillTeaProgram.Giao_diện.Giao_Diện_của_Staff.Bảng_điều
         {
             this.Close();
         }
+
+        private void cmbMaKhachHang_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string maKhachHang = cmbMaKhachHang.SelectedValue.ToString();
+            string query = "SELECT TenKhachHang, SoDienThoai FROM KhachHang WHERE MaKhachHang = @MaKhachHang";
+
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("@MaKhachHang", maKhachHang);
+                conn.Open();
+
+                SqlDataReader reader = cmd.ExecuteReader();
+                if (reader.Read())
+                {
+                    txtTenKhachHang.Text = reader["TenKhachHang"].ToString();
+                    txtSoDienThoai.Text = reader["SoDienThoai"].ToString();
+                }
+            }
+        }
+
+        private void cmbMaNhanVien_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string maNhanVien = cmbMaNhanVien.SelectedValue.ToString();
+            string query = "SELECT TenNhanVien FROM NhanVien WHERE MaNhanVien = @MaNhanVien";
+
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("@MaNhanVien", maNhanVien);
+                conn.Open();
+
+                SqlDataReader reader = cmd.ExecuteReader();
+                if (reader.Read())
+                {
+                    txtTenNhanVien.Text = reader["TenNhanVien"].ToString();
+                }
+            }
+        }
+        private void LoadGioHang()
+        {
+            dgvDanhSachHang.Rows.Clear(); // Xóa dữ liệu cũ
+
+            foreach (var item in listViewCart)
+            {
+                int thanhTien = item.SoLuong * item.DonGia;
+                dgvDanhSachHang.Rows.Add(item.MaHang, item.TenHang, item.SoLuong, item.DonGia, thanhTien);
+            }
+
+            TinhTongTien();
+        }
+        private void TinhTongTien()
+        {
+            int tongTien = 0;
+
+            foreach (DataGridViewRow row in dgvDanhSachHang.Rows)
+            {
+                if (row.Cells["ThanhTien"].Value != null)
+                {
+                    tongTien += Convert.ToInt32(row.Cells["ThanhTien"].Value);
+                }
+            }
+
+            txtTongTien.Text = tongTien.ToString("N0"); // Định dạng số
+        }
+
+        private void HoaDon_Load(object sender, EventArgs e)
+        {
+            //LoadDanhSachKhachHang();
+            //LoadDanhSachNhanVien();
+            LoadGioHang();
+        }
+        public class CartItem
+        {
+            public string MaHang { get; set; }
+            public string TenHang { get; set; }
+            public int SoLuong { get; set; }
+            public decimal DonGia { get; set; }
+            public decimal ThanhTien => SoLuong * DonGia;
+        }
+        private void RefreshCartGrid()
+        {
+            dgvDanhSachHang.Rows.Clear();
+            foreach (var item in cart)
+            {
+                dgvDanhSachHang.Rows.Add(item.MaHang, item.TenHang, item.SoLuong, item.DonGia, item.ThanhTien);
+            }
+            UpdateTongTien();
+        }
+        private void AddToCart()
+        {
+            if (string.IsNullOrEmpty(txtMaHang.Text) || string.IsNullOrEmpty(txtTenHang.Text) ||
+                !int.TryParse(txtSoLuong.Text, out int soLuong) ||
+                !decimal.TryParse(txtDonGia.Text, out decimal donGia))
+            {
+                MessageBox.Show("Vui lòng nhập đầy đủ và đúng thông tin!");
+                return;
+            }
+
+            var newItem = new CartItem
+            {
+                MaHang = txtMaHang.Text,
+                TenHang = txtTenHang.Text,
+                SoLuong = soLuong,
+                DonGia = donGia
+            };
+
+            cart.Add(newItem);
+            RefreshCartGrid();
+        }
+
     }
 }

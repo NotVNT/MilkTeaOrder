@@ -32,27 +32,27 @@
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.txtTimTen = new Guna.UI2.WinForms.Guna2TextBox();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.lblDashboard = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.cTHDBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dgvHoaDon = new System.Windows.Forms.DataGridView();
             this.idHoaDonDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idDrinkDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.soLuongDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.priceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.userNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.khuyenMaiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cTHDBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.lblDashboard = new System.Windows.Forms.Label();
             this.flowLayoutPanel2.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvHoaDon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cTHDBindingSource)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // flowLayoutPanel2
             // 
             this.flowLayoutPanel2.Controls.Add(this.panel1);
-            this.flowLayoutPanel2.Controls.Add(this.dataGridView1);
+            this.flowLayoutPanel2.Controls.Add(this.dgvHoaDon);
             this.flowLayoutPanel2.Location = new System.Drawing.Point(0, 74);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
             this.flowLayoutPanel2.Size = new System.Drawing.Size(1388, 742);
@@ -88,49 +88,25 @@
             this.txtTimTen.Size = new System.Drawing.Size(672, 47);
             this.txtTimTen.TabIndex = 1;
             // 
-            // panel2
+            // dgvHoaDon
             // 
-            this.panel2.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.panel2.Controls.Add(this.lblDashboard);
-            this.panel2.Location = new System.Drawing.Point(0, -1);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1385, 78);
-            this.panel2.TabIndex = 1;
-            // 
-            // lblDashboard
-            // 
-            this.lblDashboard.AutoSize = true;
-            this.lblDashboard.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDashboard.Location = new System.Drawing.Point(28, 19);
-            this.lblDashboard.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblDashboard.Name = "lblDashboard";
-            this.lblDashboard.Size = new System.Drawing.Size(214, 32);
-            this.lblDashboard.TabIndex = 1;
-            this.lblDashboard.Text = "Quản Lý Hóa Đơn";
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvHoaDon.AutoGenerateColumns = false;
+            this.dgvHoaDon.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dgvHoaDon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvHoaDon.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idHoaDonDataGridViewTextBoxColumn,
             this.idDrinkDataGridViewTextBoxColumn,
             this.soLuongDataGridViewTextBoxColumn,
             this.priceDataGridViewTextBoxColumn,
             this.userNameDataGridViewTextBoxColumn,
             this.khuyenMaiDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.cTHDBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 81);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1370, 661);
-            this.dataGridView1.TabIndex = 1;
-            // 
-            // cTHDBindingSource
-            // 
-            this.cTHDBindingSource.DataSource = typeof(OrderMillTeaProgram.Database.CTHD);
+            this.dgvHoaDon.DataSource = this.cTHDBindingSource;
+            this.dgvHoaDon.Location = new System.Drawing.Point(3, 81);
+            this.dgvHoaDon.Name = "dgvHoaDon";
+            this.dgvHoaDon.RowHeadersWidth = 51;
+            this.dgvHoaDon.RowTemplate.Height = 24;
+            this.dgvHoaDon.Size = new System.Drawing.Size(1370, 661);
+            this.dgvHoaDon.TabIndex = 1;
             // 
             // idHoaDonDataGridViewTextBoxColumn
             // 
@@ -180,6 +156,30 @@
             this.khuyenMaiDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.khuyenMaiDataGridViewTextBoxColumn.Name = "khuyenMaiDataGridViewTextBoxColumn";
             // 
+            // cTHDBindingSource
+            // 
+            this.cTHDBindingSource.DataSource = typeof(OrderMillTeaProgram.Database.CTHD);
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.panel2.Controls.Add(this.lblDashboard);
+            this.panel2.Location = new System.Drawing.Point(0, -1);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1385, 78);
+            this.panel2.TabIndex = 1;
+            // 
+            // lblDashboard
+            // 
+            this.lblDashboard.AutoSize = true;
+            this.lblDashboard.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDashboard.Location = new System.Drawing.Point(28, 19);
+            this.lblDashboard.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblDashboard.Name = "lblDashboard";
+            this.lblDashboard.Size = new System.Drawing.Size(214, 32);
+            this.lblDashboard.TabIndex = 1;
+            this.lblDashboard.Text = "Quản Lý Hóa Đơn";
+            // 
             // DonHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -190,12 +190,13 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "DonHang";
             this.Text = "DonHang";
+            this.Load += new System.EventHandler(this.DonHang_Load);
             this.flowLayoutPanel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvHoaDon)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cTHDBindingSource)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cTHDBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -205,7 +206,7 @@
         private System.Windows.Forms.Panel panel1;
         private Guna.UI2.WinForms.Guna2TextBox txtTimTen;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvHoaDon;
         private System.Windows.Forms.Label lblDashboard;
         private System.Windows.Forms.BindingSource cTHDBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn idHoaDonDataGridViewTextBoxColumn;

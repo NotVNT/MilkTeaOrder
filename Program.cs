@@ -10,6 +10,7 @@ using OrderMillTeaProgram.Giao_diện_của_User;
 using OrderMillTeaProgram.Database;
 using OrderMillTeaProgram.Giao_diện.Giao_Diện_của_Staff.Bảng_điều_hướng_của_Staff;
 using HoaDon = OrderMillTeaProgram.Giao_diện.Giao_Diện_của_Staff.Bảng_điều_hướng_của_Staff.HoaDon;
+using OrderMillTeaProgram.Giao_diện.Giao_Diện_của_Staff;
 
 
 namespace OrderMillTeaProgram
@@ -20,7 +21,7 @@ namespace OrderMillTeaProgram
         static void Main()
         {
             Application.EnableVisualStyles();
-            Application.Run(new HoaDon());
+            Application.Run(new DonHang());
         }
     }
 }
