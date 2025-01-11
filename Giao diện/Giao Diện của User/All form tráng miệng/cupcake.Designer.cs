@@ -32,18 +32,19 @@
             this.btnAddToCart = new System.Windows.Forms.Button();
             this.btnPlaceOrder = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.numericQuantity = new System.Windows.Forms.NumericUpDown();
             this.label8 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.lblTotalPrice = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.clbTopping = new System.Windows.Forms.CheckedListBox();
             this.btnClose = new Guna.UI2.WinForms.Guna2CircleButton();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericQuantity)).BeginInit();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnAddToCart
@@ -75,6 +76,18 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(260, 330);
             this.panel1.TabIndex = 33;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.SystemColors.Control;
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Image = global::OrderMillTeaProgram.Properties.Resources.cupcake;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(260, 330);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // numericQuantity
             // 
@@ -125,6 +138,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.Control;
+            this.panel2.Controls.Add(this.clbTopping);
             this.panel2.Controls.Add(this.btnAddToCart);
             this.panel2.Controls.Add(this.btnPlaceOrder);
             this.panel2.Controls.Add(this.numericQuantity);
@@ -133,20 +147,16 @@
             this.panel2.Controls.Add(this.label1);
             this.panel2.Location = new System.Drawing.Point(315, 32);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(583, 236);
+            this.panel2.Size = new System.Drawing.Size(583, 331);
             this.panel2.TabIndex = 34;
             // 
-            // pictureBox1
+            // clbTopping
             // 
-            this.pictureBox1.BackColor = System.Drawing.SystemColors.Control;
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Image = global::OrderMillTeaProgram.Properties.Resources.cupcake;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(260, 330);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.clbTopping.FormattingEnabled = true;
+            this.clbTopping.Location = new System.Drawing.Point(16, 169);
+            this.clbTopping.Name = "clbTopping";
+            this.clbTopping.Size = new System.Drawing.Size(160, 140);
+            this.clbTopping.TabIndex = 17;
             // 
             // btnClose
             // 
@@ -168,8 +178,9 @@
             this.btnClose.Size = new System.Drawing.Size(32, 38);
             this.btnClose.TabIndex = 35;
             this.btnClose.UseTransparentBackground = true;
+            this.btnClose.Click += new System.EventHandler(this.BtnClose_Click);
             // 
-            // CupCake
+            // cupcake
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -179,14 +190,14 @@
             this.Controls.Add(this.lblTotalPrice);
             this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "CupCake";
+            this.Name = "cupcake";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CupCake";
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericQuantity)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -205,5 +216,6 @@
         private Guna.UI2.WinForms.Guna2CircleButton btnClose;
         private System.Windows.Forms.Label lblTotalPrice;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.CheckedListBox clbTopping;
     }
 }

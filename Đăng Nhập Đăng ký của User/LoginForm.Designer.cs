@@ -1,4 +1,6 @@
-﻿namespace OrderMillTeaProgram
+﻿using System;
+
+namespace OrderMillTeaProgram
 {
     partial class LoginForm
     {
@@ -161,7 +163,7 @@
             this.btnDangNhap.TabIndex = 5;
             this.btnDangNhap.TabStop = false;
             this.btnDangNhap.Text = "Đăng Nhập";
-            this.btnDangNhap.Click += new System.EventHandler(this.BtnDangNhap_Click);
+            this.btnDangNhap.Click += new System.EventHandler(this.btnDangNhap_Click);
             // 
             // txtMatKhau
             // 
@@ -318,6 +320,7 @@
         private System.Windows.Forms.LinkLabel lblDangKy;
         private Guna.UI2.WinForms.Guna2Button btnshowpass;
         private Guna.UI2.WinForms.Guna2Button btnhidepass;
+        private readonly EventHandler btnDangNhap_Click;
     }
 }
 

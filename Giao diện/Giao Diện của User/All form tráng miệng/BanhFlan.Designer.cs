@@ -40,6 +40,7 @@
             this.lblTotalPrice = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnClose = new Guna.UI2.WinForms.Guna2CircleButton();
+            this.clbTopping = new System.Windows.Forms.CheckedListBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericQuantity)).BeginInit();
@@ -137,6 +138,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.Control;
+            this.panel2.Controls.Add(this.clbTopping);
             this.panel2.Controls.Add(this.btnAddToCart);
             this.panel2.Controls.Add(this.btnPlaceOrder);
             this.panel2.Controls.Add(this.numericQuantity);
@@ -145,7 +147,7 @@
             this.panel2.Controls.Add(this.label1);
             this.panel2.Location = new System.Drawing.Point(314, 34);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(583, 236);
+            this.panel2.Size = new System.Drawing.Size(583, 331);
             this.panel2.TabIndex = 30;
             // 
             // btnClose
@@ -168,6 +170,15 @@
             this.btnClose.Size = new System.Drawing.Size(32, 38);
             this.btnClose.TabIndex = 31;
             this.btnClose.UseTransparentBackground = true;
+            this.btnClose.Click += new System.EventHandler(this.BtnClose_Click);
+            // 
+            // clbTopping
+            // 
+            this.clbTopping.FormattingEnabled = true;
+            this.clbTopping.Location = new System.Drawing.Point(16, 178);
+            this.clbTopping.Name = "clbTopping";
+            this.clbTopping.Size = new System.Drawing.Size(166, 123);
+            this.clbTopping.TabIndex = 17;
             // 
             // BanhFlan
             // 
@@ -205,5 +216,6 @@
         private Guna.UI2.WinForms.Guna2CircleButton btnClose;
         private System.Windows.Forms.Label lblTotalPrice;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.CheckedListBox clbTopping;
     }
 }

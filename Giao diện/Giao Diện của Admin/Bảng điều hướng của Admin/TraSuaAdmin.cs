@@ -8,28 +8,34 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using OrderMillTeaProgram.Giao_diện.Giao_Diện_của_User.All_form_TS;
+using OrderMillTeaProgram.Giao_diện.Giao_Diện_của_User.All_form_tráng_miệng;
+using MailChimp.Net.Models;
+using OrderMillTeaProgram.Giao_diện.Giao_Diện_của_User;
 
 namespace OrderMillTeaProgram.Giao_diện.Giao_Diện_của_Admin
 {
     public partial class TraSuaAdmin : Form
     {
+        private readonly DashboardStaff.Cart sharedCart;
+
         public TraSuaAdmin()
         {
             InitializeComponent();
+            sharedCart = new DashboardStaff.Cart(); // Initialize shared cart
             InitializeEvents();
         }
 
         private void InitializeEvents()
         {
             // Gắn sự kiện mở form con
-            btnTraSuaThaiXanh.Click += (s, e) => OpenAdminForm(new TraSuaThaiXanh());
-            btnTraSuaTruyenThong.Click += (s, e) => OpenAdminForm(new TSTranChau());
-            btnTraSuaKhoaiMon.Click += (s, e) => OpenAdminForm(new tskhoaimon());
-            btnTraSuaChocolate.Click += (s, e) => OpenAdminForm(new TSSocolaMin());
-            btnTraSuaPhoMai.Click += (s, e) => OpenAdminForm(new TSPhoMai());
-            btnTraSuaOreo.Click += (s, e) => OpenAdminForm(new TSOreoCakeCream());
-            btnTraDaoCamSa.Click += (s, e) => OpenAdminForm(new TraDaoCamSa());
-            btnHongTraTac.Click += (s, e) => OpenAdminForm(new HongTraTac());
+            btnTraSuaThaiXanh.Click += (s, e) => OpenAdminForm(new TraSuaThaiXanh(sharedCart));
+            btnTraSuaTruyenThong.Click += (s, e) => OpenAdminForm(new TSTranChau(sharedCart));
+            btnTraSuaKhoaiMon.Click += (s, e) => OpenAdminForm(new Tskhoaimon(sharedCart));
+            btnTraSuaChocolate.Click += (s, e) => OpenAdminForm(new TSSocolaMin(sharedCart));
+            btnTraSuaPhoMai.Click += (s, e) => OpenAdminForm(new TSPhoMai(sharedCart));
+            btnTraSuaOreo.Click += (s, e) => OpenAdminForm(new TSOreoCakeCream(sharedCart));
+            btnTraDaoCamSa.Click += (s, e) => OpenAdminForm(new TraDaoCamSa(sharedCart));
+            btnHongTraTac.Click += (s, e) => OpenAdminForm(new HongTraTac(sharedCart));
 
             // Sự kiện đóng form chính
             btnClose.Click += CloseForm;
@@ -50,6 +56,11 @@ namespace OrderMillTeaProgram.Giao_diện.Giao_Diện_của_Admin
                     RemoveOverlay();
                     this.Enabled = true;
                 };
+
+                if (adminForm is ICartInteraction cartForm)
+                {
+                    cartForm.SetCart(sharedCart); // Pass the shared cart to the child form if it supports interaction
+                }
 
                 adminForm.Show(); // Hiển thị form con
                 this.Enabled = false; // Vô hiệu hóa form chính
@@ -93,7 +104,6 @@ namespace OrderMillTeaProgram.Giao_diện.Giao_Diện_của_Admin
 
         private void TraSuaAdmin_FormClosed(object sender, FormClosedEventArgs e)
         {
-
         }
 
         private void TraSuaAdmin_Load(object sender, EventArgs e)
@@ -185,5 +195,10 @@ namespace OrderMillTeaProgram.Giao_diện.Giao_Diện_của_Admin
         {
             this.Close();
         }
+    }
+
+    public interface ICartInteraction
+    {
+        void SetCart(DashboardStaff.Cart cart);
     }
 }

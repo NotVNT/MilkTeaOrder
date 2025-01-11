@@ -77,11 +77,9 @@
             this.sidebar.Controls.Add(this.btnLogout);
             this.sidebar.Dock = System.Windows.Forms.DockStyle.Left;
             this.sidebar.Location = new System.Drawing.Point(0, 0);
-            this.sidebar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.sidebar.Margin = new System.Windows.Forms.Padding(4);
             this.sidebar.Name = "sidebar";
-
-            this.sidebar.Size = new System.Drawing.Size(220, 894);
-
+            this.sidebar.Size = new System.Drawing.Size(294, 894);
             this.sidebar.TabIndex = 1;
             // 
             // panel3
@@ -91,7 +89,7 @@
             this.panel3.Controls.Add(this.pictureBox1);
             this.panel3.Controls.Add(this.pictureBox2);
             this.panel3.Location = new System.Drawing.Point(4, 4);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(289, 225);
             this.panel3.TabIndex = 0;
@@ -100,7 +98,7 @@
             // 
             this.sidebarclick.Image = ((System.Drawing.Image)(resources.GetObject("sidebarclick.Image")));
             this.sidebarclick.Location = new System.Drawing.Point(4, 4);
-            this.sidebarclick.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.sidebarclick.Margin = new System.Windows.Forms.Padding(4);
             this.sidebarclick.Name = "sidebarclick";
             this.sidebarclick.Size = new System.Drawing.Size(49, 47);
             this.sidebarclick.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -124,7 +122,7 @@
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(81, 101);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(133, 92);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -135,7 +133,7 @@
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(207, 4);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(83, 64);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -151,7 +149,7 @@
             this.btnDashboard.Image = ((System.Drawing.Image)(resources.GetObject("btnDashboard.Image")));
             this.btnDashboard.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDashboard.Location = new System.Drawing.Point(4, 237);
-            this.btnDashboard.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnDashboard.Margin = new System.Windows.Forms.Padding(4);
             this.btnDashboard.Name = "btnDashboard";
             this.btnDashboard.Size = new System.Drawing.Size(289, 57);
             this.btnDashboard.TabIndex = 1;
@@ -167,7 +165,7 @@
             this.menuContainer.Controls.Add(this.btnTrangMieng);
             this.menuContainer.Controls.Add(this.btnTopping);
             this.menuContainer.Location = new System.Drawing.Point(4, 302);
-            this.menuContainer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.menuContainer.Margin = new System.Windows.Forms.Padding(4);
             this.menuContainer.Name = "menuContainer";
             this.menuContainer.Size = new System.Drawing.Size(289, 57);
             this.menuContainer.TabIndex = 6;
@@ -271,7 +269,7 @@
             this.btnQLTK.Image = ((System.Drawing.Image)(resources.GetObject("btnQLTK.Image")));
             this.btnQLTK.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnQLTK.Location = new System.Drawing.Point(4, 424);
-            this.btnQLTK.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnQLTK.Margin = new System.Windows.Forms.Padding(4);
             this.btnQLTK.Name = "btnQLTK";
             this.btnQLTK.Size = new System.Drawing.Size(289, 57);
             this.btnQLTK.TabIndex = 8;
@@ -288,7 +286,7 @@
             this.btnKho.Image = ((System.Drawing.Image)(resources.GetObject("btnKho.Image")));
             this.btnKho.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnKho.Location = new System.Drawing.Point(4, 489);
-            this.btnKho.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnKho.Margin = new System.Windows.Forms.Padding(4);
             this.btnKho.Name = "btnKho";
             this.btnKho.Size = new System.Drawing.Size(289, 57);
             this.btnKho.TabIndex = 9;
@@ -304,7 +302,7 @@
             this.btnDonhang.Image = ((System.Drawing.Image)(resources.GetObject("btnDonhang.Image")));
             this.btnDonhang.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDonhang.Location = new System.Drawing.Point(4, 554);
-            this.btnDonhang.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnDonhang.Margin = new System.Windows.Forms.Padding(4);
             this.btnDonhang.Name = "btnDonhang";
             this.btnDonhang.Size = new System.Drawing.Size(289, 57);
             this.btnDonhang.TabIndex = 10;
@@ -320,7 +318,7 @@
             this.btnThongBao.Image = ((System.Drawing.Image)(resources.GetObject("btnThongBao.Image")));
             this.btnThongBao.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnThongBao.Location = new System.Drawing.Point(4, 619);
-            this.btnThongBao.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnThongBao.Margin = new System.Windows.Forms.Padding(4);
             this.btnThongBao.Name = "btnThongBao";
             this.btnThongBao.Size = new System.Drawing.Size(289, 57);
             this.btnThongBao.TabIndex = 11;
@@ -336,7 +334,7 @@
             this.btnLogout.Image = ((System.Drawing.Image)(resources.GetObject("btnLogout.Image")));
             this.btnLogout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnLogout.Location = new System.Drawing.Point(4, 684);
-            this.btnLogout.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnLogout.Margin = new System.Windows.Forms.Padding(4);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(289, 57);
             this.btnLogout.TabIndex = 12;
@@ -354,13 +352,11 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Linen;
-
             this.ClientSize = new System.Drawing.Size(1455, 894);
-
             this.Controls.Add(this.sidebar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.IsMdiContainer = true;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "DashboardAdmin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DashboardAdmin";

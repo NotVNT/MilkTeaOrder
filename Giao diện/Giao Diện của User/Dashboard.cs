@@ -9,7 +9,7 @@ using OrderMillTeaProgram.Giao_diện_của_User; // Namespace của TraSuaUser
 
 namespace OrderMillTeaProgram.Giao_diện_của_User
 {
-    public partial class Dashboard : Form
+    public partial class Hongtratac : Form
     {
         private string avatarFilePath; // Khai báo biến
         private readonly NumericUpDown numericProductPrice;
@@ -17,7 +17,7 @@ namespace OrderMillTeaProgram.Giao_diện_của_User
         private readonly List<CartItem> cartItems = new List<CartItem>();
         private List<Product> products;
 
-        public Dashboard()
+        public Hongtratac()
         {
             InitializeComponent();
             EnsureFlowLayoutPanelInitialized(); // Đảm bảo flowLayoutPanelCart được khởi tạo
@@ -47,6 +47,8 @@ namespace OrderMillTeaProgram.Giao_diện_của_User
         }
 
         private Label lblTotal; // Khai báo tổng giá trị
+
+        public Action<string, decimal> ProductSelected { get; private set; }
 
         private void InitializeTotalLabel()
         {
@@ -478,8 +480,8 @@ namespace OrderMillTeaProgram.Giao_diện_của_User
         private void RegisterProductEvents()
         {
             // Khởi tạo các form từ thư mục All form TS
-            var hongtracForm = new Hongtratac();
-            var khoaimonForm = new tskhoaimon();
+            Hongtratac hongtracForm = new Hongtratac();
+            var khoaimonForm = new Tskhoaimon();
             var oreoForm = new TSOreoCakeCream();
             var phomaiForm = new TSPhoMai();
             var socolaForm = new TSSocolaMin();

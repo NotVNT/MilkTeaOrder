@@ -1,6 +1,6 @@
 ﻿namespace OrderMillTeaProgram.Giao_diện.Giao_Diện_của_User.All_form_TS
 {
-    partial class tskhoaimon
+    partial class Tskhoaimon
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(tskhoaimon));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Tskhoaimon));
             this.btnExit = new Guna.UI2.WinForms.Guna2CircleButton();
             this.btnAddToCart = new System.Windows.Forms.Button();
             this.btnDatMon = new System.Windows.Forms.Button();

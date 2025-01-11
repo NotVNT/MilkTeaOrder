@@ -1,4 +1,6 @@
-﻿namespace OrderMillTeaProgram.Giao_diện.Giao_Diện_của_Admin
+﻿using System.Windows.Forms;
+
+namespace OrderMillTeaProgram.Giao_diện.Giao_Diện_của_Admin
 {
     partial class TraSuaAdmin
     {
@@ -776,5 +778,11 @@
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.PictureBox pictureBox7;
         private Guna.UI2.WinForms.Guna2CircleButton btnClose;
+        private ListView lvCart;
+
+        public TraSuaAdmin(ListView lvCart)
+        {
+            this.lvCart = lvCart;
+        }
     }
 }

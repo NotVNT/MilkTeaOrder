@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using OrderMillTeaProgram.Giao_diện_của_User;
+using OrderMillTeaProgram.Giao_diện.Giao_Diện_của_User;
+using static OrderMillTeaProgram.Giao_diện.Giao_Diện_của_User.DashboardStaff;
 
 namespace OrderMillTeaProgram
 {
@@ -59,7 +61,7 @@ namespace OrderMillTeaProgram
 
         }
 
-        private void BtnDangNhap_Click(object sender, EventArgs e)
+        private void BtnDangNhap_Click(object sender, EventArgs e, Cart cart)
         {
             string username = txtDangNhap.Text;
             string password = txtMatKhau.Text;
@@ -105,14 +107,14 @@ namespace OrderMillTeaProgram
                                     case "Nhân Viên":
                                         MessageBox.Show("Bạn đang đăng nhập tài khoản Nhân Viên!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                         this.Hide();
-                                        DashboardStaff dashboardstaff = new DashboardStaff();
+                                        DashboardStaff dashboardstaff = new DashboardStaff(cart);
                                         dashboardstaff.ShowDialog();
                                         this.Close();
                                         break;
                                     default: // "Người dùng" or any other role
                                         MessageBox.Show("Bạn đã đăng nhập thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                         this.Hide();
-                                        Dashboard dashboard = new Dashboard();
+                                        Giao_diện_của_User.Hongtratac dashboard = new Giao_diện_của_User.Hongtratac();
                                         dashboard.ShowDialog();
                                         this.Close();
                                         break;

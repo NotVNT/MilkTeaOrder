@@ -4,7 +4,7 @@ using System.Windows.Forms;
 
 namespace OrderMillTeaProgram.Giao_diện_của_User
 {
-    partial class Dashboard
+    partial class Hongtratac
     {
         /// <summary>
         /// Required designer variable.
@@ -33,7 +33,7 @@ namespace OrderMillTeaProgram.Giao_diện_của_User
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dashboard));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Hongtratac));
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
@@ -59,6 +59,7 @@ namespace OrderMillTeaProgram.Giao_diện_của_User
             this.guna2BorderlessForm2 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.panelContent = new Guna.UI2.WinForms.Guna2Panel();
             this.sqlCommand1 = new Microsoft.Data.SqlClient.SqlCommand();
+            this.label3 = new System.Windows.Forms.Label();
             this.guna2Panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.guna2Panel2.SuspendLayout();
@@ -102,6 +103,7 @@ namespace OrderMillTeaProgram.Giao_diện_của_User
             this.guna2Panel2.BackColor = System.Drawing.Color.White;
             this.guna2Panel2.BorderColor = System.Drawing.Color.Gainsboro;
             this.guna2Panel2.BorderThickness = 4;
+            this.guna2Panel2.Controls.Add(this.label3);
             this.guna2Panel2.Controls.Add(this.guna2Panel4);
             this.guna2Panel2.CustomBorderColor = System.Drawing.Color.White;
             this.guna2Panel2.Dock = System.Windows.Forms.DockStyle.Right;
@@ -287,7 +289,7 @@ namespace OrderMillTeaProgram.Giao_diện_của_User
             // 
             // btnUpload
             // 
-            this.btnUpload.Location = new System.Drawing.Point(235, 164);
+            this.btnUpload.Location = new System.Drawing.Point(222, 164);
             this.btnUpload.Name = "btnUpload";
             this.btnUpload.Size = new System.Drawing.Size(126, 23);
             this.btnUpload.TabIndex = 4;
@@ -298,7 +300,7 @@ namespace OrderMillTeaProgram.Giao_diện_của_User
             // panel1
             // 
             this.panel1.Controls.Add(this.picAvatar);
-            this.panel1.Location = new System.Drawing.Point(235, 42);
+            this.panel1.Location = new System.Drawing.Point(222, 42);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(126, 116);
             this.panel1.TabIndex = 3;
@@ -306,6 +308,7 @@ namespace OrderMillTeaProgram.Giao_diện_của_User
             // picAvatar
             // 
             this.picAvatar.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.picAvatar.Image = global::OrderMillTeaProgram.Properties.Resources.CuDem;
             this.picAvatar.Location = new System.Drawing.Point(0, 0);
             this.picAvatar.Name = "picAvatar";
             this.picAvatar.Size = new System.Drawing.Size(126, 116);
@@ -386,6 +389,15 @@ namespace OrderMillTeaProgram.Giao_diện_của_User
             this.sqlCommand1.CommandTimeout = 30;
             this.sqlCommand1.EnableOptimizedParameterBinding = false;
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(255, 1067);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(84, 16);
+            this.label3.TabIndex = 13;
+            this.label3.Text = "Tổng: 0 VND";
+            // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -405,6 +417,7 @@ namespace OrderMillTeaProgram.Giao_diện_của_User
             this.guna2Panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.guna2Panel2.ResumeLayout(false);
+            this.guna2Panel2.PerformLayout();
             this.guna2Panel4.ResumeLayout(false);
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
@@ -472,6 +485,7 @@ namespace OrderMillTeaProgram.Giao_diện_của_User
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox picAvatar;
         private System.Windows.Forms.Button btnUpload;
+        private System.Windows.Forms.Label label3;
     }
 }
 

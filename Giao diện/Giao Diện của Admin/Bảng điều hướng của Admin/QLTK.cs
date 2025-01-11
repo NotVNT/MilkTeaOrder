@@ -64,7 +64,7 @@ namespace OrderMillTeaProgram.Giao_diện.Giao_Diện_của_Admin
         }
 
 
-        private void btnAdd_Click(object sender, EventArgs e)
+        private void BtnAdd_Click(object sender, EventArgs e)
         {
             try
             {
@@ -149,7 +149,7 @@ namespace OrderMillTeaProgram.Giao_diện.Giao_Diện_của_Admin
             }
         }
 
-        private void btnDelete_Click(object sender, EventArgs e)
+        private void BtnDelete_Click(object sender, EventArgs e)
         {
             try
             {
@@ -209,7 +209,7 @@ namespace OrderMillTeaProgram.Giao_diện.Giao_Diện_của_Admin
             }
         }
 
-        private void dgvQLTK_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void DgvQLTK_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0) // Kiểm tra xem có dòng nào được chọn hay không
             {
@@ -229,7 +229,7 @@ namespace OrderMillTeaProgram.Giao_diện.Giao_Diện_của_Admin
             }
         }
 
-        private void txtTimTen_TextChanged(object sender, EventArgs e)
+        private void TxtTimTen_TextChanged(object sender, EventArgs e)
         {
             string searchText = txtTimTen.Text.Trim();
 

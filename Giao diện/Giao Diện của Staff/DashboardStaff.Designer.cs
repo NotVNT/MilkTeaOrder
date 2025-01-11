@@ -1,4 +1,8 @@
-﻿namespace OrderMillTeaProgram.Giao_diện_của_User
+﻿using System;
+using System.Windows.Forms;
+using OrderMillTeaProgram.Giao_diện.Giao_Diện_của_User;
+
+namespace OrderMillTeaProgram.Giao_diện.Giao_Diện_của_User
 {
     partial class DashboardStaff
     {
@@ -40,13 +44,14 @@
             this.btnDashboard = new System.Windows.Forms.Button();
             this.menuContainer = new System.Windows.Forms.FlowLayoutPanel();
             this.btnDanhMuc = new System.Windows.Forms.Button();
-            this.btnTraSua = new System.Windows.Forms.Button();
-            this.btnTrangMieng = new System.Windows.Forms.Button();
             this.btnTopping = new System.Windows.Forms.Button();
             this.btnDonhang = new System.Windows.Forms.Button();
             this.btnThongBao = new System.Windows.Forms.Button();
             this.btnLogout = new System.Windows.Forms.Button();
+            this.btnTraSua = new System.Windows.Forms.Button();
+            this.btnTrangMieng = new System.Windows.Forms.Button();
             this.sidebarTransition = new System.Windows.Forms.Timer(this.components);
+            this.listViewCart = new System.Windows.Forms.ListView();
             this.sidebar.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.sidebarclick)).BeginInit();
@@ -69,6 +74,8 @@
             this.sidebar.Controls.Add(this.btnDonhang);
             this.sidebar.Controls.Add(this.btnThongBao);
             this.sidebar.Controls.Add(this.btnLogout);
+            this.sidebar.Controls.Add(this.btnTraSua);
+            this.sidebar.Controls.Add(this.btnTrangMieng);
             this.sidebar.Dock = System.Windows.Forms.DockStyle.Left;
             this.sidebar.Location = new System.Drawing.Point(0, 0);
             this.sidebar.Margin = new System.Windows.Forms.Padding(4);
@@ -155,9 +162,7 @@
             // 
             this.menuContainer.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.menuContainer.Controls.Add(this.btnDanhMuc);
-            this.menuContainer.Controls.Add(this.btnTrangMieng);
             this.menuContainer.Controls.Add(this.btnTopping);
-            this.menuContainer.Controls.Add(this.btnTraSua);
             this.menuContainer.Location = new System.Drawing.Point(4, 302);
             this.menuContainer.Margin = new System.Windows.Forms.Padding(4);
             this.menuContainer.Name = "menuContainer";
@@ -183,42 +188,6 @@
             this.btnDanhMuc.UseVisualStyleBackColor = false;
             this.btnDanhMuc.Click += new System.EventHandler(this.BtnDanhMuc_Click);
             // 
-            // btnTraSua
-            // 
-            this.btnTraSua.BackColor = System.Drawing.Color.LightGray;
-            this.btnTraSua.FlatAppearance.BorderSize = 0;
-            this.btnTraSua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTraSua.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTraSua.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.btnTraSua.Image = ((System.Drawing.Image)(resources.GetObject("btnTraSua.Image")));
-            this.btnTraSua.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTraSua.Location = new System.Drawing.Point(0, 175);
-            this.btnTraSua.Margin = new System.Windows.Forms.Padding(0);
-            this.btnTraSua.Name = "btnTraSua";
-            this.btnTraSua.Size = new System.Drawing.Size(289, 57);
-            this.btnTraSua.TabIndex = 3;
-            this.btnTraSua.Text = "Trà Sữa";
-            this.btnTraSua.UseVisualStyleBackColor = false;
-            this.btnTraSua.Click += new System.EventHandler(this.BtnTraSua_Click);
-            // 
-            // btnTrangMieng
-            // 
-            this.btnTrangMieng.BackColor = System.Drawing.Color.LightGray;
-            this.btnTrangMieng.FlatAppearance.BorderSize = 0;
-            this.btnTrangMieng.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTrangMieng.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTrangMieng.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.btnTrangMieng.Image = ((System.Drawing.Image)(resources.GetObject("btnTrangMieng.Image")));
-            this.btnTrangMieng.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTrangMieng.Location = new System.Drawing.Point(0, 61);
-            this.btnTrangMieng.Margin = new System.Windows.Forms.Padding(0);
-            this.btnTrangMieng.Name = "btnTrangMieng";
-            this.btnTrangMieng.Size = new System.Drawing.Size(289, 57);
-            this.btnTrangMieng.TabIndex = 7;
-            this.btnTrangMieng.Text = "Tráng Miệng";
-            this.btnTrangMieng.UseVisualStyleBackColor = false;
-            this.btnTrangMieng.Click += new System.EventHandler(this.BtnTrangMieng_Click);
-            // 
             // btnTopping
             // 
             this.btnTopping.BackColor = System.Drawing.Color.LightGray;
@@ -228,14 +197,13 @@
             this.btnTopping.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.btnTopping.Image = ((System.Drawing.Image)(resources.GetObject("btnTopping.Image")));
             this.btnTopping.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTopping.Location = new System.Drawing.Point(0, 118);
+            this.btnTopping.Location = new System.Drawing.Point(0, 61);
             this.btnTopping.Margin = new System.Windows.Forms.Padding(0);
             this.btnTopping.Name = "btnTopping";
             this.btnTopping.Size = new System.Drawing.Size(289, 57);
             this.btnTopping.TabIndex = 8;
             this.btnTopping.Text = "Topping";
             this.btnTopping.UseVisualStyleBackColor = false;
-            this.btnTopping.Click += new System.EventHandler(this.BtnTopping_Click);
             // 
             // btnDonhang
             // 
@@ -284,12 +252,57 @@
             this.btnLogout.TabIndex = 12;
             this.btnLogout.Text = "     LogOut";
             this.btnLogout.UseVisualStyleBackColor = true;
-            this.btnLogout.Click += new System.EventHandler(this.BtnLogout_Click);
+            // 
+            // btnTraSua
+            // 
+            this.btnTraSua.BackColor = System.Drawing.Color.LightGray;
+            this.btnTraSua.FlatAppearance.BorderSize = 0;
+            this.btnTraSua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTraSua.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTraSua.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.btnTraSua.Image = ((System.Drawing.Image)(resources.GetObject("btnTraSua.Image")));
+            this.btnTraSua.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTraSua.Location = new System.Drawing.Point(0, 558);
+            this.btnTraSua.Margin = new System.Windows.Forms.Padding(0);
+            this.btnTraSua.Name = "btnTraSua";
+            this.btnTraSua.Size = new System.Drawing.Size(289, 57);
+            this.btnTraSua.TabIndex = 3;
+            this.btnTraSua.Text = "Trà Sữa";
+            this.btnTraSua.UseVisualStyleBackColor = false;
+            this.btnTraSua.Click += new System.EventHandler(this.btnTraSua_Click_1);
+            // 
+            // btnTrangMieng
+            // 
+            this.btnTrangMieng.BackColor = System.Drawing.Color.LightGray;
+            this.btnTrangMieng.FlatAppearance.BorderSize = 0;
+            this.btnTrangMieng.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTrangMieng.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTrangMieng.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.btnTrangMieng.Image = ((System.Drawing.Image)(resources.GetObject("btnTrangMieng.Image")));
+            this.btnTrangMieng.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTrangMieng.Location = new System.Drawing.Point(0, 615);
+            this.btnTrangMieng.Margin = new System.Windows.Forms.Padding(0);
+            this.btnTrangMieng.Name = "btnTrangMieng";
+            this.btnTrangMieng.Size = new System.Drawing.Size(289, 57);
+            this.btnTrangMieng.TabIndex = 7;
+            this.btnTrangMieng.Text = "Tráng Miệng";
+            this.btnTrangMieng.UseVisualStyleBackColor = false;
+            this.btnTrangMieng.Click += new System.EventHandler(this.btnTrangMieng_Click_1);
             // 
             // sidebarTransition
             // 
             this.sidebarTransition.Interval = 10;
             this.sidebarTransition.Tick += new System.EventHandler(this.SidebarTransition_Tick);
+            // 
+            // listViewCart
+            // 
+            this.listViewCart.HideSelection = false;
+            this.listViewCart.Location = new System.Drawing.Point(1601, 2);
+            this.listViewCart.Name = "listViewCart";
+            this.listViewCart.Size = new System.Drawing.Size(318, 1078);
+            this.listViewCart.TabIndex = 3;
+            this.listViewCart.UseCompatibleStateImageBehavior = false;
+            this.listViewCart.SelectedIndexChanged += new System.EventHandler(this.listViewCart_SelectedIndexChanged);
             // 
             // DashboardStaff
             // 
@@ -297,6 +310,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Linen;
             this.ClientSize = new System.Drawing.Size(1920, 1080);
+            this.Controls.Add(this.listViewCart);
             this.Controls.Add(this.sidebar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.IsMdiContainer = true;
@@ -334,5 +348,24 @@
         private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.PictureBox sidebarclick;
         private System.Windows.Forms.Timer sidebarTransition;
+        private System.Windows.Forms.ListView listViewCart;
+        private bool sidebarExpand1;
+        private readonly EventHandler btnDanhMuc_Click;
+        private readonly EventHandler BtnTrangMieng_Click;
+        private readonly EventHandler BtnTopping_Click;
+        private readonly EventHandler BtnTraSua_Click;
+        private readonly EventHandler BtnLogout_Click;
+
+        public bool menuExpand { get; private set; }
+
+        public bool GetsidebarExpand()
+        {
+            return sidebarExpand1;
+        }
+
+        private void SetsidebarExpand(bool value)
+        {
+            sidebarExpand1 = value;
+        }
     }
 }

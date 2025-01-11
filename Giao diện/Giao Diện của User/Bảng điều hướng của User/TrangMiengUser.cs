@@ -1,4 +1,5 @@
-﻿using OrderMillTeaProgram.Giao_diện.Giao_Diện_của_User.All_form_tráng_miệng;
+﻿using OrderMillTeaProgram.Giao_diện.Giao_Diện_của_User;
+using OrderMillTeaProgram.Giao_diện.Giao_Diện_của_User.All_form_tráng_miệng;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -24,20 +25,20 @@ namespace OrderMillTeaProgram
         private void InitializeEvents()
         {
             // Sự kiện mở form Bánh Flan
-            picBanhFlan.Click += (s, e) => OpenDessertForm(new BanhFlan());
-            lblBanhFlan.Click += (s, e) => OpenDessertForm(new BanhFlan());
+            picBanhFlan.Click += (s, e) => OpenDessertForm(new BanhFlan(new DashboardStaff()));
+            lblBanhFlan.Click += (s, e) => OpenDessertForm(new BanhFlan(new DashboardStaff()));
 
             // Sự kiện mở form Tiramisu
-            picBanhTiramisu.Click += (s, e) => OpenDessertForm(new Tiramisu());
-            lblBanhTiramisu.Click += (s, e) => OpenDessertForm(new Tiramisu());
+            picBanhTiramisu.Click += (s, e) => OpenDessertForm(new Tiramisu(new DashboardStaff()));
+            lblBanhTiramisu.Click += (s, e) => OpenDessertForm(new Tiramisu(new DashboardStaff()));
 
             // Sự kiện mở form Bánh Phô Mai
-            picBanhPhoMai.Click += (s, e) => OpenDessertForm(new CheeseCake());
-            lblBanhPhoMai.Click += (s, e) => OpenDessertForm(new CheeseCake());
+            picBanhPhoMai.Click += (s, e) => OpenDessertForm(new CheeseCake(new DashboardStaff()));
+            lblBanhPhoMai.Click += (s, e) => OpenDessertForm(new CheeseCake(new DashboardStaff()));
 
             // Sự kiện mở form CupCake
-            picCupCake.Click += (s, e) => OpenDessertForm(new cupcake());
-            lblCupCake.Click += (s, e) => OpenDessertForm(new cupcake());
+            picCupCake.Click += (s, e) => OpenDessertForm(new CupCake(new DashboardStaff()));
+            lblCupCake.Click += (s, e) => OpenDessertForm(new CupCake(new DashboardStaff()));
 
             // Sự kiện đóng form
             btnClose.Click += CloseForm;
@@ -153,7 +154,7 @@ namespace OrderMillTeaProgram
 
     public partial class CupCake : TiramisuOrder
     {
-        public CupCake() : base()
+        public CupCake(Giao_diện.Giao_Diện_của_User.DashboardStaff dashboardStaff) : base()
         {
             BasePrice = 17000;
             lblTitle.Text = "CupCake";

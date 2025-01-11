@@ -1,4 +1,5 @@
-﻿using OrderMillTeaProgram.Giao_diện.Giao_Diện_của_User.All_form_TS;
+﻿using OrderMillTeaProgram.Giao_diện.Giao_Diện_của_User;
+using OrderMillTeaProgram.Giao_diện.Giao_Diện_của_User.All_form_TS;
 using OrderMillTeaProgram.Giao_diện_của_User;
 using System;
 using System.Collections.Generic;
@@ -26,16 +27,16 @@ namespace OrderMillTeaProgram
         private void InitializeEvents()
         {
             // Sự kiện mở form Hồng Trà Tắc
-            picHongTraTac.Click += (s, e) => OpenTeaForm(new Hongtratac());
-            lblHongTraTac.Click += (s, e) => OpenTeaForm(new Hongtratac());
+            picHongTraTac.Click += (s, e) => OpenTeaForm(new Giao_diện.Giao_Diện_của_User.All_form_TS.Hongtratac());
+            lblHongTraTac.Click += (s, e) => OpenTeaForm(new Giao_diện.Giao_Diện_của_User.All_form_TS.Hongtratac());
 
             // Sự kiện mở form Trà Sữa Chân Trâu
             picTSChanTrau.Click += (s, e) => OpenTeaForm(new TSTranChau());
             lblTSChanTrau.Click += (s, e) => OpenTeaForm(new TSTranChau());
 
             // Sự kiện mở form Trà Sữa Khoai Môn
-            pictskhoaimon.Click += (s, e) => OpenTeaForm(new tskhoaimon());
-            lbltskhoaimon.Click += (s, e) => OpenTeaForm(new tskhoaimon());
+            pictskhoaimon.Click += (s, e) => OpenTeaForm(new Tskhoaimon());
+            lbltskhoaimon.Click += (s, e) => OpenTeaForm(new Tskhoaimon());
 
             // Sự kiện mở form Trà Sữa Oreo Cake Cream
             picTSOreoCakeCream.Click += (s, e) => OpenTeaForm(new TSOreoCakeCream());
@@ -185,14 +186,25 @@ namespace OrderMillTeaProgram
         private Label lblTotalPrice; // Hiển thị tổng giá tiền
         private Button btnAddToCart; // Nút thêm vào giỏ hàng
         private Button btnClose; // Nút đóng form
+        private DashboardStaff.Cart sharedCart;
 
         public event Action<string, decimal> ProductSelected; // Sự kiện chọn sản phẩm
 
-        public HongTraTac()
+        public HongTraTac(MailChimp.Net.Models.Cart sharedCart)
         {
+            if (sharedCart is null)
+            {
+                throw new ArgumentNullException(nameof(sharedCart));
+            }
+
             InitializeComponent();
             InitializeEvents();
             UpdateTotalPrice();
+        }
+
+        public HongTraTac(DashboardStaff.Cart sharedCart)
+        {
+            this.sharedCart = sharedCart;
         }
 
         private void InitializeComponent()
