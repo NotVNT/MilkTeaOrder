@@ -71,11 +71,11 @@ namespace OrderMillTeaProgram.Giao_diện.Giao_Diện_của_User
             this.sidebar.Controls.Add(this.panel3);
             this.sidebar.Controls.Add(this.btnDashboard);
             this.sidebar.Controls.Add(this.menuContainer);
+            this.sidebar.Controls.Add(this.btnTraSua);
+            this.sidebar.Controls.Add(this.btnTrangMieng);
             this.sidebar.Controls.Add(this.btnDonhang);
             this.sidebar.Controls.Add(this.btnThongBao);
             this.sidebar.Controls.Add(this.btnLogout);
-            this.sidebar.Controls.Add(this.btnTraSua);
-            this.sidebar.Controls.Add(this.btnTrangMieng);
             this.sidebar.Dock = System.Windows.Forms.DockStyle.Left;
             this.sidebar.Location = new System.Drawing.Point(0, 0);
             this.sidebar.Margin = new System.Windows.Forms.Padding(4);
@@ -166,7 +166,7 @@ namespace OrderMillTeaProgram.Giao_diện.Giao_Diện_của_User
             this.menuContainer.Location = new System.Drawing.Point(4, 302);
             this.menuContainer.Margin = new System.Windows.Forms.Padding(4);
             this.menuContainer.Name = "menuContainer";
-            this.menuContainer.Size = new System.Drawing.Size(289, 57);
+            this.menuContainer.Size = new System.Drawing.Size(289, 56);
             this.menuContainer.TabIndex = 6;
             // 
             // btnDanhMuc
@@ -213,7 +213,7 @@ namespace OrderMillTeaProgram.Giao_diện.Giao_Diện_của_User
             this.btnDonhang.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.btnDonhang.Image = ((System.Drawing.Image)(resources.GetObject("btnDonhang.Image")));
             this.btnDonhang.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDonhang.Location = new System.Drawing.Point(4, 367);
+            this.btnDonhang.Location = new System.Drawing.Point(4, 480);
             this.btnDonhang.Margin = new System.Windows.Forms.Padding(4);
             this.btnDonhang.Name = "btnDonhang";
             this.btnDonhang.Size = new System.Drawing.Size(289, 57);
@@ -229,7 +229,7 @@ namespace OrderMillTeaProgram.Giao_diện.Giao_Diện_của_User
             this.btnThongBao.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.btnThongBao.Image = ((System.Drawing.Image)(resources.GetObject("btnThongBao.Image")));
             this.btnThongBao.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnThongBao.Location = new System.Drawing.Point(4, 432);
+            this.btnThongBao.Location = new System.Drawing.Point(4, 545);
             this.btnThongBao.Margin = new System.Windows.Forms.Padding(4);
             this.btnThongBao.Name = "btnThongBao";
             this.btnThongBao.Size = new System.Drawing.Size(289, 57);
@@ -245,13 +245,14 @@ namespace OrderMillTeaProgram.Giao_diện.Giao_Diện_của_User
             this.btnLogout.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.btnLogout.Image = ((System.Drawing.Image)(resources.GetObject("btnLogout.Image")));
             this.btnLogout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLogout.Location = new System.Drawing.Point(4, 497);
+            this.btnLogout.Location = new System.Drawing.Point(4, 610);
             this.btnLogout.Margin = new System.Windows.Forms.Padding(4);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(289, 57);
             this.btnLogout.TabIndex = 12;
             this.btnLogout.Text = "     LogOut";
             this.btnLogout.UseVisualStyleBackColor = true;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
             // btnTraSua
             // 
@@ -262,7 +263,7 @@ namespace OrderMillTeaProgram.Giao_diện.Giao_Diện_của_User
             this.btnTraSua.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.btnTraSua.Image = ((System.Drawing.Image)(resources.GetObject("btnTraSua.Image")));
             this.btnTraSua.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTraSua.Location = new System.Drawing.Point(0, 558);
+            this.btnTraSua.Location = new System.Drawing.Point(0, 362);
             this.btnTraSua.Margin = new System.Windows.Forms.Padding(0);
             this.btnTraSua.Name = "btnTraSua";
             this.btnTraSua.Size = new System.Drawing.Size(289, 57);
@@ -280,7 +281,7 @@ namespace OrderMillTeaProgram.Giao_diện.Giao_Diện_của_User
             this.btnTrangMieng.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.btnTrangMieng.Image = ((System.Drawing.Image)(resources.GetObject("btnTrangMieng.Image")));
             this.btnTrangMieng.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTrangMieng.Location = new System.Drawing.Point(0, 615);
+            this.btnTrangMieng.Location = new System.Drawing.Point(0, 419);
             this.btnTrangMieng.Margin = new System.Windows.Forms.Padding(0);
             this.btnTrangMieng.Name = "btnTrangMieng";
             this.btnTrangMieng.Size = new System.Drawing.Size(289, 57);
@@ -348,7 +349,6 @@ namespace OrderMillTeaProgram.Giao_diện.Giao_Diện_của_User
         private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.PictureBox sidebarclick;
         private System.Windows.Forms.Timer sidebarTransition;
-        private System.Windows.Forms.ListView listViewCart;
         private bool sidebarExpand1;
         private readonly EventHandler btnDanhMuc_Click;
         private readonly EventHandler BtnTrangMieng_Click;
@@ -367,5 +367,7 @@ namespace OrderMillTeaProgram.Giao_diện.Giao_Diện_của_User
         {
             sidebarExpand1 = value;
         }
+
+        private ListView listViewCart;
     }
 }

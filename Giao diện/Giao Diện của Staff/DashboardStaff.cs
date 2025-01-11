@@ -72,15 +72,6 @@ namespace OrderMillTeaProgram.Giao_diện.Giao_Diện_của_User
                 Size = new Size(100, 30)
             };
 
-            // Tạo Label hiển thị tổng giá
-            lblTotalPrice = new Label
-            {
-                Text = "Tổng giá: 0 VNĐ",
-                Location = new Point(120, 10),
-                Size = new Size(200, 30),
-                TextAlign = ContentAlignment.MiddleRight
-            };
-
             // Thêm các điều khiển vào Form
             this.Controls.Add(btnCheckout);
             this.Controls.Add(lblTotalPrice);
@@ -205,9 +196,10 @@ namespace OrderMillTeaProgram.Giao_diện.Giao_Diện_của_User
 
         public void UpdateCartView()
         {
-            listViewCart.Items.Clear();  // Xóa tất cả các mục cũ trong listView
+            listViewCart.Items.Clear(); // Xóa tất cả các mục cũ trong listView
             decimal totalCartPrice = 0;
 
+            // Hiển thị từng sản phẩm trong giỏ hàng
             foreach (var item in sharedCart.Items)
             {
                 var listViewItem = new ListViewItem
@@ -223,12 +215,28 @@ namespace OrderMillTeaProgram.Giao_diện.Giao_Diện_của_User
                 listViewItem.SubItems.Add($"{item.TotalPrice:N0} VNĐ");
 
                 listViewCart.Items.Add(listViewItem);
-                totalCartPrice += item.TotalPrice;  // Cộng tổng giá các mặt hàng
+                totalCartPrice += item.TotalPrice; // Cộng tổng giá các mặt hàng
             }
 
-            lblTotalPrice.Text = $"Tổng giá: {totalCartPrice:N0} VNĐ";  // Cập nhật tổng giá
-            btnCheckout.Enabled = sharedCart.Items.Any();  // Kiểm tra nếu giỏ hàng có sản phẩm
+            // Thêm hàng tổng giá trị vào cuối
+            var totalRow = new ListViewItem
+            {
+                Text = "Tổng Cộng",
+                ForeColor = Color.Red, // Đặt màu đỏ để nổi bật
+                Font = new Font(listViewCart.Font, FontStyle.Bold) // Đặt font in đậm
+            };
+
+            // Thêm các cột trống trước khi hiển thị tổng giá trị
+            for (int i = 0; i < listViewCart.Columns.Count - 1; i++)
+            {
+                totalRow.SubItems.Add("");
+            }
+            totalRow.SubItems.Add($"{totalCartPrice:N0} VNĐ"); // Hiển thị tổng giá ở cột cuối cùng
+
+            listViewCart.Items.Add(totalRow); // Thêm hàng tổng giá trị vào ListView
+            btnCheckout.Enabled = sharedCart.Items.Any(); // Kiểm tra nếu giỏ hàng có sản phẩm
         }
+
 
         private void ListView_DrawSubItem(object sender, DrawListViewSubItemEventArgs e)
         {
@@ -408,6 +416,11 @@ namespace OrderMillTeaProgram.Giao_diện.Giao_Diện_của_User
             {
                 MessageBox.Show($"Đã xảy ra lỗi: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

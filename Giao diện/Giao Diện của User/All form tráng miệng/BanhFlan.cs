@@ -15,12 +15,9 @@ namespace OrderMillTeaProgram.Giao_diện.Giao_Diện_của_User.All_form_trán
 
         private ContextMenuStrip toppingContextMenu;
 
-        private readonly DashboardStaff parentForm; // Tham chiếu tới form cha
-
-        public BanhFlan(DashboardStaff parent)
+        public BanhFlan(DashboardStaff dashboardStaff)
         {
             InitializeComponent();
-            this.parentForm = parent; // Gán form cha vào biến
             LoadFormData();
             InitializeContextMenu();
             InitializeEvents();
@@ -75,7 +72,8 @@ namespace OrderMillTeaProgram.Giao_diện.Giao_Diện_của_User.All_form_trán
 
             foreach (var topping in toppings)
             {
-                clbTopping.Items.Add($"{topping.Key} x{topping.Value.Quantity}");
+                int index = clbTopping.Items.Add($"{topping.Key} x{topping.Value.Quantity}");
+                clbTopping.Items[index] = topping.Key; // Lưu key topping trong Tag
             }
         }
 
@@ -158,25 +156,8 @@ namespace OrderMillTeaProgram.Giao_diện.Giao_Diện_của_User.All_form_trán
 
             string totalPrice = lblTotalPrice.Text;
 
-            if (parentForm != null)
-            {
-                // Thêm sản phẩm vào ListViewCart
-                ListViewItem item = new ListViewItem("Bánh Flan");
-                item.SubItems.Add(quantity.ToString());
-                item.SubItems.Add(toppingsText);
-                item.SubItems.Add(totalPrice);
-
-                parentForm.listViewCart_SelectedIndexChanged.Items.Add(item); // Sửa lỗi: Sử dụng thuộc tính ListViewCart
-            }
-
-            MessageBox.Show(
-                $"Thêm vào giỏ hàng:\nBánh Flan\nSố lượng: {quantity}\nTopping: {toppingsText}\n{totalPrice}",
-                "Thông báo",
-                MessageBoxButtons.OK,
-                MessageBoxIcon.Information
-            );
+            MessageBox.Show($"Thêm vào giỏ hàng:\nBánh Flan\nSố lượng: {quantity}\nTopping: {toppingsText}\n{totalPrice}", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
-
 
         private void PlaceOrder(object sender, EventArgs e)
         {
@@ -194,7 +175,7 @@ namespace OrderMillTeaProgram.Giao_diện.Giao_Diện_của_User.All_form_trán
 
             string totalPrice = lblTotalPrice.Text;
 
-            MessageBox.Show($"Đặt món thành công:\nBánh Flan\nSố lượng: {quantity}\nTopping: {toppingsText}\n{totalPrice}", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show($"Đặt món thành công:\nBánh Flan\nSố lượng: {quantity}\nTopping: {toppingsText}\n{totalPrice}", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void BtnClose_Click(object sender, EventArgs e)
